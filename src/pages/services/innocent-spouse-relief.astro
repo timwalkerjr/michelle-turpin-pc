@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ServiceHero from '@/components/services/innocent-spouse-relief/ServiceHero.astro';
+import ServiceContent from '@/components/services/innocent-spouse-relief/ServiceContent.astro';
+import ServiceContact from '@/components/services/innocent-spouse-relief/ServiceContact.astro';
+import RelatedServices from '@/components/services/innocent-spouse-relief/RelatedServices.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Innocent Spouse Relief - Michelle Turpin P.C.",
+  "description": "Seek innocent spouse relief from IRS taxes caused by a spouse's actions. Experienced Utah tax attorneys at Michelle Turpin P.C.",
+  "url": `${SITE.url}/services/innocent-spouse-relief/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Innocent Spouse Relief | Utah Tax Attorney"
+  description="Seek innocent spouse relief from IRS taxes caused by a spouse's actions. Experienced Utah tax attorneys at Michelle Turpin P.C."
+  jsonLd={jsonLd}
+>
+  <ServiceHero />
+  <ServiceContent />
+  <ServiceContact />
+  <RelatedServices />
+</BaseLayout>

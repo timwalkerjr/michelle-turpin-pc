@@ -1,0 +1,76 @@
+---
+const sections = [
+  {
+    title: 'How IRS Business Audits Work — Utah Tax Audit Representation',
+    paragraphs: [
+      `Michelle Turpin P.C. represents Utah businesses being audited by the IRS. If your business has received an audit notice, we encourage you to contact us to discuss your business tax audit today.`
+    ]
+  },
+  {
+    title: 'Why Businesses Are Audited',
+    paragraphs: [
+      `The IRS selects businesses for audit through multiple methods including statistical scoring, industry-specific programs, and random selection. Common audit triggers for businesses include:`
+    ],
+    list: [
+      'High deduction-to-income ratios compared to industry norms',
+      'Losses reported in multiple consecutive years',
+      'Significant cash transactions',
+      'Large charitable contributions relative to income',
+      'Employee classification issues (employees vs. independent contractors)',
+      'Payroll tax discrepancies',
+      'Information mismatches between reported income and third-party documents'
+    ]
+  },
+  {
+    title: 'Types of Business Audits',
+    paragraphs: [
+      `<strong>Correspondence Audits</strong> are conducted entirely by mail and focus on specific issues. <strong>Office Audits</strong> require meeting with an IRS examiner at a local IRS office. <strong>Field Audits</strong> are the most comprehensive — the IRS comes to your business location to review books, records, and operations. Field audits can be particularly disruptive to business operations and require experienced representation.`
+    ]
+  },
+  {
+    title: 'High-Risk Areas in Business Audits',
+    paragraphs: [
+      `Areas of particular scrutiny in business audits include:`
+    ],
+    list: [
+      '<strong>Employee vs. Independent Contractor classification</strong> — Misclassification can trigger massive payroll tax assessments plus Trust Fund Recovery Penalties against responsible persons personally.',
+      '<strong>Business use of vehicles and home offices</strong> — The IRS scrutinizes these deductions closely and requires substantial documentation.',
+      '<strong>Entertainment and meal expenses</strong> — Require specific business purpose documentation.',
+      '<strong>Officer compensation</strong> — Must be reasonable in relation to services rendered.',
+      '<strong>Inventory and cost of goods sold</strong> — Subject to detailed verification.'
+    ]
+  },
+  {
+    title: 'Our Business Audit Defense Approach',
+    paragraphs: [
+      `We handle all communications with IRS agents on your behalf, prepare comprehensive documentation responses, and develop legal arguments for all disputed items. Our goal is to minimize adjustments while protecting your rights throughout the process.`,
+      `Call Michelle Turpin P.C. today at <strong>(801) 685-0552</strong> to protect your business.`
+    ]
+  }
+];
+---
+
+<section class="bg-white py-16 lg:py-20">
+  <div class="max-w-[900px] mx-auto px-4">
+    {sections.map((s) => (
+      <div class="mb-10 last:mb-0">
+        <h2 class="text-[28px] lg:text-[30px] font-bold text-[#1A1A1A] font-serif mb-4 leading-tight">
+          {s.title}
+        </h2>
+        {s.paragraphs.map((p) => (
+          <p class="text-[#374151] text-[16px] leading-[1.65] mb-4" set:html={p} />
+        ))}
+        {s.list && (
+          <ul class="list-disc pl-6 space-y-2 text-[#374151] text-[16px] leading-[1.65]">
+            {s.list.map((item) => (
+              <li set:html={item} />
+            ))}
+          </ul>
+        )}
+      </div>
+    ))}
+    <p class="text-[#6B7280] text-sm italic mt-12 border-t border-gray-200 pt-6">
+      This content is provided for informational purposes only and does not constitute legal advice.
+    </p>
+  </div>
+</section>

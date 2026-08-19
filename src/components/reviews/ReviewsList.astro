@@ -1,0 +1,175 @@
+---
+// Reviews page: featured review + filter chips + grid of reviews
+const categories = ["All Reviews", "Tax Planning", "IRS Representation", "Tax Relief", "Business Tax"];
+
+const featuredReview = {
+  quote: "I can't say enough great things about Michelle Turpin PC. We had an initial consultation over the phone, we discussed what my options were, then got to meet her and her team at their office to discuss things further. When it was all said and done, they released our bank levy and settled our tax debt through an offer in compromise. The whole process took only a couple of months and we have been very satisfied with the results! Thanks again Michelle and team for everything!",
+  initials: "RW",
+  name: "Rich Whale",
+  service: "Offer in Compromise · Salt Lake City, UT",
+};
+
+const reviews = [
+  {
+    category: "Tax Relief",
+    quote: "Michelle Turpin and her team saved me. I had what I thought was an insurmountable mess with the IRS. Michelle and Mark took over, helped me get all my returns filed and got the IRS and Utah Tax Commission to accept a payment plan that was affordable. They are excellent at what they do. Totally worth the cost.",
+    initials: "EB",
+    name: "Erica Bruce",
+  },
+  {
+    category: "Tax Planning",
+    quote: "I searched the web for tax attorney's who were familiar with the new opportunity zone tax benefits. The attorney's at Michelle Turpin P.C. were the only ones I could find who were knowledgeable in this area. They gave me a detailed opinion and charged me considerably less than any of their competitors.",
+    initials: "JS",
+    name: "Johnnie Sasaki",
+  },
+  {
+    category: "IRS Representation",
+    quote: "Amazing firm. The entire team works hard to answer all my questions and get my problems resolved as quickly as possible.",
+    initials: "JS",
+    name: "Joanna Smith",
+  },
+  {
+    category: "Tax Relief",
+    quote: "After searching for someone competent and affordable to help me with my tax debt, I found Mark Barnes at Michelle Turpin P.C.. He gave me straight answers about what I could and could not do and helped get the IRS off my back. They charged me significantly less than all the others were going to charge me as well. Glad I went with them.",
+    initials: "CR",
+    name: "Christopher Rodriguez",
+  },
+  {
+    category: "IRS Representation",
+    quote: "Michelle Turpin P.C. Tax Attorneys helped me with a personal IRS Audit. I didn't know what to do. They helped me understand the process and ended up saving me a ton of money. Their experience is evident. I appreciate all the help.",
+    initials: "CW",
+    name: "Clifford Woods",
+  },
+  {
+    category: "Business Tax",
+    quote: "Michelle Turpin Law helped our business through a tax audit. They made it as painless and simple for us as they possibly could. If you need assistance with taxes call them! You won't regret it.",
+    initials: "CH",
+    name: "Clara Howland",
+  },
+  {
+    category: "Tax Planning",
+    quote: "I recently had to get opinions on some questionable things my ex tried to do on my taxes. I was able to consult and get clear answers from Mark and this firm. Don't cause yourself more grief. Find out what the laws are and how to protect yourself. Give these folks a call!!",
+    initials: "SK",
+    name: "Sue Krupa",
+  },
+  {
+    category: "Tax Planning",
+    quote: "Michelle Turpin P.C. was the only tax firm I could find that didn't require at least a $2000 upfront retainer. My tax issue was confusing and I needed help but, it didn't justify retaining a lawyer to represent me. I was able to pay a $400 consultation fee and get all the advice I needed to understand my issue and be able to solve it on my own. Very helpful and worth every penny.",
+    initials: "JCT",
+    name: "Joshua C Turner",
+  },
+  {
+    category: "Tax Relief",
+    quote: "Staci Spencer and Sandra Fratto specifically, were excellent. They kept advocating for us until our issue was solved. No stone went un-turned. The communication was exceptional. I felt they were on it until the job was fully done.",
+    initials: "AJ",
+    name: "Anne Joosten",
+  },
+  {
+    category: "Tax Planning",
+    quote: "Michelle Turpin is the best tax attorney in the state of Utah! I've been a client for years. I highly recommend her.",
+    initials: "NN",
+    name: "Nicole Nutter",
+  },
+  {
+    category: "IRS Representation",
+    quote: "Michelle is the best at what she does. Nobody is better at fighting the IRS and winning!",
+    initials: "SL",
+    name: "Shan Lassig",
+  },
+  {
+    category: "Tax Relief",
+    quote: "Very prompt and responsive to all questions raised. Skilled and thorough tax attorneys!",
+    initials: "AP",
+    name: "Adrienne Prude",
+  },
+  {
+    category: "Tax Planning",
+    quote: "I had tax questions about my residency and everyone else I called wanted a large retainer to help me. Michelle Turpin and her staff helped me at a fraction of the cost; they are the most ethical and experienced tax law firm that I could find. I highly recommend them to anyone who has tax questions or issues.",
+    initials: "MK",
+    name: "Maxime Kind",
+  },
+  {
+    category: "Tax Planning",
+    quote: "Michelle truly has her clients' best interests at heart. She handled everything professionally and efficiently. My questions were always responded to quickly and concisely. I would recommend Michelle to anyone who needs a tax lawyer.",
+    initials: "JJ",
+    name: "Jerry Johnston",
+  },
+  {
+    category: "Tax Relief",
+    quote: "Needed technical advice, received same right away with full accuracy!",
+    initials: "HR",
+    name: "Howard Rowley",
+  },
+  {
+    category: "Tax Relief",
+    quote: "Invaluable help!!",
+    initials: "DR",
+    name: "Dusty Rhodes",
+  },
+  {
+    category: "IRS Representation",
+    quote: "Great firm with friendly and professional staff! The attorney listened to all my concerns, answered all my questions, and resolved my tax issue swiftly. I'm so glad I found them!",
+    initials: "HA",
+    name: "Haia A",
+  },
+  {
+    category: "Tax Planning",
+    quote: "I have used Michelle Turpin and her Associates for over a decade. Michelle is professional, down to earth, incredibly dedicated to her clients. Her timely delivery, clarity of message and personalized attention with incredible knowledge delivering positive results. I'm very thankful to have her on my side.",
+    initials: "OA",
+    name: "Operas Angel",
+  },
+];
+---
+
+<section id="reviews-list" class="bg-white py-16 lg:py-20">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <!-- Featured review -->
+    <div class="bg-[rgba(245,239,230,0.6)] rounded-[8px] p-6 lg:p-8 mb-12 border-l-4 border-[#C1272D]">
+      <div class="text-yellow-500 text-xl mb-3">★★★★★</div>
+      <blockquote class="text-[18px] lg:text-[20px] text-[#1A1A1A] font-serif italic leading-relaxed mb-4">
+        {featuredReview.quote}
+      </blockquote>
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full bg-[#C1272D] text-white font-bold flex items-center justify-center shrink-0">{featuredReview.initials}</div>
+        <div>
+          <p class="text-[#1A1A1A] font-medium">{featuredReview.name}</p>
+          <p class="text-[#4B5563] text-[14px]">{featuredReview.service}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section header -->
+    <h2 class="text-[30px] lg:text-[36px] font-bold text-[#1A1A1A] font-serif text-center mb-3">
+      What Our Clients Say
+    </h2>
+    <p class="text-[#4B5563] text-[16px] text-center max-w-[700px] mx-auto mb-8">
+      Real experiences from real people who trusted us with their tax and bankruptcy matters.
+    </p>
+
+    <!-- Filter chips -->
+    <div class="flex flex-wrap gap-2 justify-center mb-10">
+      {categories.map((cat, i) => (
+        <button
+          class={`px-4 py-2 rounded-full text-[14px] font-medium border transition ${i === 0 ? 'bg-[#C1272D] text-white border-[#C1272D]' : 'bg-white text-[#1A1A1A] border-gray-300 hover:border-[#C1272D] hover:text-[#C1272D]'}`}
+        >{cat}</button>
+      ))}
+    </div>
+
+    <!-- Reviews grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {reviews.map((review) => (
+        <div class="bg-white border border-gray-200 rounded-[8px] p-6 hover:shadow-md hover:border-[#C1272D]/30 transition">
+          <span class="inline-block bg-[#C1272D]/10 text-[#C1272D] text-[12px] font-medium uppercase tracking-wider px-2 py-1 rounded mb-3">{review.category}</span>
+          <div class="text-yellow-500 text-lg mb-2">★★★★★</div>
+          <blockquote class="text-[#374151] text-[15px] leading-relaxed mb-4 italic">
+            "{review.quote}"
+          </blockquote>
+          <div class="flex items-center gap-3 pt-3 border-t border-gray-100">
+            <div class="w-10 h-10 rounded-full bg-[#1A1A1A] text-white font-bold flex items-center justify-center text-[12px] shrink-0">{review.initials}</div>
+            <p class="text-[#1A1A1A] font-medium text-[14px]">{review.name}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

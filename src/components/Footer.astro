@@ -1,0 +1,67 @@
+---
+import { SITE } from '@/config/site';
+---
+
+<footer class="bg-gradient-to-b from-[#262626] via-[#161616] to-[#0A0A0A] text-[#D1D5DB] pt-14 pb-12" data-ps="src/components/Footer.astro:root">
+  <div class="max-w-[1400px] mx-auto px-4" data-ps="src/components/Footer.astro:p4vf8a">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12" data-ps="src/components/Footer.astro:p4vf8b">
+      <!-- Col 1: Logo -->
+      <div data-ps="src/components/Footer.astro:col-1">
+        <a href="/" class="inline-block mb-4" aria-label="Michelle Turpin P.C. Homepage" data-ps="src/components/Footer.astro:7gqc0l">
+          <img
+            src="https://pagesmith-cdn.com/84515c4a/images/60d38c00f68047fa9b8d2d9d_logo-light.svg"
+            alt="Michelle Turpin P.C."
+            class="w-[284px] h-[40px] max-w-full object-contain"
+            width="284"
+            height="40" data-ps="src/components/Footer.astro:4qdjez" />
+        </a>
+      </div>
+
+      <!-- Col 2: About & Reviews -->
+      <div data-ps="src/components/Footer.astro:col-2">
+        <ul class="list-none p-0 m-0 flex flex-col gap-3">
+          <li data-ps="src/components/Footer.astro:wyji7b">
+            <a href="/reviews" class="text-[15px] text-[#D1D5DB] no-underline hover:text-white transition-colors" data-ps="src/components/Footer.astro:7gqc0m">Client Reviews</a>
+          </li>
+          <li data-ps="src/components/Footer.astro:wyji7c">
+            <a href="/about" class="text-[15px] text-[#D1D5DB] no-underline hover:text-white transition-colors" data-ps="src/components/Footer.astro:8o2pe">About Our Firm</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Phone & Contact -->
+      <div data-ps="src/components/Footer.astro:col-3">
+        <ul class="list-none p-0 m-0 flex flex-col gap-3">
+          <li data-ps="src/components/Footer.astro:wyji7d">
+            <a href={SITE.phoneHref} class="text-[15px] text-[#D1D5DB] no-underline hover:text-white transition-colors" data-ps="src/components/Footer.astro:8o2pf">Tel: +1 (801) 685-0552</a>
+          </li>
+          <li data-ps="src/components/Footer.astro:wyji7e">
+            <a href="/contact-us" class="text-[15px] text-[#D1D5DB] no-underline hover:text-white transition-colors" data-ps="src/components/Footer.astro:8o2pg">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Planning & Articles -->
+      <div data-ps="src/components/Footer.astro:col-4">
+        <ul class="list-none p-0 m-0 flex flex-col gap-3">
+          <li data-ps="src/components/Footer.astro:wyji7f">
+            <a href="/tax-planning" class="text-[15px] text-[#D1D5DB] no-underline hover:text-white transition-colors" data-ps="src/components/Footer.astro:8o2ph">Tax Planning</a>
+          </li>
+          <li data-ps="src/components/Footer.astro:wyji7g">
+            <a href="/articles" class="text-[15px] text-[#D1D5DB] no-underline hover:text-white transition-colors" data-ps="src/components/Footer.astro:8o2pi">Tax Law Articles</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Legal Disclaimer and Copyright -->
+    <div class="border-t border-white/10 pt-8 max-w-[1000px] mx-auto text-center text-[12px] text-gray-400 leading-relaxed" data-ps="src/components/Footer.astro:disclaimer">
+      <p class="m-0 mb-3" data-ps="src/components/Footer.astro:euop">
+        Lawyer Advertising. This website is designed for general informational purposes only. Information on this website is in no way intended to constitute legal advice nor the formation of a lawyer/client relationship. Every case is unique and prior results are not a guarantee or prediction with respect to a future case.
+      </p>
+      <p class="m-0 text-gray-500 text-[12px]" data-ps="src/components/Footer.astro:euoq">
+        © {new Date().getFullYear()} Michelle Turpin, P.C. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>

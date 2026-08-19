@@ -1,0 +1,72 @@
+---
+const sections = [
+  {
+    title: 'Utah IRS Tax Penalty Attorneys',
+    paragraphs: [
+      `The IRS penalizes millions of taxpayers each year. The most common penalties are the <strong>Failure to File penalty</strong> and the <strong>Failure to Pay penalty</strong>. Both of these penalties can substantially increase the amount you owe the IRS in a very short period of time. To make matters worse, the IRS charges you interest on penalties.`
+    ]
+  },
+  {
+    title: 'How Penalties Compound Your Tax Debt',
+    paragraphs: [
+      `Taxpayers often find out about IRS problems years after they have occurred. This causes the amount owed to the IRS to be substantially greater due to penalties and interest.`,
+      `Some IRS penalties can be as high as <strong>75–100% of the original taxes owed</strong>. Often taxpayers can afford to pay the taxes owed. However, the extra penalties make it impossible to pay off the entire balance.`,
+      `The original goal of the IRS imposing penalties was to keep taxpayers in line by punishing them. Unfortunately, penalties have turned into additional sources of income for the IRS.`
+    ]
+  },
+  {
+    title: 'Common Types of IRS Penalties',
+    paragraphs: [`The most common IRS penalties include:`],
+    list: [
+      '<strong>Failure to File Penalty</strong> — 5% per month on unpaid taxes, up to 25% maximum',
+      '<strong>Failure to Pay Penalty</strong> — 0.5% per month on unpaid taxes, up to 25% maximum',
+      '<strong>Accuracy-Related Penalty</strong> — 20–40% of underpayment due to negligence or substantial understatement',
+      '<strong>Civil Fraud Penalty</strong> — 75% of the underpayment attributable to fraud',
+      '<strong>Trust Fund Recovery Penalty</strong> — Equal to 100% of unpaid employment taxes'
+    ]
+  },
+  {
+    title: 'Penalty Abatement: Getting Penalties Reduced',
+    paragraphs: [
+      `The IRS does abate penalties, so before you pay the IRS any penalty amounts, you may want to consider requesting the IRS to abate your penalties. Options include:`
+    ],
+    list: [
+      '<strong>First-Time Penalty Abatement</strong> — Available to taxpayers with a clean compliance history',
+      '<strong>Reasonable Cause Abatement</strong> — Available when you can show the failure was due to reasonable cause and not willful neglect',
+      '<strong>Statutory Exceptions</strong> — Certain penalties are waived automatically in qualifying circumstances'
+    ]
+  },
+  {
+    title: 'How We Can Help',
+    paragraphs: [
+      `Our tax penalty attorneys can represent you to the IRS and work to abate your penalties. We analyze your situation, identify the strongest arguments for penalty relief, and present them persuasively to IRS personnel. Even if full abatement is not available, we often negotiate meaningful penalty reductions that dramatically reduce the total amount owed.`,
+      `Call Michelle Turpin P.C. today at <strong>(801) 685-0552</strong> before you pay any penalties.`
+    ]
+  }
+];
+---
+
+<section class="bg-white py-16 lg:py-20">
+  <div class="max-w-[900px] mx-auto px-4">
+    {sections.map((s) => (
+      <div class="mb-10 last:mb-0">
+        <h2 class="text-[28px] lg:text-[30px] font-bold text-[#1A1A1A] font-serif mb-4 leading-tight">
+          {s.title}
+        </h2>
+        {s.paragraphs.map((p) => (
+          <p class="text-[#374151] text-[16px] leading-[1.65] mb-4" set:html={p} />
+        ))}
+        {s.list && (
+          <ul class="list-disc pl-6 space-y-2 text-[#374151] text-[16px] leading-[1.65]">
+            {s.list.map((item) => (
+              <li set:html={item} />
+            ))}
+          </ul>
+        )}
+      </div>
+    ))}
+    <p class="text-[#6B7280] text-sm italic mt-12 border-t border-gray-200 pt-6">
+      This content is provided for informational purposes only and does not constitute legal advice.
+    </p>
+  </div>
+</section>

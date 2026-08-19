@@ -1,0 +1,41 @@
+/* Pagesmith platform fonts — served from /_pagesmith/fonts/* via dispatcher. */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/_pagesmith/fonts/roboto-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/_pagesmith/fonts/roboto-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/_pagesmith/fonts/roboto-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/_pagesmith/fonts/pt-serif-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/_pagesmith/fonts/pt-serif-700.woff2') format('woff2');
+}

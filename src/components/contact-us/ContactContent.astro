@@ -1,0 +1,129 @@
+---
+// Contact page: main content with form, info, and offices
+---
+
+<section id="contact-content" class="bg-white py-16 lg:py-20">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+      <!-- Left: heading, contact, testimonial -->
+      <div class="lg:col-span-7">
+        <h2 class="text-[30px] lg:text-[38px] font-bold text-[#1A1A1A] font-serif leading-tight mb-4">
+          Get IRS and/or Utah State Tax Relief Today
+        </h2>
+        <a
+          href="tel:+18016850552"
+          class="inline-block text-[28px] lg:text-[36px] text-[#C1272D] font-serif font-bold mb-6 hover:text-[#8F1A1F] transition"
+        >(801) 685-0552</a>
+
+        <p class="text-[#374151] text-[16px] leading-[1.65] mb-6">
+          We are a full-service tax law firm with more than 30 years experience helping individuals and businesses deal with all of their tax issues. If you are dealing with the IRS or a State taxing authority, our tax attorneys can help you navigate the bureaucratic process, make sure that your rights as a taxpayer are protected and resolve your issues in the best manner possible. Reach out to us for a consultation via the contact form on the right, or reach us during office hours via the contact information below.
+        </p>
+
+        <h3 class="text-[22px] font-bold text-[#1A1A1A] font-serif mt-8 mb-3">We Do Utah State and Federal Tax Preparation</h3>
+        <p class="text-[#374151] text-[16px] leading-[1.65]">
+          Our attorneys are highly experienced and knowledgeable of all areas of <a href="/services/tax-planning" class="text-[#C1272D] underline hover:text-[#8F1A1F]">tax law</a>. They have dealt with nearly every kind of tax situation imaginable, and they will be able to help you navigate the complex world of <a href="/services/tax-planning" class="text-[#C1272D] underline hover:text-[#8F1A1F]">tax law</a> as you try to <a href="/services/individuals-tax-help" class="text-[#C1272D] underline hover:text-[#8F1A1F]">deal with the IRS and other agencies</a>.
+        </p>
+
+        <!-- Testimonial Box -->
+        <div class="bg-[rgba(245,239,230,0.6)] border-l-4 border-[#C1272D] rounded-[8px] p-6 mt-8">
+          <p class="text-[#1A1A1A] font-serif italic text-[18px] mb-2">"Invaluable help!!"</p>
+          <p class="text-[#4B5563] text-[14px] font-medium">— Dusty Rhodes</p>
+        </div>
+
+        <!-- Our Local / We'll Help You Deal section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          <div class="border-l-4 border-[#C1272D] pl-4">
+            <h3 class="text-[20px] font-bold text-[#1A1A1A] font-serif mb-3">Our Local, State, and Federal Tax Lawyers</h3>
+            <p class="text-[#374151] text-[15px] leading-relaxed">
+              We are a full-service <a href="/services/tax-planning" class="text-[#C1272D] underline hover:text-[#8F1A1F]">tax law</a> firm with more than 30 years of experience helping individuals and businesses deal with all of their tax and bankruptcy issues. If you are dealing with the IRS or a State taxing authority, our tax attorneys can help you navigate the bureaucratic process, make sure that your rights as a taxpayer are protected and resolve your issues in the best manner possible.
+            </p>
+          </div>
+          <div class="border-l-4 border-[#C1272D] pl-4">
+            <h3 class="text-[20px] font-bold text-[#1A1A1A] font-serif mb-3">We'll Help You Deal with the IRS</h3>
+            <p class="text-[#374151] text-[15px] leading-relaxed">
+              The IRS can be ruthless when it comes to dealing with those they believe have committed tax fraud or who owe them money. If you have come into conflict with the IRS, you'll want our experienced Salt Lake <a href="/services/tax-planning" class="text-[#C1272D] underline hover:text-[#8F1A1F]">tax law</a> professionals on your side. Our tax attorneys will represent you and help your case reach the most favorable outcome.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="lg:col-span-5">
+        <div class="bg-[#C1272D] rounded-[8px] p-6 lg:p-8 text-white shadow-2xl">
+          <h3 class="text-[24px] font-bold font-serif mb-6 text-white">Send Us Your Message</h3>
+
+          <form action="#" method="POST" class="space-y-4">
+            <div>
+              <label for="name" class="text-xs uppercase font-bold tracking-wider mb-1 block">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Your Name"
+                class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:ring-2 focus:ring-white text-[14px]"
+              />
+            </div>
+
+            <div>
+              <label for="phone" class="text-xs uppercase font-bold tracking-wider mb-1 block">Contact Phone</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Your Best Contact Number"
+                class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:ring-2 focus:ring-white text-[14px]"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="text-xs uppercase font-bold tracking-wider mb-1 block">Email Address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Your Email"
+                class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:ring-2 focus:ring-white text-[14px]"
+              />
+            </div>
+
+            <div>
+              <label for="message" class="text-xs uppercase font-bold tracking-wider mb-1 block">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="How can we help you? Briefly describe your situation."
+                class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:ring-2 focus:ring-white text-[14px]"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-white text-[#C1272D] rounded-[6px] py-3 text-[16px] font-bold hover:bg-gray-100 transition shadow"
+            >Send Us Your Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Office addresses below -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 border-t border-gray-200 pt-12">
+      <div>
+        <h3 class="text-[20px] font-bold text-[#1A1A1A] font-serif mb-2">Salt Lake Location</h3>
+        <p class="text-[#374151] text-[15px] leading-relaxed mb-3">
+          4764 South 900 East<br/>
+          Salt Lake City, UT 84117
+        </p>
+        <a href="tel:+18016850552" class="text-[#C1272D] font-medium hover:text-[#8F1A1F] transition">(801) 685-0552</a>
+      </div>
+      <div>
+        <h3 class="text-[20px] font-bold text-[#1A1A1A] font-serif mb-2">St. George Location</h3>
+        <p class="text-[#374151] text-[15px] leading-relaxed mb-3">
+          162 N. 400 E St., Suite A-204<br/>
+          St. George, UT 84770
+        </p>
+        <a href="tel:+18016850552" class="text-[#C1272D] font-medium hover:text-[#8F1A1F] transition">(801) 685-0552</a>
+      </div>
+    </div>
+  </div>
+</section>

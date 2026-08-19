@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/business-tax-liens/Hero.astro';
+import Content from '../components/business-tax-liens/Content.astro';
+import RelatedServices from '../components/business-tax-liens/RelatedServices.astro';
+import ContactCTA from '../components/business-tax-liens/ContactCTA.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Business Tax Lien Help - Michelle Turpin P.C.",
+  "description": "Resolve IRS federal tax liens against your Utah business. Call our business tax attorneys at Michelle Turpin P.C. today.",
+  "url": `${SITE.url}/business-tax-liens/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Business Tax Lien Help | Utah Tax Attorneys"
+  description="Resolve IRS federal tax liens against your Utah business. Call our business tax attorneys at Michelle Turpin P.C. today."
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <Content />
+  <RelatedServices />
+  <ContactCTA />
+</BaseLayout>

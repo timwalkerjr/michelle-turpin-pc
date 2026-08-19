@@ -1,0 +1,273 @@
+{
+  "success": true,
+  "url": "https://michelleturpin2026.clientsite.agency/",
+  "structured": {
+    "title": "Utah Tax Attorneys | IRS Tax Help | Michelle Turpin P.C.",
+    "description": "Facing IRS or Utah State tax issues or audits? Our Salt Lake City tax attorneys provide expert IRS representation, tax debt relief, and bankruptcy help.",
+    "url": "https://michelleturpin2026.clientsite.agency/",
+    "imageCount": 11,
+    "branding": {
+      "colors": {
+        "primary": "#C1272D",
+        "secondary": "#4B5563",
+        "accent": "#C1272D",
+        "background": "#FFFFFF",
+        "textPrimary": "#1A1A1A",
+        "link": "#374151"
+      },
+      "typography": {
+        "fontFamilies": {
+          "primary": "Roboto",
+          "heading": "PT Serif"
+        },
+        "fontStacks": {
+          "heading": [
+            "PT Serif",
+            "Georgia",
+            "serif"
+          ],
+          "body": [
+            "Roboto",
+            "system-ui",
+            "sans-serif"
+          ],
+          "paragraph": [
+            "PT Serif",
+            "Georgia",
+            "serif"
+          ]
+        },
+        "fontSizes": {
+          "h1": "60px",
+          "h2": "36px",
+          "body": "24px"
+        }
+      },
+      "spacing": {
+        "baseUnit": 4,
+        "borderRadius": "6px"
+      },
+      "logo": "https://cdn.prod.website-files.com/60a2b0ce1efb1732f7f4faa1/60a40858d7dde91631f98db1_logo-michelle-turpin-pc.svg",
+      "favicon": "https://michelleturpin2026.clientsite.agency/vite.svg"
+    },
+    "pages": [
+      {
+        "slug": "index",
+        "path": "/",
+        "title": "Utah Tax Attorneys | IRS Tax Help | Michelle Turpin P.C.",
+        "file": "data/pages/index.md"
+      }
+    ],
+    "availablePages": [
+      {
+        "path": "/about/",
+        "label": "About",
+        "slug": "about",
+        "scraped": false
+      },
+      {
+        "path": "/contact-us/",
+        "label": "Contact Us",
+        "slug": "contact-us",
+        "scraped": false
+      },
+      {
+        "path": "/services/audit-offer-in-compromise-appeal/",
+        "label": "Audit Offer In Compromise Appeal",
+        "slug": "services-audit-offer-in-compromise-appeal",
+        "scraped": false
+      },
+      {
+        "path": "/services/bank-levy-wage-garnishment/",
+        "label": "Bank Levy Wage Garnishment",
+        "slug": "services-bank-levy-wage-garnishment",
+        "scraped": false
+      },
+      {
+        "path": "/services/tax-liens/",
+        "label": "Tax Liens",
+        "slug": "services-tax-liens",
+        "scraped": false
+      },
+      {
+        "path": "/services/individuals-tax-help/",
+        "label": "Individuals Tax Help",
+        "slug": "services-individuals-tax-help",
+        "scraped": false
+      },
+      {
+        "path": "/services/innocent-spouse-relief/",
+        "label": "Innocent Spouse Relief",
+        "slug": "services-innocent-spouse-relief",
+        "scraped": false
+      },
+      {
+        "path": "/services/audit-help/",
+        "label": "Audit Help",
+        "slug": "services-audit-help",
+        "scraped": false
+      },
+      {
+        "path": "/services/property-seizures/",
+        "label": "Property Seizures",
+        "slug": "services-property-seizures",
+        "scraped": false
+      },
+      {
+        "path": "/services/tax-penalty/",
+        "label": "Tax Penalty",
+        "slug": "services-tax-penalty",
+        "scraped": false
+      },
+      {
+        "path": "/services/tax-planning/",
+        "label": "Tax Planning",
+        "slug": "services-tax-planning",
+        "scraped": false
+      },
+      {
+        "path": "/services/unfiled-tax-returns/",
+        "label": "Unfiled Tax Returns",
+        "slug": "services-unfiled-tax-returns",
+        "scraped": false
+      },
+      {
+        "path": "/services/audit-help-for-businesses/",
+        "label": "Audit Help For Businesses",
+        "slug": "services-audit-help-for-businesses",
+        "scraped": false
+      },
+      {
+        "path": "/services/business-audit-appeals/",
+        "label": "Business Audit Appeals",
+        "slug": "services-business-audit-appeals",
+        "scraped": false
+      },
+      {
+        "path": "/services/business-bank-levy/",
+        "label": "Business Bank Levy",
+        "slug": "services-business-bank-levy",
+        "scraped": false
+      },
+      {
+        "path": "/services/business-tax-liens/",
+        "label": "Business Tax Liens",
+        "slug": "services-business-tax-liens",
+        "scraped": false
+      },
+      {
+        "path": "/services/business-tax-penalty/",
+        "label": "Business Tax Penalty",
+        "slug": "services-business-tax-penalty",
+        "scraped": false
+      },
+      {
+        "path": "/services/irs-representation-for-business/",
+        "label": "Irs Representation For Business",
+        "slug": "services-irs-representation-for-business",
+        "scraped": false
+      },
+      {
+        "path": "/services/state-tax-problem/",
+        "label": "State Tax Problem",
+        "slug": "services-state-tax-problem",
+        "scraped": false
+      },
+      {
+        "path": "/services/tax-planning-for-businesses/",
+        "label": "Tax Planning For Businesses",
+        "slug": "services-tax-planning-for-businesses",
+        "scraped": false
+      },
+      {
+        "path": "/services/trust-fund-recovery-penalty/",
+        "label": "Trust Fund Recovery Penalty",
+        "slug": "services-trust-fund-recovery-penalty",
+        "scraped": false
+      },
+      {
+        "path": "/services/collection-appeals/",
+        "label": "Collection Appeals",
+        "slug": "services-collection-appeals",
+        "scraped": false
+      },
+      {
+        "path": "/services/corporate-restructuring/",
+        "label": "Corporate Restructuring",
+        "slug": "services-corporate-restructuring",
+        "scraped": false
+      },
+      {
+        "path": "/services/installment-agreements/",
+        "label": "Installment Agreements",
+        "slug": "services-installment-agreements",
+        "scraped": false
+      },
+      {
+        "path": "/services/offer-in-compromise-with-utah-tax-attorney/",
+        "label": "Offer In Compromise With Utah Tax Attorney",
+        "slug": "services-offer-in-compromise-with-utah-tax-attorney",
+        "scraped": false
+      },
+      {
+        "path": "/services/tax-appeals/",
+        "label": "Tax Appeals",
+        "slug": "services-tax-appeals",
+        "scraped": false
+      },
+      {
+        "path": "/services/payroll-taxes/",
+        "label": "Payroll Taxes",
+        "slug": "services-payroll-taxes",
+        "scraped": false
+      },
+      {
+        "path": "/services/chapter-11-small-business-bankruptcy/",
+        "label": "Chapter 11 Small Business Bankruptcy",
+        "slug": "services-chapter-11-small-business-bankruptcy",
+        "scraped": false
+      },
+      {
+        "path": "/services/chapter-13-bankruptcy/",
+        "label": "Chapter 13 Bankruptcy",
+        "slug": "services-chapter-13-bankruptcy",
+        "scraped": false
+      },
+      {
+        "path": "/services/chapter-7-bankruptcy/",
+        "label": "Chapter 7 Bankruptcy",
+        "slug": "services-chapter-7-bankruptcy",
+        "scraped": false
+      },
+      {
+        "path": "/reviews/",
+        "label": "Reviews",
+        "slug": "reviews",
+        "scraped": false
+      },
+      {
+        "path": "/tax-planning/",
+        "label": "Tax Planning",
+        "slug": "tax-planning",
+        "scraped": false
+      },
+      {
+        "path": "/articles/",
+        "label": "Articles",
+        "slug": "articles",
+        "scraped": false
+      }
+    ]
+  },
+  "metadata": {
+    "scraper": "firecrawl-crawl-endpoint",
+    "timestamp": "2026-08-18T22:16:55.525Z",
+    "homepageContentLength": 55303,
+    "imageCount": 11,
+    "hasBranding": true,
+    "hasElementorEnrichment": false,
+    "hasVisibleIr": false,
+    "pagesDiscovered": 33,
+    "pagesScraped": 1
+  }
+}

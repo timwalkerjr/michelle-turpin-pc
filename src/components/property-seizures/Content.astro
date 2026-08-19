@@ -1,0 +1,74 @@
+---
+const sections = [
+  {
+    title: 'Property Seizures',
+    paragraphs: [
+      `The collection of unpaid taxes usually begins with letters from the IRS and then possibly a visit from an IRS Revenue Officer. The IRS Revenue Officer has the authority to take your personal property and sell it to pay the tax due.`,
+      `The U.S. Department of the Treasury, Inspector General for Tax Administration determined in its <em>Fiscal Year 2013 Review of Compliance With Legal Guidelines When Conducting Seizures of Taxpayers' Property</em> that <strong>30% of the seizures reviewed in 2012 did not follow the legal or internal IRS property seizure requirements.</strong>`
+    ]
+  },
+  {
+    title: 'What the IRS Can Seize',
+    paragraphs: [
+      `The IRS has broad authority to seize many types of property, including:`
+    ],
+    list: [
+      'Real estate, including your home',
+      'Business assets and equipment',
+      'Vehicles',
+      'Bank accounts and investment accounts',
+      'Retirement accounts (in limited circumstances)',
+      'Business inventory and receivables'
+    ]
+  },
+  {
+    title: 'Protecting Your Property',
+    paragraphs: [
+      `We often find that property seizures are the result of poor or no communication with the IRS. We believe it is critical to have a CPA, Attorney, or Enrolled Agent represent your business to:`
+    ],
+    list: [
+      'Avoid property seizures in the first place',
+      'Ensure the IRS has complied with the laws and rules governing property seizures',
+      'Challenge improperly conducted seizures',
+      'Negotiate resolution arrangements such as installment agreements or offers in compromise that halt further collection action'
+    ]
+  },
+  {
+    title: 'Your Rights When Facing Seizure',
+    paragraphs: [
+      `Before the IRS can seize property, they must meet several legal requirements, including providing advance notice, allowing time to resolve the debt, and following strict procedures. Any failure to follow these requirements can be challenged. Our experienced attorneys know exactly what the IRS is required to do — and what they cannot do.`
+    ]
+  },
+  {
+    title: 'Act Immediately',
+    paragraphs: [
+      `If you have received a Notice of Intent to Levy or an IRS Revenue Officer has contacted you about property seizure, <strong>call us immediately at (801) 685-0552</strong>. Time is critical — the sooner you act, the more options you have to protect your property.`
+    ]
+  }
+];
+---
+
+<section class="bg-white py-16 lg:py-20">
+  <div class="max-w-[900px] mx-auto px-4">
+    {sections.map((s) => (
+      <div class="mb-10 last:mb-0">
+        <h2 class="text-[28px] lg:text-[30px] font-bold text-[#1A1A1A] font-serif mb-4 leading-tight">
+          {s.title}
+        </h2>
+        {s.paragraphs.map((p) => (
+          <p class="text-[#374151] text-[16px] leading-[1.65] mb-4" set:html={p} />
+        ))}
+        {s.list && (
+          <ul class="list-disc pl-6 space-y-2 text-[#374151] text-[16px] leading-[1.65]">
+            {s.list.map((item) => (
+              <li set:html={item} />
+            ))}
+          </ul>
+        )}
+      </div>
+    ))}
+    <p class="text-[#6B7280] text-sm italic mt-12 border-t border-gray-200 pt-6">
+      This content is provided for informational purposes only and does not constitute legal advice.
+    </p>
+  </div>
+</section>

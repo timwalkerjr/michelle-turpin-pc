@@ -1,0 +1,75 @@
+---
+const sections = [
+  {
+    title: 'Utah Tax Planning Attorneys',
+    paragraphs: [
+      `Our full-service tax law firm can help you reduce taxes and audit risks. Strategic tax planning is one of the most valuable services we offer — it allows you to take advantage of all legally available deductions, credits, and timing strategies before you face a problem.`
+    ]
+  },
+  {
+    title: 'Why Tax Planning Matters',
+    paragraphs: [
+      `Many taxpayers wait until they receive an IRS notice before engaging a tax attorney. But proactive tax planning can:`
+    ],
+    list: [
+      'Significantly reduce your current and future tax liability',
+      'Minimize the risk of triggering an audit',
+      'Ensure you are taking full advantage of all legitimate deductions',
+      'Help you plan the timing of income and expenses for maximum benefit',
+      'Protect your assets and prepare for business transitions'
+    ]
+  },
+  {
+    title: 'Individual Tax Planning Services',
+    paragraphs: [
+      `We work with individual taxpayers to develop customized plans that address:`
+    ],
+    list: [
+      'Income timing strategies',
+      'Investment tax planning, including capital gains management',
+      'Retirement planning and IRA strategies',
+      'Real estate tax planning',
+      'Estate and gift tax planning',
+      'Charitable contribution strategies'
+    ]
+  },
+  {
+    title: 'Business Tax Planning Services',
+    paragraphs: [
+      `For business owners, we address entity selection, compensation strategies, retirement plan design, and succession planning to minimize tax burden at every stage of your business lifecycle.`
+    ]
+  },
+  {
+    title: 'Year-Round Tax Planning',
+    paragraphs: [
+      `Effective tax planning is not just an annual event — it requires year-round attention to changing circumstances, new laws, and opportunities. Our team stays current with tax law developments and proactively advises clients on strategies that can benefit them.`,
+      `Call Michelle Turpin P.C. today at <strong>(801) 685-0552</strong> to discuss how proactive tax planning can benefit your situation.`
+    ]
+  }
+];
+---
+
+<section class="bg-white py-16 lg:py-20">
+  <div class="max-w-[900px] mx-auto px-4">
+    {sections.map((s) => (
+      <div class="mb-10 last:mb-0">
+        <h2 class="text-[28px] lg:text-[30px] font-bold text-[#1A1A1A] font-serif mb-4 leading-tight">
+          {s.title}
+        </h2>
+        {s.paragraphs.map((p) => (
+          <p class="text-[#374151] text-[16px] leading-[1.65] mb-4" set:html={p} />
+        ))}
+        {s.list && (
+          <ul class="list-disc pl-6 space-y-2 text-[#374151] text-[16px] leading-[1.65]">
+            {s.list.map((item) => (
+              <li set:html={item} />
+            ))}
+          </ul>
+        )}
+      </div>
+    ))}
+    <p class="text-[#6B7280] text-sm italic mt-12 border-t border-gray-200 pt-6">
+      This content is provided for informational purposes only and does not constitute legal advice.
+    </p>
+  </div>
+</section>

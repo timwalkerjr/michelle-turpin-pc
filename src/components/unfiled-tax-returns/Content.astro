@@ -1,0 +1,80 @@
+---
+const sections = [
+  {
+    title: 'Unfiled Utah and/or Federal Tax Returns',
+    paragraphs: [
+      `Failure to file your tax returns may be construed as a criminal act by the IRS. If you have unfiled returns for multiple years, it is critical to address this situation promptly with professional legal guidance.`
+    ]
+  },
+  {
+    title: 'The Risks of Unfiled Tax Returns',
+    paragraphs: [
+      `Unfiled returns create serious legal and financial risks:`
+    ],
+    list: [
+      '<strong>Criminal prosecution:</strong> Willful failure to file is a federal crime punishable by up to one year in prison per year not filed.',
+      '<strong>Substitute for Return (SFR):</strong> The IRS may file a return on your behalf using only income information it has, with none of your deductions or credits, resulting in a much higher tax bill.',
+      '<strong>Unlimited statute of limitations:</strong> The IRS has unlimited time to assess tax for years you never filed.',
+      '<strong>Mounting penalties:</strong> Failure to file penalties accrue at 5% per month on the unpaid balance, up to 25%.',
+      '<strong>Collection actions:</strong> Once the IRS assesses tax, they can immediately begin collection actions including levies and liens.'
+    ]
+  },
+  {
+    title: 'Why People Don\'t File',
+    paragraphs: [
+      `There are many reasons taxpayers fall behind on filing:`
+    ],
+    list: [
+      'Fear of a large tax bill they cannot pay',
+      'Missing records or documentation',
+      'Personal hardship, illness, or life crisis',
+      'Disagreement with the IRS about what is owed',
+      'Simply falling behind and not knowing how to catch up'
+    ]
+  },
+  {
+    title: 'How We Help',
+    paragraphs: [
+      `No matter the reason, the problem only gets worse with time. <strong>The IRS is actually more willing to work with taxpayers who come forward voluntarily</strong> than those who are caught.`,
+      `Our attorneys guide clients through the process of bringing their returns current in a way that minimizes penalties and positions them for the best available resolution options. We:`
+    ],
+    list: [
+      'Help reconstruct records when documentation is missing',
+      'Prepare and file multiple years of returns strategically',
+      'Negotiate with the IRS regarding prior Substitute for Returns filed by the IRS',
+      'Immediately begin working on resolution of any balances owed'
+    ]
+  },
+  {
+    title: 'Take Action Now',
+    paragraphs: [
+      `Call Michelle Turpin P.C. today at <strong>(801) 685-0552</strong> for a confidential consultation. The sooner you act, the better your options.`
+    ]
+  }
+];
+---
+
+<section class="bg-white py-16 lg:py-20">
+  <div class="max-w-[900px] mx-auto px-4">
+    {sections.map((s) => (
+      <div class="mb-10 last:mb-0">
+        <h2 class="text-[28px] lg:text-[30px] font-bold text-[#1A1A1A] font-serif mb-4 leading-tight">
+          {s.title}
+        </h2>
+        {s.paragraphs.map((p) => (
+          <p class="text-[#374151] text-[16px] leading-[1.65] mb-4" set:html={p} />
+        ))}
+        {s.list && (
+          <ul class="list-disc pl-6 space-y-2 text-[#374151] text-[16px] leading-[1.65]">
+            {s.list.map((item) => (
+              <li set:html={item} />
+            ))}
+          </ul>
+        )}
+      </div>
+    ))}
+    <p class="text-[#6B7280] text-sm italic mt-12 border-t border-gray-200 pt-6">
+      This content is provided for informational purposes only and does not constitute legal advice.
+    </p>
+  </div>
+</section>

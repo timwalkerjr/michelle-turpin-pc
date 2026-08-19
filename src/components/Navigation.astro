@@ -1,0 +1,537 @@
+---
+import { SITE } from '@/config/site';
+---
+
+<header id="navbar" class="sticky top-0 z-50 shadow-sm bg-white" data-ps="src/components/Navigation.astro:header">
+  <!-- Top Utility Bar -->
+  <div class="bg-[#1A1A1A] text-white py-2 border-b border-white/10" data-ps="src/components/Navigation.astro:top-bar">
+    <div class="max-w-[1400px] mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-[14px]" data-ps="src/components/Navigation.astro:lxl1n0">
+      <p class="font-normal text-gray-300 text-center sm:text-left m-0" data-ps="src/components/Navigation.astro:rmn2g">Utah Tax & Bankruptcy Attorneys</p>
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3" data-ps="src/components/Navigation.astro:lxl1n1">
+        <a
+          href={SITE.phoneHref}
+          class="bg-[#C1272D] text-white rounded-[6px] px-3.5 py-1.5 text-[14px] font-medium inline-flex items-center gap-1.5 hover:bg-[#8F1A1F] transition-colors no-underline"
+          data-ps="src/components/Navigation.astro:phone-cta"
+        >
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.48.59 3.68a1 1 0 01-.24 1.02l-2.23 2.09z" />
+          </svg>
+          Contact Us (801) 685-0552
+        </a>
+        <a
+          href="https://app.clio.com/link/v2/2/2/dcfb0459e2f227ae7420ea26db5d4146?hmac=1e24259dbcd7ddcc848df1988f4ce4b2246813684f43d576e8c9cdb047b759ba"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="border border-white/40 text-white rounded-[6px] px-3 py-1.5 text-[14px] font-normal hover:bg-white/10 transition-colors no-underline"
+         data-ps="src/components/Navigation.astro:7vkjo1">
+          Pay Invoice
+        </a>
+        <a
+          href="https://app.clio.com/link/v2/2/2/baf43aa226356a2690df4cb882c6de97?hmac=ce7b193171da9a4cb878be9514b6b9c394e26b67f9081cb4d13212e557297f36"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="border border-white/40 text-white rounded-[6px] px-3 py-1.5 text-[14px] font-normal hover:bg-white/10 transition-colors no-underline"
+         data-ps="src/components/Navigation.astro:7vkjo2">
+          Pay Retainer
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Nav Bar -->
+  <nav class="bg-white py-3.5 border-b border-gray-100" data-ps="src/components/Navigation.astro:main-nav">
+    <div class="max-w-[1400px] mx-auto px-4 flex justify-between items-center" data-ps="src/components/Navigation.astro:lxl1n2">
+      <a href="/" class="block shrink-0" aria-label="Michelle Turpin P.C. Homepage" data-ps="src/components/Navigation.astro:logo-link">
+        <img
+          src="https://pagesmith-cdn.com/84515c4a/images/60a40858d7dde91631f98db1_logo-michelle-turpin-pc.svg"
+          alt="Michelle Turpin P.C. -- Utah Tax and Bankruptcy Attorneys"
+          class="w-[284px] h-[40px] max-w-full object-contain"
+          width="284"
+          height="40" data-ps="src/components/Navigation.astro:jfbxbj" />
+      </a>
+
+      <!-- Desktop Links with Mega Menus -->
+      <div class="hidden lg:flex items-center gap-3 xl:gap-5" data-ps="src/components/Navigation.astro:desktop-links">
+        <a href="/" class="text-[15px] font-medium text-[#C1272D] no-underline hover:text-[#C1272D] transition-colors py-2" data-ps="src/components/Navigation.astro:7vkjo3">Home</a>
+
+        <!-- 1. Individual Taxes Mega Menu -->
+        <div class="relative group" data-ps="src/components/Navigation.astro:lxl1n3">
+          <a href="/#services" class="text-[15px] font-medium text-[#1A1A1A] hover:text-[#C1272D] transition-colors inline-flex items-center gap-1.5 no-underline py-2" data-ps="src/components/Navigation.astro:7vkjo4">
+            Individual Taxes
+            <svg class="w-4 h-4 text-gray-500 group-hover:text-[#C1272D] transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <!-- Mega Menu Dropdown -->
+          <div class="absolute top-full left-1/2 -translate-x-1/3 hidden group-hover:block bg-white shadow-2xl border border-gray-200 rounded-[10px] p-6 w-screen max-w-[680px] z-50 transition-all" data-ps="src/components/Navigation.astro:ue04xr">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-gray-100" data-ps="src/components/Navigation.astro:ue04xq">
+              <div data-ps="src/components/Navigation.astro:ue04x4">
+                <h4 class="text-[16px] font-bold text-[#1A1A1A] font-serif m-0" data-ps="src/components/Navigation.astro:91xsh3">Individual Tax Services</h4>
+                <p class="text-xs text-gray-500 m-0" data-ps="src/components/Navigation.astro:nshv5r">Comprehensive relief, audit defense, and resolution for individuals.</p>
+              </div>
+              <a href="/#services" class="text-xs font-semibold text-[#C1272D] hover:underline flex items-center gap-1 shrink-0" data-ps="src/components/Navigation.astro:v3cvc5">
+                View all individual services &rarr;
+              </a>
+            </div>
+            <div class="grid grid-cols-2 gap-x-6 gap-y-3" data-ps="src/components/Navigation.astro:ue04x3">
+              <a href="/services/audit-offer-in-compromise-appeal" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvc6">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:ue04x2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:ue04x1">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors" data-ps="src/components/Navigation.astro:ue04x0">Audit & OIC Appeals</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:ue04wz">Appeal IRS audit or OIC rejection</div>
+                </div>
+              </a>
+
+              <a href="/services/bank-levy-wage-garnishment" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvc7">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:ue04wy">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:ue04wx">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors" data-ps="src/components/Navigation.astro:ue04ww">Bank Levy & Wage Garnishment</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:ue04wv">Emergency release and defense</div>
+                </div>
+              </a>
+
+              <a href="/services/tax-liens" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvc8">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1fy">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1fz">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors" data-ps="src/components/Navigation.astro:lxl1g0">Federal & State Tax Liens</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1g1">Lien subordination and releases</div>
+                </div>
+              </a>
+
+              <a href="/services/individuals-tax-help" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvcu">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1g2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1g3">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors" data-ps="src/components/Navigation.astro:lxl1g4">Personal Tax Representation</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1g5">Individual IRS & state tax guidance</div>
+                </div>
+              </a>
+
+              <a href="/services/innocent-spouse-relief" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvcv">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1g6">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1g7">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors" data-ps="src/components/Navigation.astro:lxl1gt">Innocent Spouse Relief</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1gu">Protection from spouse tax liabilities</div>
+                </div>
+              </a>
+
+              <a href="/services/audit-help" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvcw">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1gv">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1gw">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors" data-ps="src/components/Navigation.astro:lxl1gx">IRS & State Audit Help</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1gy">Direct representation during audits</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Business Taxes Mega Menu -->
+        <div class="relative group" data-ps="src/components/Navigation.astro:gqvsd6">
+          <a href="/#services" class="text-[15px] font-medium text-[#1A1A1A] hover:text-[#C1272D] transition-colors inline-flex items-center gap-1.5 no-underline py-2" data-ps="src/components/Navigation.astro:7vkjpl">
+            Business Taxes
+            <svg class="w-4 h-4 text-gray-500 group-hover:text-[#C1272D] transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <!-- Mega Menu Dropdown -->
+          <div class="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block bg-white shadow-2xl border border-gray-200 rounded-[10px] p-6 w-screen max-w-[860px] z-50 transition-all" data-ps="src/components/Navigation.astro:lxl1gz">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-gray-100" data-ps="src/components/Navigation.astro:lxl1h0">
+              <div data-ps="src/components/Navigation.astro:lxl1h1">
+                <h4 class="text-[16px] font-bold text-[#1A1A1A] font-serif m-0" data-ps="src/components/Navigation.astro:91xsh4">Business Tax Solutions</h4>
+                <p class="text-xs text-gray-500 m-0" data-ps="src/components/Navigation.astro:nshv5s">Protecting Utah companies from IRS audits, payroll levies, and personal liability.</p>
+              </div>
+              <a href="/contact-us" class="text-xs font-semibold text-[#C1272D] hover:underline flex items-center gap-1 shrink-0" data-ps="src/components/Navigation.astro:v3cvcx">
+                Schedule Business Review &rarr;
+              </a>
+            </div>
+            <div class="grid grid-cols-3 gap-x-4 gap-y-3" data-ps="src/components/Navigation.astro:lxl1h2">
+              <a href="/audit-help-for-businesses" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvcy">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1ho">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1hp">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1hq">Business Audit Help</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1hr">IRS corporate audits</div>
+                </div>
+              </a>
+
+              <a href="/business-audit-appeals" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvcz">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1hs">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1ht">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1hu">Audit Appeals</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1hv">Disputing findings</div>
+                </div>
+              </a>
+
+              <a href="/business-bank-levy" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvd0">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1hw">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1hx">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1ij">Business Bank Levy</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1ik">Account freezes</div>
+                </div>
+              </a>
+
+              <a href="/business-tax-liens" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvd1">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1il">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1im">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1in">Business Tax Liens</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1io">Asset lien relief</div>
+                </div>
+              </a>
+
+              <a href="/business-tax-penalty" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvd2">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1ip">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1iq">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1ir">Business Penalties</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1is">Penalty abatement</div>
+                </div>
+              </a>
+
+              <a href="/irs-representation-for-business" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvd3">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1je">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1jf">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1jg">IRS Representation</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1jh">Direct attorney buffer</div>
+                </div>
+              </a>
+
+              <a href="/services-state-tax-problem" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvdp">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1ji">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1jj">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1jk">State Tax Problems</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1jl">Utah Tax Commission</div>
+                </div>
+              </a>
+
+              <a href="/services-tax-planning-for-businesses" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvdq">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1jm">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1jn">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1k9">Tax Planning</div>
+                  <div class="text-[11px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1ka">Strategic tax reduction</div>
+                </div>
+              </a>
+
+              <a href="/services-trust-fund-recovery-penalty" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvdr">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1kb">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1kc">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1kd">Trust Fund Penalty</div>
+                  <div class="text-[12px] text-gray-500 leading-snug" data-ps="src/components/Navigation.astro:lxl1ke">Personal liability defense</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Settlement Options Mega Menu -->
+        <div class="relative group" data-ps="src/components/Navigation.astro:gqvsd8">
+          <a href="/#services" class="text-[15px] font-medium text-[#1A1A1A] hover:text-[#C1272D] transition-colors inline-flex items-center gap-1.5 no-underline py-2" data-ps="src/components/Navigation.astro:7vkjqg">
+            Settlement Options
+            <svg class="w-4 h-4 text-gray-500 group-hover:text-[#C1272D] transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <!-- Dropdown -->
+          <div class="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block bg-white shadow-2xl border border-gray-200 rounded-[10px] p-5 w-[480px] z-50 transition-all" data-ps="src/components/Navigation.astro:lxl1kf">
+            <div class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3 px-2" data-ps="src/components/Navigation.astro:lxl1kg">IRS & State Resolution Programs</div>
+            <div class="flex flex-col gap-1.5" data-ps="src/components/Navigation.astro:lxl1kh">
+              <a href="/services/installment-agreements" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvds">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1ki">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1l4">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1l5">Installment Agreements</div>
+                  <div class="text-[12px] text-gray-500" data-ps="src/components/Navigation.astro:lxl1l6">Structured affordable monthly plans</div>
+                </div>
+              </a>
+
+              <a href="/services/offer-in-compromise-with-utah-tax-attorney" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvdt">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1l7">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1l8">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1l9">Offer in Compromise (OIC)</div>
+                  <div class="text-[12px] text-gray-500" data-ps="src/components/Navigation.astro:lxl1la">Settle your debt for less than you owe</div>
+                </div>
+              </a>
+
+              <a href="/services/tax-appeals" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvdu">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1lb">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1lc">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1ld">Tax Appeals</div>
+                  <div class="text-[12px] text-gray-500" data-ps="src/components/Navigation.astro:lxl1lz">Formal administrative appeal hearings</div>
+                </div>
+              </a>
+
+              <a href="/services/payroll-taxes" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvdv">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1m0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1m1">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1m2">Trust Fund Taxes (Payroll & Sales)</div>
+                  <div class="text-[12px] text-gray-500" data-ps="src/components/Navigation.astro:lxl1m3">Employment tax settlement</div>
+                </div>
+              </a>
+
+              <a href="/services-collection-appeals" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvdw">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1m4">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1m5">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1m6">Collection Due Process Appeals</div>
+                  <div class="text-[12px] text-gray-500" data-ps="src/components/Navigation.astro:lxl1m7">Stop levies with formal CDP appeals</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Bankruptcy Dropdown -->
+        <div class="relative group" data-ps="src/components/Navigation.astro:gqvsda">
+          <a href="/#services" class="text-[15px] font-medium text-[#1A1A1A] hover:text-[#C1272D] transition-colors inline-flex items-center gap-1.5 no-underline py-2" data-ps="src/components/Navigation.astro:7vkjqn">
+            Bankruptcy
+            <svg class="w-4 h-4 text-gray-500 group-hover:text-[#C1272D] transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <div class="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block bg-white shadow-2xl border border-gray-200 rounded-[10px] p-5 w-[440px] z-50 transition-all" data-ps="src/components/Navigation.astro:lxl1m8">
+            <div class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3 px-2" data-ps="src/components/Navigation.astro:lxl1mu">Discharge Taxes in Bankruptcy</div>
+            <div class="flex flex-col gap-1.5" data-ps="src/components/Navigation.astro:lxl1mv">
+              <a href="/services/chapter-11-small-business-bankruptcy" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvdx">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1mw">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1mx">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1my">Chapter 11 Bankruptcy</div>
+                  <div class="text-[12px] text-gray-500" data-ps="src/components/Navigation.astro:lxl1mz">Small business restructuring</div>
+                </div>
+              </a>
+
+              <a href="/services/chapter-13-bankruptcy" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvdy">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:lxl1n0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:lxl1n1">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] whitespace-nowrap" data-ps="src/components/Navigation.astro:lxl1n2">Chapter 13 Bankruptcy</div>
+                  <div class="text-[12px] text-gray-500" data-ps="src/components/Navigation.astro:lxl1n3">Wage earner repayment plans</div>
+                </div>
+              </a>
+
+              <a href="/services/chapter-7-bankruptcy" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline" data-ps="src/components/Navigation.astro:v3cvek">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors" data-ps="src/components/Navigation.astro:gqvsd5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                </div>
+                <div data-ps="src/components/Navigation.astro:gqvsd6">
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] whitespace-nowrap" data-ps="src/components/Navigation.astro:gqvsd7">Chapter 7 Bankruptcy</div>
+                  <div class="text-[12px] text-gray-500" data-ps="src/components/Navigation.astro:gqvsd8">Complete debt discharge</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. More Dropdown -->
+        <div class="relative group" data-ps="src/components/Navigation.astro:gqvsdc">
+          <a href="/#controversy-law" class="text-[15px] font-medium text-[#1A1A1A] hover:text-[#C1272D] transition-colors inline-flex items-center gap-1.5 no-underline py-2" data-ps="src/components/Navigation.astro:7vkjrc">
+            More
+            <svg class="w-4 h-4 text-gray-500 group-hover:text-[#C1272D] transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <div class="absolute top-full right-0 hidden group-hover:block bg-white shadow-xl border border-gray-100 rounded-[8px] p-2 w-52 z-50" data-ps="src/components/Navigation.astro:gqvsd9">
+            <a href="/reviews" class="flex items-center gap-2.5 px-3 py-2 rounded-md text-sm text-[#1A1A1A] hover:bg-[#F9F6F0] hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvel">
+              <svg class="w-4 h-4 text-[#C1272D]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              Reviews & Results
+            </a>
+            <a href="/tax-planning" class="flex items-center gap-2.5 px-3 py-2 rounded-md text-sm text-[#1A1A1A] hover:bg-[#F9F6F0] hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvem">
+              <svg class="w-4 h-4 text-[#C1272D]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+              Tax Planning
+            </a>
+            <a href="/articles" class="flex items-center gap-2.5 px-3 py-2 rounded-md text-sm text-[#1A1A1A] hover:bg-[#F9F6F0] hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cven">
+              <svg class="w-4 h-4 text-[#C1272D]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
+              Articles & Guides
+            </a>
+          </div>
+        </div>
+
+        <a href="/about" class="text-[15px] font-medium text-[#1A1A1A] no-underline hover:text-[#C1272D] transition-colors py-2" data-ps="src/components/Navigation.astro:7vkjrg">About Us</a>
+        <a href="/contact-us" class="text-[15px] font-medium text-[#1A1A1A] no-underline hover:text-[#C1272D] transition-colors py-2" data-ps="src/components/Navigation.astro:7vkjrh">Contact Us</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-button"
+        type="button"
+        class="lg:hidden p-2 text-[#1A1A1A] hover:text-[#C1272D] transition-colors focus:outline-none"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-ps="src/components/Navigation.astro:mobile-btn"
+      >
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Dropdown with Collapsible Mega Categories -->
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden bg-white border-t border-gray-200 max-h-[85vh] overflow-y-auto px-5 py-4 shadow-xl"
+    role="navigation"
+    aria-label="Mobile navigation"
+    data-ps="src/components/Navigation.astro:mobile-menu"
+  >
+    <div class="flex flex-col gap-2" data-ps="src/components/Navigation.astro:gqvsde">
+      <a href="/" class="text-[16px] font-bold text-[#C1272D] py-2 border-b border-gray-100 no-underline" data-ps="src/components/Navigation.astro:7vkjri">Home</a>
+
+      <!-- Individual Taxes Accordion -->
+      <details class="group py-1 border-b border-gray-100">
+        <summary class="flex items-center justify-between py-2 text-[16px] font-semibold text-[#1A1A1A] cursor-pointer list-none">
+          <span data-ps="src/components/Navigation.astro:wxhee7">Individual Taxes</span>
+          <svg class="w-4 h-4 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="pl-3 py-2 space-y-2 text-sm bg-gray-50 rounded-lg my-1" data-ps="src/components/Navigation.astro:gqvsda">
+          <a href="/services/audit-offer-in-compromise-appeal" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cveo">Audit/OIC Appeals</a>
+          <a href="/services/bank-levy-wage-garnishment" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvep">Bank Levy & Wage Garnishment</a>
+          <a href="/services/tax-liens" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cveq">Federal and State Tax Liens</a>
+          <a href="/services/individuals-tax-help" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cver">Individuals Tax Help</a>
+          <a href="/services/innocent-spouse-relief" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cves">Innocent Spouse Relief</a>
+          <a href="/services/audit-help" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvet">IRS and State Audit Help</a>
+        </div>
+      </details>
+
+      <!-- Business Taxes Accordion -->
+      <details class="group py-1 border-b border-gray-100">
+        <summary class="flex items-center justify-between py-2 text-[16px] font-semibold text-[#1A1A1A] cursor-pointer list-none">
+          <span data-ps="src/components/Navigation.astro:wxhee6">Business Taxes</span>
+          <svg class="w-4 h-4 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="pl-3 py-2 space-y-2 text-sm bg-gray-50 rounded-lg my-1" data-ps="src/components/Navigation.astro:gqvsdb">
+          <a href="/audit-help-for-businesses" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvff">Audit Help for Businesses</a>
+          <a href="/business-audit-appeals" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvfg">Business Audit Appeals</a>
+          <a href="/business-bank-levy" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvfh">Business Bank Levy</a>
+          <a href="/business-tax-liens" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvfi">Business Tax Liens</a>
+          <a href="/business-tax-penalty" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvfj">Business Tax Penalty</a>
+          <a href="/irs-representation-for-business" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvfk">IRS Representation</a>
+          <a href="/services-state-tax-problem" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvfl">State Tax Problems</a>
+          <a href="/services-tax-planning-for-businesses" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvfm">Business Tax Planning</a>
+          <a href="/services-trust-fund-recovery-penalty" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvfn">Trust Fund Penalty (TFRP)</a>
+        </div>
+      </details>
+
+      <!-- Settlement Options Accordion -->
+      <details class="group py-1 border-b border-gray-100">
+        <summary class="flex items-center justify-between py-2 text-[16px] font-semibold text-[#1A1A1A] cursor-pointer list-none">
+          <span data-ps="src/components/Navigation.astro:wxhee5">Settlement Options</span>
+          <svg class="w-4 h-4 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="pl-3 py-2 space-y-2 text-sm bg-gray-50 rounded-lg my-1" data-ps="src/components/Navigation.astro:gqvsdc">
+          <a href="/services/installment-agreements" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvfo">Installment Agreements</a>
+          <a href="/services/offer-in-compromise-with-utah-tax-attorney" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvga">Offer in Compromise</a>
+          <a href="/services/tax-appeals" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvgb">Tax Appeals</a>
+          <a href="/services/payroll-taxes" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvgc">Trust Fund / Payroll Taxes</a>
+          <a href="/services-collection-appeals" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvgd">Collection Appeals</a>
+        </div>
+      </details>
+
+      <!-- Bankruptcy Accordion -->
+      <details class="group py-1 border-b border-gray-100">
+        <summary class="flex items-center justify-between py-2 text-[16px] font-semibold text-[#1A1A1A] cursor-pointer list-none">
+          <span data-ps="src/components/Navigation.astro:wxhee4">Bankruptcy</span>
+          <svg class="w-4 h-4 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="pl-3 py-2 space-y-2 text-sm bg-gray-50 rounded-lg my-1" data-ps="src/components/Navigation.astro:gqvsdd">
+          <a href="/services/chapter-11-small-business-bankruptcy" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvge">Chapter 11 Small Business</a>
+          <a href="/services/chapter-13-bankruptcy" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvgf">Chapter 13 Bankruptcy</a>
+          <a href="/services/chapter-7-bankruptcy" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline" data-ps="src/components/Navigation.astro:v3cvgg">Chapter 7 Bankruptcy</a>
+        </div>
+      </details>
+
+      <a href="/reviews" class="text-[16px] font-medium text-[#1A1A1A] py-2 border-b border-gray-100 no-underline hover:text-[#C1272D]" data-ps="src/components/Navigation.astro:v3cvgh">Reviews</a>
+      <a href="/tax-planning" class="text-[16px] font-medium text-[#1A1A1A] py-2 border-b border-gray-100 no-underline hover:text-[#C1272D]" data-ps="src/components/Navigation.astro:v3cvgi">Tax Planning</a>
+      <a href="/articles" class="text-[16px] font-medium text-[#1A1A1A] py-2 border-b border-gray-100 no-underline hover:text-[#C1272D]" data-ps="src/components/Navigation.astro:v3cvgj">Articles</a>
+      <a href="/about" class="text-[16px] font-medium text-[#1A1A1A] py-2 border-b border-gray-100 no-underline hover:text-[#C1272D]" data-ps="src/components/Navigation.astro:7vkjs8">About Us</a>
+      <a href="/contact-us" class="text-[16px] font-medium text-[#1A1A1A] py-2 no-underline hover:text-[#C1272D]" data-ps="src/components/Navigation.astro:7vkjs9">Contact Us</a>
+
+      <div class="pt-4 border-t border-gray-200 mt-2" data-ps="src/components/Navigation.astro:gqvsde">
+        <a href={SITE.phoneHref} class="block text-center bg-[#C1272D] text-white py-3 rounded-md font-semibold no-underline" data-ps="src/components/Navigation.astro:kd8n5q">
+          Call (801) 685-0552
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIconOpen = document.getElementById('menu-icon-open');
+  const menuIconClose = document.getElementById('menu-icon-close');
+
+  function toggleMenu() {
+    const isOpen = !mobileMenu?.classList.contains('hidden');
+    if (isOpen) {
+      mobileMenu?.classList.add('hidden');
+      menuIconOpen?.classList.remove('hidden');
+      menuIconClose?.classList.add('hidden');
+      mobileMenuButton?.setAttribute('aria-expanded', 'false');
+    } else {
+      mobileMenu?.classList.remove('hidden');
+      menuIconOpen?.classList.add('hidden');
+      menuIconClose?.classList.remove('hidden');
+      mobileMenuButton?.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  mobileMenuButton?.addEventListener('click', toggleMenu);
+  mobileMenu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+      menuIconOpen?.classList.remove('hidden');
+      menuIconClose?.classList.add('hidden');
+      mobileMenuButton?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

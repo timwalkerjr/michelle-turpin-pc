@@ -1,0 +1,33 @@
+---
+const offices = [
+  {
+    city: "Salt Lake City",
+    address: "6995 Union Park Center, Suite 100",
+    region: "Cottonwood Heights, UT 84047"
+  },
+  {
+    city: "St. George",
+    address: "41 N 300 W, Suite 201",
+    region: "St. George, UT 84770"
+  }
+];
+---
+
+<section class="bg-[rgba(245,239,230,0.4)] py-16 border-t border-gray-200">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <h3 class="text-[22px] lg:text-[28px] font-bold text-[#1A1A1A] font-serif text-center mb-10">
+      Our Offices
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
+      {offices.map(office => (
+        <div class="bg-white border border-gray-200 rounded-[8px] p-6 text-center">
+          <h4 class="text-[20px] font-bold text-[#1A1A1A] font-serif mb-2">{office.city}</h4>
+          <p class="text-[#4B5563] text-[15px] m-0 leading-relaxed">
+            {office.address}<br />
+            {office.region}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

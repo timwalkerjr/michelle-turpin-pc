@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/services-tax-planning-for-businesses/Hero.astro';
+import Content from '@/components/services-tax-planning-for-businesses/Content.astro';
+import CTA from '@/components/services-tax-planning-for-businesses/CTA.astro';
+import Related from '@/components/services-tax-planning-for-businesses/Related.astro';
+import Offices from '@/components/services-tax-planning-for-businesses/Offices.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Business Tax Planning - Michelle Turpin P.C.",
+  "description": "Strategic tax planning for Utah businesses. Save on taxes and stay compliant with Michelle Turpin P.C.",
+  "url": `${SITE.url}/services-tax-planning-for-businesses/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Business Tax Planning | Utah Tax Attorneys"
+  description="Strategic tax planning for Utah businesses. Save on taxes and stay compliant with Michelle Turpin P.C."
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <Content />
+  <CTA />
+  <Related />
+  <Offices />
+</BaseLayout>

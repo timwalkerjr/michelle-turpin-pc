@@ -1,0 +1,42 @@
+---
+const related = [
+  {
+    title: "Installment Agreements",
+    desc: "Our Utah Tax Lawyers can help you with IRS Installment Agreements for taxes due.",
+    href: "/services/installment-agreements"
+  },
+  {
+    title: "Tax Appeals",
+    desc: "You may have the right to a Tax Appeal with the IRS. Our IRS Tax Appeals Attorneys can help you.",
+    href: "/services/tax-appeals"
+  },
+  {
+    title: "Offer in Compromise",
+    desc: "The IRS Offer in Compromise is an excellent way to settle taxes with the IRS for less than owed.",
+    href: "/services/offer-in-compromise-with-utah-tax-attorney"
+  }
+];
+---
+
+<section class="bg-white py-16">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <h3 class="text-[22px] lg:text-[28px] font-bold text-[#1A1A1A] font-serif text-center mb-10">
+      Explore Related Services
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      {related.map(item => (
+        <a href={item.href} class="bg-white border border-gray-200 rounded-[8px] p-5 hover:border-[#C1272D]/40 hover:shadow-md transition flex flex-col gap-3 group">
+          <div class="w-11 h-11 rounded-full bg-[#C1272D]/10 flex items-center justify-center text-[#C1272D]">
+            <i class="ri-scales-line text-[22px]"></i>
+          </div>
+          <h4 class="text-[17px] font-bold text-[#1A1A1A] font-serif group-hover:text-[#C1272D] transition">
+            {item.title}
+          </h4>
+          <p class="text-[#4B5563] text-[14px] leading-relaxed m-0">
+            {item.desc}
+          </p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

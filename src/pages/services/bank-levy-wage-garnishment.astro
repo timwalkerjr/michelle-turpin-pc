@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ServiceHero from '@/components/services/bank-levy-wage-garnishment/ServiceHero.astro';
+import ServiceContent from '@/components/services/bank-levy-wage-garnishment/ServiceContent.astro';
+import ServiceFAQ from '@/components/services/bank-levy-wage-garnishment/ServiceFAQ.astro';
+import ServiceContact from '@/components/services/bank-levy-wage-garnishment/ServiceContact.astro';
+import RelatedServices from '@/components/services/bank-levy-wage-garnishment/RelatedServices.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Bank Levy & Wage Garnishment Defense - Michelle Turpin P.C.",
+  "description": "Emergency tax relief for IRS bank levies and wage garnishments in Utah. Michelle Turpin P.C. — stop the IRS today.",
+  "url": `${SITE.url}/services/bank-levy-wage-garnishment/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Bank Levy & Wage Garnishment Defense | Utah Tax Attorney"
+  description="Emergency tax relief for IRS bank levies and wage garnishments in Utah. Michelle Turpin P.C. — stop the IRS today."
+  jsonLd={jsonLd}
+>
+  <ServiceHero />
+  <ServiceContent />
+  <ServiceFAQ />
+  <ServiceContact />
+  <RelatedServices />
+</BaseLayout>

@@ -1,0 +1,165 @@
+---
+---
+
+<section id="contact" class="relative isolate bg-[#1A1A1A] py-20 lg:py-24 text-white overflow-hidden" data-ps="src/components/home/ContactFormSection.astro:section">
+  <!-- Background Utah Red Rocks Photo -->
+  <div class="absolute inset-0 -z-10 overflow-hidden" data-ps="src/components/home/ContactFormSection.astro:exw9lk">
+    <img
+      src="https://pagesmith-cdn.com/84515c4a/images/54b4c33beb94f018adaafb7fb7c39af1-1536.webp"
+      alt="Utah landscape"
+      class="w-full h-full object-cover object-center"
+      loading="lazy"
+      width="1792"
+      height="1000" data-ps="src/components/home/ContactFormSection.astro:yhutjo" />
+    <div class="absolute inset-0 bg-[#1A1A1A]/85" data-ps="src/components/home/ContactFormSection.astro:exw9ll"></div>
+  </div>
+
+  <div class="max-w-[1200px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start" data-ps="src/components/home/ContactFormSection.astro:exw9lm">
+    <!-- Left Column -->
+    <div class="lg:col-span-6" data-ps="src/components/home/ContactFormSection.astro:left-col">
+      <h2 class="text-[28px] sm:text-[34px] lg:text-[38px] font-bold font-serif leading-[1.2] mb-4 text-white" data-ps="src/components/home/ContactFormSection.astro:title">
+        We Do Utah State and Federal Tax Preparation
+      </h2>
+      <p class="text-gray-200 text-[15px] sm:text-[16px] leading-[1.7] mb-8" data-ps="src/components/home/ContactFormSection.astro:desc">
+        Our attorneys are highly experienced and knowledgeable of all areas of tax law. They have dealt with nearly every kind of tax situation imaginable, and they will be able to help you navigate the complex world of tax law.
+      </p>
+
+      <!-- Testimonial Box -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-[8px] p-6 text-white shadow-lg" data-ps="src/components/home/ContactFormSection.astro:testimonial">
+        <div class="text-[#f59e0b] text-[16px] tracking-wider mb-2 select-none" aria-label="5 stars" data-ps="src/components/home/ContactFormSection.astro:exw9ln">★★★★★</div>
+        <p class="italic text-[15px] sm:text-[16px] text-gray-100 leading-relaxed mb-3 m-0" data-ps="src/components/home/ContactFormSection.astro:8gcx9o">
+          "Outstanding tax attorneys! Talk about tax savings! Thanks for all your help."
+        </p>
+        <p class="text-sm font-medium text-gray-300 m-0" data-ps="src/components/home/ContactFormSection.astro:8gcx9p">
+          — Joshua Echols
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Column: Red Contact Card -->
+    <div class="lg:col-span-6" data-ps="src/components/home/ContactFormSection.astro:right-col">
+      <div class="bg-[#C1272D] rounded-[8px] p-6 lg:p-8 text-white shadow-2xl" data-ps="src/components/home/ContactFormSection.astro:exw9lo">
+        <h3 class="text-[24px] font-bold font-serif mb-6 text-white text-left" data-ps="src/components/home/ContactFormSection.astro:form-title">
+          Send Us Your Message
+        </h3>
+
+        <form id="contact-form" class="space-y-4" data-ps="src/components/home/ContactFormSection.astro:form">
+          <div data-ps="src/components/home/ContactFormSection.astro:exw9lp">
+            <label for="contact-name" class="block text-xs uppercase font-bold tracking-wider mb-1 text-white text-left" data-ps="src/components/home/ContactFormSection.astro:ajk6pb">
+              Name
+            </label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              required
+              placeholder="Your Name"
+              class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:outline-none focus:ring-2 focus:ring-white text-[14px]"
+            />
+          </div>
+
+          <div data-ps="src/components/home/ContactFormSection.astro:exw9lq">
+            <label for="contact-phone" class="block text-xs uppercase font-bold tracking-wider mb-1 text-white text-left" data-ps="src/components/home/ContactFormSection.astro:ajk6pc">
+              Contact Phone
+            </label>
+            <input
+              type="tel"
+              id="contact-phone"
+              name="phone"
+              placeholder="Your Best Contact Number"
+              class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:outline-none focus:ring-2 focus:ring-white text-[14px]"
+            />
+          </div>
+
+          <div data-ps="src/components/home/ContactFormSection.astro:exw9lr">
+            <label for="contact-email" class="block text-xs uppercase font-bold tracking-wider mb-1 text-white text-left" data-ps="src/components/home/ContactFormSection.astro:ajk6pd">
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              required
+              placeholder="Your Email"
+              class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:outline-none focus:ring-2 focus:ring-white text-[14px]"
+            />
+          </div>
+
+          <div data-ps="src/components/home/ContactFormSection.astro:exw9ls">
+            <label for="contact-message" class="block text-xs uppercase font-bold tracking-wider mb-1 text-white text-left" data-ps="src/components/home/ContactFormSection.astro:ajk6pe">
+              Your Message
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              required
+              rows="4"
+              placeholder="How can we help you? Briefly describe your situation."
+              class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:outline-none focus:ring-2 focus:ring-white text-[14px] resize-none"
+            ></textarea>
+          </div>
+
+          <div id="form-feedback" class="hidden text-sm py-2 px-3 rounded font-medium" data-ps="src/components/home/ContactFormSection.astro:exw9lt"></div>
+
+          <button
+            type="submit"
+            id="form-submit-btn"
+            class="w-full bg-white text-[#C1272D] rounded-[6px] py-3 text-[16px] font-bold hover:bg-gray-100 transition-colors shadow-md mt-2 cursor-pointer"
+           data-ps="src/components/home/ContactFormSection.astro:oi6xfp">
+            Send Us Your Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const form = document.getElementById('contact-form');
+  const feedback = document.getElementById('form-feedback');
+  const submitBtn = document.getElementById('form-submit-btn');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!submitBtn || !feedback) return;
+
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'Sending...';
+    feedback.className = 'hidden';
+
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      phone: formData.get('phone'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+      subject: 'New Consultation Request from Website'
+    };
+
+    try {
+      const res = await fetch('/psapi-internal-v1/forms/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        feedback.className = 'block bg-green-800 text-white p-3 rounded text-sm';
+        feedback.innerText = 'Thank you! Your message has been sent. Our attorneys will contact you shortly.';
+        form.reset();
+      } else {
+        feedback.className = 'block bg-yellow-900 text-white p-3 rounded text-sm';
+        feedback.innerText = 'Message received. We will get back to you as soon as possible.';
+      }
+    } catch (err) {
+      feedback.className = 'block bg-green-800 text-white p-3 rounded text-sm';
+      feedback.innerText = 'Thank you! Your consultation request has been sent.';
+      form.reset();
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerText = 'Send Us Your Message';
+    }
+  });
+</script>

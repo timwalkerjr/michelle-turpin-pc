@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/services-trust-fund-recovery-penalty/Hero.astro';
+import Content from '@/components/services-trust-fund-recovery-penalty/Content.astro';
+import CTA from '@/components/services-trust-fund-recovery-penalty/CTA.astro';
+import Related from '@/components/services-trust-fund-recovery-penalty/Related.astro';
+import Offices from '@/components/services-trust-fund-recovery-penalty/Offices.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Trust Fund Recovery Penalty Defense - Michelle Turpin P.C.",
+  "description": "Defend against IRS Trust Fund Recovery Penalties in Utah. Michelle Turpin P.C. protects individuals from personal liability.",
+  "url": `${SITE.url}/services-trust-fund-recovery-penalty/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Trust Fund Recovery Penalty Defense | Utah Tax Attorney"
+  description="Defend against IRS Trust Fund Recovery Penalties in Utah. Michelle Turpin P.C. protects individuals from personal liability."
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <Content />
+  <CTA />
+  <Related />
+  <Offices />
+</BaseLayout>

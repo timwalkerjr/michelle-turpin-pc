@@ -1,0 +1,42 @@
+---
+const related = [
+  {
+    title: "Trust Fund Taxes (Payroll & Sales Tax)",
+    desc: "Is the IRS trying to collect payroll taxes from your business? Our Utah Business Tax Attorneys can help.",
+    href: "/services/payroll-taxes"
+  },
+  {
+    title: "Business Tax Liens",
+    desc: "If your Utah business owes taxes, the IRS may file a Federal Tax Lien against you. Call our Business Tax Attorneys today.",
+    href: "/services/business-tax-liens"
+  },
+  {
+    title: "IRS & State Tax Representation for Business",
+    desc: "We can help your business with IRS Tax Issues. Contact Michelle Turpin, P.C. today.",
+    href: "/services/irs-representation-for-business"
+  }
+];
+---
+
+<section class="bg-white py-16">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <h3 class="text-[22px] lg:text-[28px] font-bold text-[#1A1A1A] font-serif text-center mb-10">
+      Explore Related Services
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      {related.map(item => (
+        <a href={item.href} class="bg-white border border-gray-200 rounded-[8px] p-5 hover:border-[#C1272D]/40 hover:shadow-md transition flex flex-col gap-3 group">
+          <div class="w-11 h-11 rounded-full bg-[#C1272D]/10 flex items-center justify-center text-[#C1272D]">
+            <i class="ri-file-list-3-line text-[22px]"></i>
+          </div>
+          <h4 class="text-[17px] font-bold text-[#1A1A1A] font-serif group-hover:text-[#C1272D] transition">
+            {item.title}
+          </h4>
+          <p class="text-[#4B5563] text-[14px] leading-relaxed m-0">
+            {item.desc}
+          </p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

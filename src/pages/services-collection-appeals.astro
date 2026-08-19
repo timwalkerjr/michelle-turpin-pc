@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/services-collection-appeals/Hero.astro';
+import Content from '@/components/services-collection-appeals/Content.astro';
+import CTA from '@/components/services-collection-appeals/CTA.astro';
+import Related from '@/components/services-collection-appeals/Related.astro';
+import Offices from '@/components/services-collection-appeals/Offices.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "IRS Collection Appeals - Michelle Turpin P.C.",
+  "description": "Appeal a rejected IRS installment agreement. Our Utah tax attorneys can represent you before the IRS at Michelle Turpin P.C.",
+  "url": `${SITE.url}/services-collection-appeals/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="IRS Collection Appeals | Utah Tax Attorneys"
+  description="Appeal a rejected IRS installment agreement. Our Utah tax attorneys can represent you before the IRS at Michelle Turpin P.C."
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <Content />
+  <CTA />
+  <Related />
+  <Offices />
+</BaseLayout>

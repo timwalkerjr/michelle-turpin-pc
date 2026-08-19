@@ -1,0 +1,174 @@
+---
+// Service Sidebar component for all Tax Services pages
+import { SITE } from '@/config/site';
+
+export interface Props {
+  currentPath?: string;
+  topicTitle?: string;
+}
+
+const { currentPath = '', topicTitle = 'Your Tax Case' } = Astro.props;
+
+const servicesList = [
+  { name: 'Audit / OIC Appeal', href: '/services/audit-offer-in-compromise-appeal' },
+  { name: 'Tax Appeals', href: '/services/tax-appeals' },
+  { name: 'Offer in Compromise', href: '/services/offer-in-compromise-with-utah-tax-attorney' },
+  { name: 'Installment Agreements', href: '/services/installment-agreements' },
+  { name: 'Bank Levy & Wage Garnishment', href: '/services/bank-levy-wage-garnishment' },
+  { name: 'Federal & State Tax Liens', href: '/services/tax-liens' },
+  { name: 'IRS & State Audit Defense', href: '/services/audit-help' },
+  { name: 'Innocent Spouse Relief', href: '/services/innocent-spouse-relief' },
+  { name: 'Payroll & Business Taxes', href: '/services/payroll-taxes' },
+  { name: 'Chapter 7 Bankruptcy', href: '/services/chapter-7-bankruptcy' },
+  { name: 'Chapter 13 Bankruptcy', href: '/services/chapter-13-bankruptcy' },
+  { name: 'Chapter 11 Business Bankruptcy', href: '/services/chapter-11-small-business-bankruptcy' },
+];
+---
+
+<aside class="space-y-6" data-ps="src/components/services/ServiceSidebar.astro:sidebar-root">
+  
+  <!-- 1. Urgent Case Evaluation Box -->
+  <div class="bg-[#C1272D] rounded-[8px] p-6 text-white shadow-xl" data-ps="src/components/services/ServiceSidebar.astro:cta-card">
+    <div class="inline-flex items-center gap-1.5 bg-white/20 text-white text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-[4px] mb-3" data-ps="src/components/services/ServiceSidebar.astro:mrm2zb">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      Confidential Tax Help
+    </div>
+    
+    <h3 class="text-[22px] font-bold font-serif mb-2 text-white leading-snug" data-ps="src/components/services/ServiceSidebar.astro:lm6gc4">
+      Need Help With {topicTitle}?
+    </h3>
+    <p class="text-white/90 text-[14px] leading-relaxed mb-5" data-ps="src/components/services/ServiceSidebar.astro:wwrvhs">
+      Speak directly with Utah's premier tax controversy attorneys. We protect your rights before IRS deadlines expire.
+    </p>
+
+    <div class="space-y-2.5" data-ps="src/components/services/ServiceSidebar.astro:j2c7kh">
+      <a
+        href={SITE.phoneHref}
+        class="flex items-center justify-center gap-2 w-full bg-white text-[#C1272D] rounded-[6px] py-3 px-4 text-[15px] font-bold hover:bg-gray-100 transition shadow text-center"
+       data-ps="src/components/services/ServiceSidebar.astro:v0e9se">
+        <svg class="w-4 h-4 text-[#C1272D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        Call {SITE.phone}
+      </a>
+      <a
+        href="/contact-us"
+        class="block w-full border border-white/40 text-white rounded-[6px] py-2.5 px-4 text-[14px] font-medium hover:bg-white/10 transition text-center"
+       data-ps="src/components/services/ServiceSidebar.astro:v0e9sd">
+        Request Free Consultation
+      </a>
+    </div>
+
+    <div class="mt-4 pt-4 border-t border-white/20 flex items-center justify-between text-[12px] text-white/80" data-ps="src/components/services/ServiceSidebar.astro:j2c7ki">
+      <span data-ps="src/components/services/ServiceSidebar.astro:cbqt80">✓ 100+ Years Experience</span>
+      <span data-ps="src/components/services/ServiceSidebar.astro:cbqt81">✓ U.S. Tax Court Bar</span>
+    </div>
+  </div>
+
+  <!-- 2. Services Navigation Directory Menu -->
+  <div class="bg-white border border-gray-200 rounded-[8px] p-5 shadow-sm" data-ps="src/components/services/ServiceSidebar.astro:nav-card">
+    <h4 class="text-[17px] font-bold text-[#1A1A1A] font-serif mb-3 pb-2 border-b border-gray-100 flex items-center justify-between" data-ps="src/components/services/ServiceSidebar.astro:yqiofe">
+      <span data-ps="src/components/services/ServiceSidebar.astro:cbqt8n">Tax Services</span>
+      <span class="text-[12px] font-normal text-gray-500" data-ps="src/components/services/ServiceSidebar.astro:cbqt8o">Directory</span>
+    </h4>
+    
+    <nav class="space-y-1" data-ps="src/components/services/ServiceSidebar.astro:olzvay">
+      {servicesList.map((item, __psIdx) => {
+        const isActive = currentPath.includes(item.href);
+        return (
+          <a
+            href={item.href}
+            class:list={[
+              'flex items-center justify-between px-3 py-2 rounded-[5px] text-[14px] transition group',
+              isActive
+                ? 'bg-[#C1272D] text-white font-medium shadow-sm'
+                : 'text-[#374151] hover:bg-gray-50 hover:text-[#C1272D]'
+            ]}
+           data-ps={`src/components/services/ServiceSidebar.astro:v0e9sc-${__psIdx}`}>
+            <span class="truncate" data-ps={`src/components/services/ServiceSidebar.astro:cbqt8p-${__psIdx}`}>{item.name}</span>
+            <svg
+              class:list={[
+                'w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5',
+                isActive ? 'text-white' : 'text-gray-400 group-hover:text-[#C1272D]'
+              ]}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        );
+      })}
+    </nav>
+  </div>
+
+  <!-- 3. Attorney Credentials Widget -->
+  <div class="bg-[#FBF9F6] border border-[#EAE3D9] rounded-[8px] p-5" data-ps="src/components/services/ServiceSidebar.astro:attorney-card">
+    <div class="flex items-center gap-3 mb-3" data-ps="src/components/services/ServiceSidebar.astro:j2c7kj">
+      <img
+        src="https://pagesmith-cdn.com/84515c4a/images/66b10a5de25c2598f7d5d078_60a2dbb60d091276406b000f_michelle-turpin-utah-tax-attorneys-1024.webp"
+        alt="Michelle Turpin"
+        class="w-12 h-12 rounded-full object-cover border-2 border-[#C1272D]"
+        loading="lazy" data-ps="src/components/services/ServiceSidebar.astro:k9cynt" />
+      <div data-ps="src/components/services/ServiceSidebar.astro:j2c7kk">
+        <h5 class="text-[15px] font-bold text-[#1A1A1A] font-serif m-0" data-ps="src/components/services/ServiceSidebar.astro:k23r7t">Michelle Turpin, P.C.</h5>
+        <p class="text-[#C1272D] text-[12px] font-medium m-0" data-ps="src/components/services/ServiceSidebar.astro:wwrvht">Utah Tax Controversy Attorneys</p>
+      </div>
+    </div>
+    <p class="text-[#4B5563] text-[13px] leading-[1.5] mb-3" data-ps="src/components/services/ServiceSidebar.astro:wwrvhu">
+      Dedicated exclusively to tax controversy resolution, IRS audits, settlement negotiations, and federal tax litigation for over three decades.
+    </p>
+    <a
+      href="/about"
+      class="inline-flex items-center gap-1 text-[13px] font-bold text-[#C1272D] hover:underline"
+     data-ps="src/components/services/ServiceSidebar.astro:v0e9sb">
+      Meet Our Tax Attorneys →
+    </a>
+  </div>
+
+  <!-- 4. Office Locations Widget -->
+  <div class="bg-white border border-gray-200 rounded-[8px] p-5 shadow-sm" data-ps="src/components/services/ServiceSidebar.astro:offices-card">
+    <h4 class="text-[16px] font-bold text-[#1A1A1A] font-serif mb-3" data-ps="src/components/services/ServiceSidebar.astro:yqioff">Our Office Locations</h4>
+    
+    <div class="space-y-3 text-[13px] text-[#4B5563]" data-ps="src/components/services/ServiceSidebar.astro:j2c7kl">
+      <div class="border-b border-gray-100 pb-2.5" data-ps="src/components/services/ServiceSidebar.astro:j2c7km">
+        <p class="font-bold text-[#1A1A1A] mb-0.5" data-ps="src/components/services/ServiceSidebar.astro:wwrvhv">Salt Lake City (Millcreek)</p>
+        <p class="leading-relaxed" data-ps="src/components/services/ServiceSidebar.astro:wwrvhw">4764 S 900 E #3, Millcreek, UT 84117</p>
+      </div>
+      <div class="border-b border-gray-100 pb-2.5" data-ps="src/components/services/ServiceSidebar.astro:j2c7kn">
+        <p class="font-bold text-[#1A1A1A] mb-0.5" data-ps="src/components/services/ServiceSidebar.astro:wwrvhx">Cottonwood Heights</p>
+        <p class="leading-relaxed" data-ps="src/components/services/ServiceSidebar.astro:wwrvhy">6995 Union Park Center, Suite 100</p>
+      </div>
+      <div data-ps="src/components/services/ServiceSidebar.astro:j2c7ko">
+        <p class="font-bold text-[#1A1A1A] mb-0.5" data-ps="src/components/services/ServiceSidebar.astro:wwrvik">St. George Office</p>
+        <p class="leading-relaxed" data-ps="src/components/services/ServiceSidebar.astro:wwrvil">162 N 400 E, Suite A-204, St. George, UT 84770</p>
+      </div>
+    </div>
+    
+    <div class="mt-4 pt-3 border-t border-gray-100 text-center" data-ps="src/components/services/ServiceSidebar.astro:j2c7kp">
+      <a href="tel:+18016850552" class="text-[14px] font-bold text-[#C1272D] hover:underline" data-ps="src/components/services/ServiceSidebar.astro:v0e9sa">
+        Direct Line: (801) 685-0552
+      </a>
+    </div>
+  </div>
+
+  <!-- 5. Client Portal & Secure Payment Link -->
+  <div class="bg-gray-50 border border-gray-200 rounded-[8px] p-4 text-center" data-ps="src/components/services/ServiceSidebar.astro:j2c7kq">
+    <p class="text-[12px] uppercase tracking-wider text-gray-500 font-bold mb-1" data-ps="src/components/services/ServiceSidebar.astro:wwrvim">Existing Clients</p>
+    <a
+      href="https://secure.billpro.com/michelleturpin"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center gap-1.5 text-[13px] font-medium text-[#1A1A1A] hover:text-[#C1272D] transition"
+     data-ps="src/components/services/ServiceSidebar.astro:v0e9s9">
+      <svg class="w-4 h-4 text-[#C1272D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+      </svg>
+      Secure Clio Client Payment Portal →
+    </a>
+  </div>
+
+</aside>

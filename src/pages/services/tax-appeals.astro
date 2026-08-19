@@ -1,0 +1,51 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ServiceHero from '@/components/services/tax-appeals/ServiceHero.astro';
+import ServiceContent from '@/components/services/tax-appeals/ServiceContent.astro';
+import ServiceExplore from '@/components/services/tax-appeals/ServiceExplore.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "IRS Tax Appeals - Michelle Turpin P.C.",
+  "description": "File an IRS tax appeal with experienced Utah tax attorneys. Protect your rights and challenge IRS decisions at Michelle Turpin P.C.",
+  "url": `${SITE.url}/services/tax-appeals/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="IRS Tax Appeals | Utah Tax Attorneys"
+  description="File an IRS tax appeal with experienced Utah tax attorneys. Protect your rights and challenge IRS decisions at Michelle Turpin P.C."
+  jsonLd={jsonLd}
+>
+  <ServiceHero />
+  <ServiceContent />
+  <ServiceExplore />
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/business-audit-appeals/Hero.astro';
+import Content from '../components/business-audit-appeals/Content.astro';
+import RelatedServices from '../components/business-audit-appeals/RelatedServices.astro';
+import ContactCTA from '../components/business-audit-appeals/ContactCTA.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Business Audit Appeals - Michelle Turpin P.C.",
+  "description": "Appeal an IRS business audit with experienced Utah business tax lawyers at Michelle Turpin P.C. Protect your company.",
+  "url": `${SITE.url}/business-audit-appeals/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Business Audit Appeals | Utah Tax Attorneys"
+  description="Appeal an IRS business audit with experienced Utah business tax lawyers at Michelle Turpin P.C. Protect your company."
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <Content />
+  <RelatedServices />
+  <ContactCTA />
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ServiceHero from '@/components/services/chapter-13-bankruptcy/ServiceHero.astro';
+import ServiceContent from '@/components/services/chapter-13-bankruptcy/ServiceContent.astro';
+import ServiceContact from '@/components/services/chapter-13-bankruptcy/ServiceContact.astro';
+import RelatedServices from '@/components/services/chapter-13-bankruptcy/RelatedServices.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Chapter 13 Bankruptcy - Michelle Turpin P.C.",
+  "description": "Chapter 13 bankruptcy attorneys in Salt Lake City and all of Utah. Call Michelle Turpin P.C. today.",
+  "url": `${SITE.url}/services/chapter-13-bankruptcy/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Chapter 13 Bankruptcy | Utah Attorneys"
+  description="Chapter 13 bankruptcy attorneys in Salt Lake City and all of Utah. Call Michelle Turpin P.C. today."
+  jsonLd={jsonLd}
+>
+  <ServiceHero />
+  <ServiceContent />
+  <ServiceContact />
+  <RelatedServices />
+</BaseLayout>

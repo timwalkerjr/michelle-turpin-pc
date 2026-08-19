@@ -1,0 +1,84 @@
+---
+const offices = [
+  {
+    city: 'Salt Lake City',
+    address: '6995 Union Park Center, Suite 100',
+    cityState: 'Cottonwood Heights, UT 84047'
+  },
+  {
+    city: 'St. George',
+    address: '41 N 300 W, Suite 201',
+    cityState: 'St. George, UT 84770'
+  }
+];
+
+const relatedLinks = [
+  {
+    label: 'Tax Penalty',
+    href: '/services/tax-penalty'
+  },
+  {
+    label: 'Installment Agreements',
+    href: '/services/installment-agreements'
+  },
+  {
+    label: 'Offer in Compromise',
+    href: '/services/offer-in-compromise-with-utah-tax-attorney'
+  }
+];
+---
+
+<section class="bg-white py-16 lg:py-20 border-t border-gray-200">
+  <div class="max-w-[1200px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+    <div class="lg:col-span-5">
+      <h2 class="text-[28px] lg:text-[34px] font-bold text-[#1A1A1A] font-serif mb-4 leading-tight">
+        Contact Us Today
+      </h2>
+      <p class="text-[#374151] text-[16px] leading-relaxed mb-6">
+        Speak directly with an experienced Utah tax attorney about your situation.
+      </p>
+      <a
+        href="tel:+18016850552"
+        class="inline-flex items-center gap-3 bg-[#C1272D] text-white rounded-[6px] px-6 py-4 text-[18px] font-bold hover:bg-[#8F1A1F] transition"
+      >
+        <i class="ri-phone-line text-xl"></i>
+        <span class="flex flex-col items-start leading-tight">
+          <span class="text-[12px] uppercase tracking-wider font-medium opacity-90">Call Now</span>
+          <span>(801) 685-0552</span>
+        </span>
+      </a>
+
+      <div class="mt-10">
+        <h4 class="text-[18px] font-bold text-[#1A1A1A] font-serif mb-4">Our Offices</h4>
+        <div class="space-y-4">
+          {offices.map((o) => (
+            <div class="border-l-4 border-[#C1272D] pl-4 py-1">
+              <p class="font-bold text-[#1A1A1A] text-[15px]">{o.city}</p>
+              <p class="text-[#374151] text-[14px] leading-relaxed">{o.address}</p>
+              <p class="text-[#374151] text-[14px]">{o.cityState}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <h4 class="text-[18px] font-bold text-[#1A1A1A] font-serif mb-4">Related Services</h4>
+      <ul class="space-y-3">
+        {relatedLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="flex items-start gap-3 p-4 border border-gray-200 rounded-[8px] hover:border-[#C1272D]/40 hover:shadow-sm transition bg-white group"
+            >
+              <i class="ri-arrow-right-line text-[#C1272D] text-lg mt-1 shrink-0 group-hover:translate-x-1 transition-transform"></i>
+              <span class="text-[#C1272D] underline font-medium text-[15px] group-hover:text-[#8F1A1F]">
+                {link.label}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

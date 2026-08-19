@@ -1,0 +1,51 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ServiceHero from '@/components/services/audit-offer-in-compromise-appeal/ServiceHero.astro';
+import ServiceContent from '@/components/services/audit-offer-in-compromise-appeal/ServiceContent.astro';
+import ServiceExplore from '@/components/services/audit-offer-in-compromise-appeal/ServiceExplore.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Audit & Offer In Compromise Appeals - Michelle Turpin P.C.",
+  "description": "Appeal an IRS audit or Offer in Compromise denial with experienced Utah tax attorneys at Michelle Turpin, P.C.",
+  "url": `${SITE.url}/services/audit-offer-in-compromise-appeal/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Audit & Offer In Compromise Appeals | Utah Tax Attorney"
+  description="Appeal an IRS audit or Offer in Compromise denial with experienced Utah tax attorneys at Michelle Turpin, P.C."
+  jsonLd={jsonLd}
+>
+  <ServiceHero />
+  <ServiceContent />
+  <ServiceExplore />
+</BaseLayout>

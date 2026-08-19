@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/property-seizures/Hero.astro';
+import Content from '@/components/property-seizures/Content.astro';
+import CTA from '@/components/property-seizures/CTA.astro';
+import Contact from '@/components/property-seizures/Contact.astro';
+import RelatedServices from '@/components/property-seizures/RelatedServices.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "IRS Property Seizure Defense - Michelle Turpin P.C.",
+  "description": "Stop IRS property seizures in Utah. Our tax lawyers will defend your assets and negotiate with the IRS.",
+  "url": `${SITE.url}/property-seizures/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="IRS Property Seizure Defense | Utah Tax Lawyers"
+  description="Stop IRS property seizures in Utah. Our tax lawyers will defend your assets and negotiate with the IRS."
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <Content />
+  <CTA />
+  <Contact />
+  <RelatedServices />
+</BaseLayout>

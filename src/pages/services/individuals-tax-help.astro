@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ServiceHero from '@/components/services/individuals-tax-help/ServiceHero.astro';
+import ServiceContent from '@/components/services/individuals-tax-help/ServiceContent.astro';
+import ServiceContact from '@/components/services/individuals-tax-help/ServiceContact.astro';
+import RelatedServices from '@/components/services/individuals-tax-help/RelatedServices.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Individual Tax Help - Michelle Turpin P.C.",
+  "description": "Get help with your personal state and federal taxes from experienced Utah tax attorneys at Michelle Turpin P.C.",
+  "url": `${SITE.url}/services/individuals-tax-help/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Individual Tax Help | Utah Tax Attorneys"
+  description="Get help with your personal state and federal taxes from experienced Utah tax attorneys at Michelle Turpin P.C."
+  jsonLd={jsonLd}
+>
+  <ServiceHero />
+  <ServiceContent />
+  <ServiceContact />
+  <RelatedServices />
+</BaseLayout>

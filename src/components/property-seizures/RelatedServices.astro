@@ -1,0 +1,50 @@
+---
+const services = [
+  {
+    title: 'Bank Levy & Wage Garnishment Defense',
+    desc: 'Emergency Tax Relief for Individuals and Businesses. If you are facing IRS Bank Levies and/or Wage Garnishments we can help.',
+    href: '/services/bank-levy-wage-garnishment',
+    icon: 'ri-bank-line'
+  },
+  {
+    title: 'Federal and State Tax Liens',
+    desc: 'When you owe taxes, a tax lien may be filed against your Utah property. Call our Utah Tax Lien Attorneys today.',
+    href: '/services/tax-liens',
+    icon: 'ri-file-list-3-line'
+  },
+  {
+    title: 'Installment Agreements',
+    desc: 'Our Utah Tax Lawyers can help you with IRS Installment Agreements for taxes due.',
+    href: '/services/installment-agreements',
+    icon: 'ri-scales-line'
+  }
+];
+---
+
+<section class="bg-white py-16 lg:py-20 border-t border-gray-200">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <h2 class="text-[28px] lg:text-[36px] font-bold text-[#1A1A1A] font-serif text-center mb-12">
+      Explore Related Services
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {services.map((s) => (
+        <a
+          href={s.href}
+          class="bg-white border border-gray-200 rounded-[8px] p-6 hover:shadow-md hover:border-[#C1272D]/30 transition flex flex-col items-start gap-4"
+        >
+          <div class="w-12 h-12 rounded-full bg-[#C1272D]/10 flex items-center justify-center text-[#C1272D] shrink-0">
+            <i class={`${s.icon} text-2xl`}></i>
+          </div>
+          <div>
+            <h3 class="text-[18px] font-bold text-[#1A1A1A] font-serif mb-2 leading-snug">
+              {s.title}
+            </h3>
+            <p class="text-[#374151] text-[14px] leading-relaxed">
+              {s.desc}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

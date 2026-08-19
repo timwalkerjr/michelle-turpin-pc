@@ -1,0 +1,45 @@
+---
+const services = [
+  {
+    title: "Property Seizures",
+    description: "Is the IRS trying to seize your Utah property? Contact our tax lawyers today to start your defense.",
+    href: "/services/property-seizures",
+    icon: "ri-home-line"
+  },
+  {
+    title: "Federal and State Tax Liens",
+    description: "When you owe taxes, a tax lien may be filed against your Utah property. Call our Utah Tax Lien Attorneys today.",
+    href: "/services/tax-liens",
+    icon: "ri-file-shield-2-line"
+  },
+  {
+    title: "Business Bank Levy",
+    description: "If your Utah business is facing an IRS Bank Levy we may be able to help you. Contact our Business Levy Legal Team Today.",
+    href: "/services/business-bank-levy",
+    icon: "ri-bank-line"
+  }
+];
+---
+
+<section id="related" class="py-16 lg:py-20" style="background-color: rgba(245, 239, 230, 0.4);">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <h2 class="text-[28px] lg:text-[36px] font-bold text-[#1A1A1A] font-serif mb-10 text-center leading-[1.2]">
+      Explore Related Services
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      {services.map((service) => (
+        <a href={service.href} class="block bg-white border border-gray-200 rounded-[8px] p-6 hover:shadow-md hover:border-[#C1272D]/30 transition group">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D]">
+              <i class={service.icon + " text-xl"}></i>
+            </div>
+            <div>
+              <h3 class="text-[18px] font-bold text-[#1A1A1A] font-serif mb-2 group-hover:text-[#C1272D] transition">{service.title}</h3>
+              <p class="text-[#4B5563] text-[14px] leading-relaxed">{service.description}</p>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

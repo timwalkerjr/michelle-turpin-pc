@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/business-tax-penalty/Hero.astro';
+import Content from '../components/business-tax-penalty/Content.astro';
+import RelatedServices from '../components/business-tax-penalty/RelatedServices.astro';
+import ContactCTA from '../components/business-tax-penalty/ContactCTA.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Business Tax Penalty Abatement - Michelle Turpin P.C.",
+  "description": "Get IRS business tax penalty abatement. Our attorneys represent you and work to reduce penalties at Michelle Turpin P.C.",
+  "url": `${SITE.url}/business-tax-penalty/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Business Tax Penalty Abatement | Utah Tax Attorneys"
+  description="Get IRS business tax penalty abatement. Our attorneys represent you and work to reduce penalties at Michelle Turpin P.C."
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <Content />
+  <RelatedServices />
+  <ContactCTA />
+</BaseLayout>

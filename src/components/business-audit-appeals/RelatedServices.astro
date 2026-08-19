@@ -1,0 +1,47 @@
+---
+const services = [
+  {
+    title: 'Audit Help for Businesses',
+    description: 'Michelle Turpin P.C. represents Utah businesses being audited by the IRS. Contact us today.',
+    href: '/services/audit-help-for-businesses',
+    icon: 'ri-file-list-3-line'
+  },
+  {
+    title: 'Tax Appeals',
+    description: 'You may have the right to a Tax Appeal with the IRS. Our IRS Tax Appeals Attorneys can help you.',
+    href: '/services/tax-appeals',
+    icon: 'ri-scales-line'
+  },
+  {
+    title: 'IRS & State Tax Representation for Business',
+    description: 'We can help your business with IRS Tax Issues. Contact Michelle Turpin, P.C. today.',
+    href: '/services/irs-representation-for-business',
+    icon: 'ri-briefcase-line'
+  }
+];
+---
+
+<section class="py-16 lg:py-20" style="background-color: rgba(245, 239, 230, 0.4);">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <h2 class="text-[28px] lg:text-[36px] font-bold text-[#1A1A1A] font-serif text-center mb-10">
+      Explore Related Services
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {services.map((s) => (
+        <a href={s.href} class="group bg-white border border-gray-200 rounded-[8px] p-6 hover:shadow-lg hover:border-[#C1272D]/40 transition flex items-start gap-4">
+          <span class="w-12 h-12 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D]">
+            <i class={s.icon + ' text-xl'}></i>
+          </span>
+          <div>
+            <h3 class="text-[17px] font-bold text-[#1A1A1A] font-serif mb-2 group-hover:text-[#C1272D] transition">
+              {s.title}
+            </h3>
+            <p class="text-[14px] text-[#374151] leading-relaxed">
+              {s.description}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

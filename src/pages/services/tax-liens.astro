@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ServiceHero from '@/components/services/tax-liens/ServiceHero.astro';
+import ServiceContent from '@/components/services/tax-liens/ServiceContent.astro';
+import ServiceFAQ from '@/components/services/tax-liens/ServiceFAQ.astro';
+import ServiceContact from '@/components/services/tax-liens/ServiceContact.astro';
+import RelatedServices from '@/components/services/tax-liens/RelatedServices.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Federal & State Tax Lien Help - Michelle Turpin P.C.",
+  "description": "Resolve federal and state tax liens against your Utah property. Call our tax lien attorneys today at Michelle Turpin P.C.",
+  "url": `${SITE.url}/services/tax-liens/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Federal & State Tax Lien Help | Utah Tax Attorneys"
+  description="Resolve federal and state tax liens against your Utah property. Call our tax lien attorneys today at Michelle Turpin P.C."
+  jsonLd={jsonLd}
+>
+  <ServiceHero />
+  <ServiceContent />
+  <ServiceFAQ />
+  <ServiceContact />
+  <RelatedServices />
+</BaseLayout>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import TaxPlanningHero from '@/components/tax-planning/TaxPlanningHero.astro';
+import TaxPlanningIntro from '@/components/tax-planning/TaxPlanningIntro.astro';
+import TaxPlanningAttorney from '@/components/tax-planning/TaxPlanningAttorney.astro';
+import TaxPlanningDualBanner from '@/components/tax-planning/TaxPlanningDualBanner.astro';
+import TaxPlanningRepresentation from '@/components/tax-planning/TaxPlanningRepresentation.astro';
+import TaxPlanningServices from '@/components/tax-planning/TaxPlanningServices.astro';
+import TaxPlanningMapLocations from '@/components/tax-planning/TaxPlanningMapLocations.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Tax Planning Attorneys - Michelle Turpin, P.C.",
+  "description": "Proactive tax planning from Michelle Turpin, P.C. helps Utah individuals and businesses reduce tax liability and audit risk. Schedule a consultation today.",
+  "url": `${SITE.url}/tax-planning/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Tax Planning Attorneys | Utah | Michelle Turpin, P.C."
+  description="Proactive tax planning from Michelle Turpin, P.C. helps Utah individuals and businesses reduce tax liability and audit risk. Schedule a consultation today."
+  jsonLd={jsonLd}
+>
+  <TaxPlanningHero />
+  <TaxPlanningIntro />
+  <TaxPlanningAttorney />
+  <TaxPlanningDualBanner />
+  <TaxPlanningRepresentation />
+  <TaxPlanningServices />
+  <TaxPlanningMapLocations />
+</BaseLayout>

@@ -1,0 +1,51 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ServiceHero from '@/components/services/payroll-taxes/ServiceHero.astro';
+import ServiceContent from '@/components/services/payroll-taxes/ServiceContent.astro';
+import ServiceExplore from '@/components/services/payroll-taxes/ServiceExplore.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Payroll Tax Help - Michelle Turpin P.C.",
+  "description": "Resolve IRS payroll and sales tax issues for your Utah business. Our attorneys can help at Michelle Turpin P.C.",
+  "url": `${SITE.url}/services/payroll-taxes/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Payroll Tax Help | Utah Business Tax Attorneys"
+  description="Resolve IRS payroll and sales tax issues for your Utah business. Our attorneys can help at Michelle Turpin P.C."
+  jsonLd={jsonLd}
+>
+  <ServiceHero />
+  <ServiceContent />
+  <ServiceExplore />
+</BaseLayout>

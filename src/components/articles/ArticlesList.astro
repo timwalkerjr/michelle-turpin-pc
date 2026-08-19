@@ -1,0 +1,101 @@
+---
+// Articles page: List of articles
+const articles = [
+  {
+    title: "Complete Guide to IRS Offer in Compromise for Utah Taxpayers",
+    excerpt: "An Offer in Compromise allows you to settle your tax debt for less than the full amount owed. Learn the qualification criteria, application process, and success strategies from our experienced tax attorneys.",
+    image: "https://pagesmith-cdn.com/84515c4a/images/11856334e8aec0f08818ba75d69c4957-768.webp",
+    category: "Settlement Options",
+    date: "2024-12-15",
+    readTime: "8 min read",
+    href: "/articles/offer-in-compromise-guide-2024",
+  },
+  {
+    title: "IRS Audit Defense: Strategies That Work for Utah Taxpayers",
+    excerpt: "Facing an IRS audit can be overwhelming. Our tax attorneys break down the audit process, types of audits, and proven defense strategies to protect your rights and achieve the best possible outcome.",
+    image: "https://pagesmith-cdn.com/84515c4a/images/01cc16c62b2addadac39825274ee8012-320.webp",
+    category: "Individual Taxes",
+    date: "2025-01-08",
+    readTime: "6 min read",
+    href: "/articles/irs-audit-defense-strategies",
+  },
+  {
+    title: "Can Taxes Be Discharged in Bankruptcy? A Utah Attorney Explains",
+    excerpt: "Many people, including some attorneys, mistakenly believe that bankruptcy cannot help with tax debt. Discover the specific conditions under which federal and state tax debts can be eliminated through bankruptcy.",
+    image: "https://pagesmith-cdn.com/84515c4a/images/7f00c4a3994a61ff757f5e2e10621b33-768.webp",
+    category: "Bankruptcy",
+    date: "2025-02-20",
+    readTime: "7 min read",
+    href: "/articles/can-taxes-be-discharged-in-bankruptcy",
+  },
+  {
+    title: "Defending Against IRS Wage Garnishment in Utah",
+    excerpt: "An IRS wage garnishment can take a devastating portion of your paycheck. Learn how our tax attorneys stop garnishments quickly and negotiate alternatives that protect your income.",
+    image: "https://pagesmith-cdn.com/84515c4a/images/755a51b80fef3a111774ec2516fee854-768.webp",
+    category: "Individual Taxes",
+    date: "2025-03-05",
+    readTime: "5 min read",
+    href: "/articles/defending-against-irs-wage-garnishment-utah",
+  },
+  {
+    title: "Strategic Business Tax Planning for Utah Companies",
+    excerpt: "Proactive tax planning can save your business thousands of dollars annually while reducing audit risk. Our business tax attorneys share key strategies for Utah entrepreneurs and business owners.",
+    image: "https://pagesmith-cdn.com/84515c4a/images/52b81e9a49deae6f4bc7ea45d6eb513f-768.webp",
+    category: "Business Taxes",
+    date: "2025-04-12",
+    readTime: "6 min read",
+    href: "/articles/strategic-business-tax-planning-utah",
+  },
+  {
+    title: "Innocent Spouse Relief: What Utah Taxpayers Need to Know",
+    excerpt: "If your spouse underreported income or claimed improper deductions, you may not be liable for the resulting tax debt. Learn how Innocent Spouse Relief works and whether you qualify.",
+    image: "https://pagesmith-cdn.com/84515c4a/images/efcdcd49ead6e741be4e84b3d93870d7-768.webp",
+    category: "Individual Taxes",
+    date: "2025-05-18",
+    readTime: "5 min read",
+    href: "/articles/innocent-spouse-relief-explained-utah",
+  },
+];
+
+function formatDate(iso: string) {
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<section id="articles-list" class="bg-white py-16 lg:py-20">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {articles.map((article) => (
+        <a
+          href={article.href}
+          class="bg-white border border-gray-200 rounded-[8px] overflow-hidden hover:shadow-md hover:border-[#C1272D]/30 transition group flex flex-col"
+        >
+          <div class="aspect-video overflow-hidden bg-gray-100">
+            <img
+              src={article.image}
+              alt={article.title}
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="flex items-center gap-3 text-[12px] text-[#4B5563] mb-3">
+              <span class="bg-[#C1272D]/10 text-[#C1272D] font-medium uppercase tracking-wider px-2 py-1 rounded">{article.category}</span>
+              <span>{formatDate(article.date)}</span>
+              <span>·</span>
+              <span>{article.readTime}</span>
+            </div>
+            <h3 class="text-[20px] font-bold text-[#1A1A1A] font-serif mb-3 group-hover:text-[#C1272D] transition leading-tight">
+              {article.title}
+            </h3>
+            <p class="text-[#374151] text-[15px] leading-relaxed mb-4 flex-1">
+              {article.excerpt}
+            </p>
+            <span class="text-[#C1272D] font-medium text-[14px] group-hover:underline">Read Article →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

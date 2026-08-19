@@ -1,0 +1,82 @@
+---
+const individualTaxes = [
+  { title: "Audit/Offer In Compromise Appeal", desc: "Utah Tax Attorney Michelle Turpin, P.C. — Learn How to Appeal an IRS Audit or Offer in Compromise Denial.", href: "/services/audit-offer-in-compromise-appeal", icon: "ri-scales-3-line" },
+  { title: "Bank Levy & Wage Garnishment Defense", desc: "Emergency Tax Relief for Individuals and Businesses. If you are facing IRS Bank Levies and/or Wage Garnishments we can help.", href: "/services/bank-levy-wage-garnishment", icon: "ri-bank-line" },
+  { title: "Federal and State Tax Liens", desc: "When you owe taxes, a tax lien may be filed against your Utah property. Call our Utah Tax Lien Attorneys today.", href: "/services/tax-liens", icon: "ri-file-shield-2-line" },
+  { title: "Individuals Tax Help", desc: "We can help assist you with all of your personal taxes, both State and Federal. Call for a consultation today.", href: "/services/individuals-tax-help", icon: "ri-user-line" },
+  { title: "Innocent Spouse Relief", desc: "Innocent Spouse Relief provides you relief from additional taxes you owe due to a spouse's actions. Contact us to learn more.", href: "/services/innocent-spouse-relief", icon: "ri-user-heart-line" },
+  { title: "IRS and State Tax Audit Help", desc: "Expert audit legal representation for IRS, State, and Local Tax Issues. Find out how audits work.", href: "/services/audit-help", icon: "ri-search-line" },
+  { title: "Property Seizures", desc: "Is the IRS trying to seize your Utah property? Contact our tax lawyers today to start your defense.", href: "/services/property-seizures", icon: "ri-home-line" },
+  { title: "Tax Penalty", desc: "The IRS penalizes millions of taxpayers each year. Call us and learn how we can help you.", href: "/services/tax-penalty", icon: "ri-alert-line" },
+  { title: "Tax Planning", desc: "Our full-service tax law firm can help you reduce taxes and audit risks. Contact us today.", href: "/services/tax-planning", icon: "ri-line-chart-line" },
+  { title: "Unfiled Tax Returns", desc: "If you are facing unfiled returns for Utah or for the IRS, contact one of our tax lawyers today for specific guidance.", href: "/services/unfiled-tax-returns", icon: "ri-file-unknow-line" }
+];
+
+const businessTaxes = [
+  { title: "Audit Help for Businesses", desc: "Michelle Turpin P.C. represents Utah businesses being audited by the IRS. Contact us today.", href: "/services/audit-help-for-businesses", icon: "ri-search-line" },
+  { title: "Business Audit Appeals", desc: "You may have the right to appeal an IRS Business Audit. Contact Utah Business Tax Lawyer Michelle Turpin P.C. today.", href: "/services/business-audit-appeals", icon: "ri-scales-3-line" },
+  { title: "Business Bank Levy", desc: "If your Utah business is facing an IRS Bank Levy we may be able to help you. Contact our Business Levy Legal Team Today.", href: "/services/business-bank-levy", icon: "ri-bank-line" },
+  { title: "Business Tax Liens", desc: "If your Utah business owes taxes, the IRS may file a Federal Tax Lien against you. Call our Business Tax Attorneys today.", href: "/services/business-tax-liens", icon: "ri-file-shield-2-line" },
+  { title: "Business Tax Penalty", desc: "Our tax penalty attorneys can represent you to the IRS and work to abate your penalties.", href: "/services/business-tax-penalty", icon: "ri-alert-line" },
+  { title: "IRS & State Tax Representation for Business", desc: "We can help your business with IRS Tax Issues. Contact Michelle Turpin, P.C. today.", href: "/services/irs-representation-for-business", icon: "ri-government-line" },
+  { title: "State Tax Problem", desc: "Unpaid Employment Taxes, State Taxing Authority Problems? Our Utah Tax Lawyers can help.", href: "/services/state-tax-problem", icon: "ri-government-line" },
+  { title: "Strategic Business Tax Planning", desc: "The IRS code is complex. We help Utah Business Owners plan to save on taxes.", href: "/services/tax-planning-for-businesses", icon: "ri-line-chart-line" },
+  { title: "Trust Fund Recovery Penalty (TFRP)", desc: "Facing an IRS Trust Fund Recovery Penalty? Michelle Turpin P.C. defends individuals against personal liability.", href: "/services/trust-fund-recovery-penalty", icon: "ri-shield-user-line" }
+];
+
+const settlementOptions = [
+  { title: "Collection Appeals", desc: "Has the IRS rejected your Installment Agreement? We can appeal your case before the IRS.", href: "/services/collection-appeals", icon: "ri-scales-3-line" },
+  { title: "Corporate Restructuring", desc: "Restructuring your business in Utah may be an answer to incurred income or tax debt.", href: "/services/corporate-restructuring", icon: "ri-building-line" },
+  { title: "Installment Agreements", desc: "Our Utah Tax Lawyers can help you with IRS Installment Agreements for taxes due.", href: "/services/installment-agreements", icon: "ri-file-list-3-line" },
+  { title: "Offer in Compromise", desc: "The IRS Offer in Compromise is an excellent way to settle taxes with the IRS for less than owed.", href: "/services/offer-in-compromise-with-utah-tax-attorney", icon: "ri-handshake-line" },
+  { title: "Tax Appeals", desc: "You may have the right to a Tax Appeal with the IRS. Our IRS Tax Appeals Attorneys can help you.", href: "/services/tax-appeals", icon: "ri-government-line" },
+  { title: "Trust Fund Taxes (Payroll & Sales Tax)", desc: "Is the IRS trying to collect payroll taxes from your business? Our Utah Business Tax Attorneys can help.", href: "/services/payroll-taxes", icon: "ri-money-dollar-box-line" }
+];
+
+const bankruptcy = [
+  { title: "Chapter 11 Small Business Bankruptcy", desc: "Chapter 11 Small Business Bankruptcy Attorneys. Salt Lake City and all of Utah. Call today.", href: "/services/chapter-11-small-business-bankruptcy", icon: "ri-building-line" },
+  { title: "Chapter 13 Bankruptcy", desc: "Chapter 13 Bankruptcy Attorneys. Salt Lake City and all of Utah. Call today.", href: "/services/chapter-13-bankruptcy", icon: "ri-auction-line" },
+  { title: "Chapter 7 Bankruptcy", desc: "Chapter 7 Bankruptcy Attorneys. Salt Lake City and all of Utah. Call today.", href: "/services/chapter-7-bankruptcy", icon: "ri-auction-line" }
+];
+
+const categories = [
+  { name: "Individual Taxes", items: individualTaxes, icon: "ri-user-line" },
+  { name: "Business Taxes", items: businessTaxes, icon: "ri-file-list-3-line" },
+  { name: "Settlement Options", items: settlementOptions, icon: "ri-scales-line" },
+  { name: "Bankruptcy", items: bankruptcy, icon: "ri-auction-line" }
+];
+---
+
+<section id="services" class="bg-white py-16 lg:py-24">
+  <div class="max-w-[1200px] mx-auto px-4 flex flex-col gap-14">
+    <div class="text-center mb-2">
+      <h2 class="text-[32px] lg:text-[38px] font-bold text-[#1A1A1A] font-serif text-center mb-3">
+        Tax Questions? We have answers...
+      </h2>
+      <p class="text-center text-[#4B5563] text-[16px] max-w-[800px] mx-auto">
+        Our attorneys are highly experienced and knowledgeable of all <a href="/services/tax-planning" class="text-[#C1272D] underline hover:text-[#8F1A1F]">areas of tax law</a>. They have dealt with nearly every kind of <a href="/services/individuals-tax-help" class="text-[#C1272D] underline hover:text-[#8F1A1F]">tax situation</a> imaginable, and they will be able to help you navigate the complex world of <a href="/services/tax-planning" class="text-[#C1272D] underline hover:text-[#8F1A1F]">tax law</a> as you try to deal with the IRS and other agencies.
+      </p>
+    </div>
+
+    {categories.map((category) => (
+      <div>
+        <span class="inline-block bg-[#C1272D] text-white font-serif font-bold text-[20px] px-6 py-2.5 rounded-[6px] mb-6">
+          {category.name}
+        </span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {category.items.map((item) => (
+            <a href={item.href} class="bg-white border border-gray-200 rounded-[8px] p-4 hover:shadow-md hover:border-[#C1272D]/30 transition flex items-start gap-4 group">
+              <div class="w-11 h-11 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D]">
+                <i class={item.icon + " text-lg"}></i>
+              </div>
+              <div>
+                <h3 class="text-[16px] font-bold text-[#1A1A1A] font-serif mb-1 group-hover:text-[#C1272D] transition">{item.title}</h3>
+                <p class="text-[#4B5563] text-[13px] leading-relaxed">{item.desc}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

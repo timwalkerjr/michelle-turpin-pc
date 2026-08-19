@@ -1,0 +1,22 @@
+---
+const related = [
+  { title: "Chapter 13 Bankruptcy", excerpt: "Chapter 13 Bankruptcy Attorneys. Salt Lake City and all of Utah. Call today.", href: "/services/chapter-13-bankruptcy" },
+  { title: "Chapter 7 Bankruptcy", excerpt: "Chapter 7 Bankruptcy Attorneys. Salt Lake City and all of Utah. Call today.", href: "/services/chapter-7-bankruptcy" },
+  { title: "Corporate Restructuring", excerpt: "Restructuring your business in Utah may be an answer to incurred income or tax debt.", href: "/services/corporate-restructuring" },
+];
+---
+
+<section id="service-explore" class="bg-white py-16 lg:py-20">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <h2 class="text-[28px] lg:text-[36px] font-bold text-[#1A1A1A] font-serif text-center mb-10">Explore Related Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {related.map((s) => (
+        <a href={s.href} class="bg-white border border-gray-200 rounded-[8px] p-6 hover:shadow-md hover:border-[#C1272D]/30 transition flex flex-col">
+          <h3 class="text-[18px] font-bold text-[#1A1A1A] font-serif mb-2 leading-tight">{s.title}</h3>
+          <p class="text-[#4B5563] text-[14px] leading-relaxed mb-3 flex-1">{s.excerpt}</p>
+          <span class="text-[#C1272D] font-medium text-[14px]">Learn More →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

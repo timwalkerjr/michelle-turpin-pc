@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/business-bank-levy/Hero.astro';
+import Content from '../components/business-bank-levy/Content.astro';
+import RelatedServices from '../components/business-bank-levy/RelatedServices.astro';
+import ContactCTA from '../components/business-bank-levy/ContactCTA.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Business Bank Levy Help - Michelle Turpin P.C.",
+  "description": "Stop an IRS bank levy against your Utah business. Our legal team can help protect your accounts.",
+  "url": `${SITE.url}/business-bank-levy/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Business Bank Levy Help | Utah Tax Attorneys"
+  description="Stop an IRS bank levy against your Utah business. Our legal team can help protect your accounts."
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <Content />
+  <RelatedServices />
+  <ContactCTA />
+</BaseLayout>

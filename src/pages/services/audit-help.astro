@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ServiceHero from '@/components/services/audit-help/ServiceHero.astro';
+import ServiceContent from '@/components/services/audit-help/ServiceContent.astro';
+import ServiceFAQ from '@/components/services/audit-help/ServiceFAQ.astro';
+import ServiceContact from '@/components/services/audit-help/ServiceContact.astro';
+import RelatedServices from '@/components/services/audit-help/RelatedServices.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "IRS and State Tax Audit Help - Michelle Turpin P.C.",
+  "description": "Expert IRS and state tax audit representation in Utah. Michelle Turpin P.C. defends individuals and businesses during audits with over 100 years of cumulative experience.",
+  "url": `${SITE.url}/services/audit-help/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="IRS and State Tax Audit Help | Michelle Turpin P.C."
+  description="Expert IRS and state tax audit representation in Utah. Michelle Turpin P.C. defends individuals and businesses during audits with over 100 years of cumulative experience."
+  jsonLd={jsonLd}
+>
+  <ServiceHero />
+  <ServiceContent />
+  <ServiceFAQ />
+  <ServiceContact />
+  <RelatedServices />
+</BaseLayout>

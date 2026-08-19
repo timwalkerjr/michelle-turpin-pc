@@ -1,0 +1,39 @@
+---
+const breadcrumb = [
+  { label: 'Home', href: '/' },
+  { label: 'Business Taxes', href: '/services/audit-help-for-businesses' },
+  { label: 'IRS & State Tax Representation for Business', href: '/services/irs-representation-for-business' }
+];
+---
+
+<section class="relative bg-dark-background py-16 lg:py-20 overflow-hidden">
+  <div class="absolute inset-0">
+    <img
+      src="https://pagesmith-cdn.com/84515c4a/images/fa9a9fb9a66a191651ef7a08f67d6c09-1024.webp"
+      alt=""
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
+  </div>
+  <div class="relative max-w-[1200px] mx-auto px-4 text-center">
+    <nav class="flex justify-center items-center gap-2 text-sm text-gray-300 mb-6 flex-wrap">
+      {breadcrumb.map((item, i) => (
+        <span class="flex items-center gap-2">
+          {i > 0 && <span class="text-gray-400">/</span>}
+          <a href={item.href} class={`hover:text-[#C1272D] transition ${i === breadcrumb.length - 1 ? 'text-white font-medium' : ''}`}>
+            {item.label}
+          </a>
+        </span>
+      ))}
+    </nav>
+    <span class="inline-block bg-[#C1272D] text-white font-serif font-bold text-[18px] lg:text-[20px] px-6 py-2 rounded-[6px] mb-6">
+      Business Taxes
+    </span>
+    <h1 class="text-[34px] lg:text-[48px] font-bold text-white font-serif leading-tight mb-4">
+      IRS & State Tax Representation for Business
+    </h1>
+    <p class="text-[16px] lg:text-[18px] text-gray-200 italic max-w-[800px] mx-auto leading-relaxed">
+      We can help your business with IRS Tax Issues. Contact Michelle Turpin, P.C. today.
+    </p>
+  </div>
+</section>

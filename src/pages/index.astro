@@ -1,0 +1,58 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/home/Hero.astro';
+import AttorneyMichelle from '@/components/home/AttorneyMichelle.astro';
+import AttorneyRichard from '@/components/home/AttorneyRichard.astro';
+import Representation from '@/components/home/Representation.astro';
+import ControversyLaw from '@/components/home/ControversyLaw.astro';
+import ExperienceBanner from '@/components/home/ExperienceBanner.astro';
+import ServicesMatrix from '@/components/home/ServicesMatrix.astro';
+import ContactFormSection from '@/components/home/ContactFormSection.astro';
+import MapLocations from '@/components/home/MapLocations.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Michelle Turpin P.C. - Utah Tax and Bankruptcy Attorneys",
+  "description": SITE.description,
+  "url": SITE.url,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "image": "https://pagesmith-cdn.com/84515c4a/images/66b10a5de25c2598f7d5d078_60a2dbb60d091276406b000f_michelle-turpin-utah-tax-attorneys-1024.webp",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={SITE.title}
+  description={SITE.description}
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <AttorneyMichelle />
+  <AttorneyRichard />
+  <Representation />
+  <ControversyLaw />
+  <ExperienceBanner />
+  <ServicesMatrix />
+  <ContactFormSection />
+  <MapLocations />
+</BaseLayout>

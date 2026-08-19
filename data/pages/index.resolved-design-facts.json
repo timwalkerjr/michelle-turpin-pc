@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "linkTypography": {
+      "rawFontSize": "15px",
+      "normalizedFontSize": "15px",
+      "source": "computed-navigation",
+      "confidence": "high"
+    }
+  },
+  "warnings": []
+}

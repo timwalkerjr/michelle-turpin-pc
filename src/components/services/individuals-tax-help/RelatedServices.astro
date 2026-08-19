@@ -1,0 +1,45 @@
+---
+const services = [
+  {
+    title: "Tax Planning",
+    description: "Our full-service tax law firm can help you reduce taxes and audit risks. Contact us today.",
+    href: "/services/tax-planning",
+    icon: "ri-line-chart-line"
+  },
+  {
+    title: "Unfiled Tax Returns",
+    description: "If you are facing unfiled returns for Utah or for the IRS, contact one of our tax lawyers today for specific guidance.",
+    href: "/services/unfiled-tax-returns",
+    icon: "ri-file-unknow-line"
+  },
+  {
+    title: "Innocent Spouse Relief",
+    description: "Innocent Spouse Relief provides you relief from additional taxes you owe due to a spouse's actions. Contact us to learn more.",
+    href: "/services/innocent-spouse-relief",
+    icon: "ri-user-heart-line"
+  }
+];
+---
+
+<section id="related" class="py-16 lg:py-20" style="background-color: rgba(245, 239, 230, 0.4);">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <h2 class="text-[28px] lg:text-[36px] font-bold text-[#1A1A1A] font-serif mb-10 text-center leading-[1.2]">
+      Explore Related Services
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      {services.map((service) => (
+        <a href={service.href} class="block bg-white border border-gray-200 rounded-[8px] p-6 hover:shadow-md hover:border-[#C1272D]/30 transition group">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D]">
+              <i class={service.icon + " text-xl"}></i>
+            </div>
+            <div>
+              <h3 class="text-[18px] font-bold text-[#1A1A1A] font-serif mb-2 group-hover:text-[#C1272D] transition">{service.title}</h3>
+              <p class="text-[#4B5563] text-[14px] leading-relaxed">{service.description}</p>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
