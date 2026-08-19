@@ -1,4 +1,5 @@
 ---
+import ContactForm from '@/components/ContactForm.astro';
 ---
 
 <section id="intro" class="bg-white py-16 lg:py-20">
@@ -17,25 +18,7 @@
     <div class="lg:col-span-5">
       <div class="bg-[#C1272D] rounded-[8px] p-6 lg:p-8 text-white shadow-2xl">
         <h3 class="text-[24px] font-bold font-serif mb-6 text-white">Send Us Your Message</h3>
-        <form>
-          <div class="mb-4">
-            <label class="text-xs uppercase font-bold tracking-wider mb-1 block">Name</label>
-            <input type="text" placeholder="Your Name" class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:ring-2 focus:ring-white text-[14px]" />
-          </div>
-          <div class="mb-4">
-            <label class="text-xs uppercase font-bold tracking-wider mb-1 block">Contact Phone</label>
-            <input type="text" placeholder="Your Best Contact Number" class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:ring-2 focus:ring-white text-[14px]" />
-          </div>
-          <div class="mb-4">
-            <label class="text-xs uppercase font-bold tracking-wider mb-1 block">Email Address</label>
-            <input type="email" placeholder="Your Email" class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:ring-2 focus:ring-white text-[14px]" />
-          </div>
-          <div class="mb-6">
-            <label class="text-xs uppercase font-bold tracking-wider mb-1 block">Your Message</label>
-            <textarea placeholder="How can we help you? Briefly describe your situation." class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:ring-2 focus:ring-white text-[14px] h-[110px]"></textarea>
-          </div>
-          <button type="submit" class="w-full bg-white text-[#C1272D] rounded-[6px] py-3 text-[16px] font-bold hover:bg-gray-100 transition shadow">Send Us Your Message</button>
-        </form>
+        <ContactForm idPrefix="tax-planning-contact" subject="Tax planning consultation request" />
       </div>
     </div>
   </div>
