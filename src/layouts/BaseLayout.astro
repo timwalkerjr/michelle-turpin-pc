@@ -23,9 +23,8 @@ const htmlLang = lang ?? Astro.currentLocale ?? SITE.lang;
 <!DOCTYPE html>
 <html lang={htmlLang}>
   <head>
-    <link rel="preconnect" href="https://pagesmith-cdn.com" crossorigin />
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
-    <link rel="preload" href="/_pagesmith/fonts/roboto-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/roboto-400.woff2" as="font" type="font/woff2" crossorigin />
     <SEOHead
       title={title}
       description={description}
@@ -38,9 +37,9 @@ const htmlLang = lang ?? Astro.currentLocale ?? SITE.lang;
     <!-- Mark JS as enabled immediately -->
     <script is:inline>document.documentElement.classList.add('js');</script>
   </head>
-    <body data-ps="src/layouts/BaseLayout.astro:4vj8al">
+    <body>
       <Navigation />
-      <main data-ps="src/layouts/BaseLayout.astro:yuyoow">
+      <main>
         <slot />
       </main>
       <Footer />

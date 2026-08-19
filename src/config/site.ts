@@ -5,7 +5,7 @@ export const SITE = {
   lang: 'en',
   url:
     (typeof process !== 'undefined' && process.env.SITE_URL) ||
-    'https://michelleturpin2026.clientsite.agency',
+    'https://taxlawsolutions.com',
   phone: '(801) 685-0552',
   phoneHref: 'tel:+18016850552',
   address: '4764 S 900 E #3, Millcreek, UT 84117',

@@ -6,15 +6,15 @@ const related = [
 ];
 ---
 
-<section id="service-explore" class="bg-white py-16 lg:py-20" data-ps="src/components/services/installment-agreements/ServiceExplore.astro:2z0x0z">
-  <div class="max-w-[1400px] mx-auto px-4" data-ps="src/components/services/installment-agreements/ServiceExplore.astro:t2ihe2">
-    <h2 class="text-[28px] lg:text-[36px] font-bold text-[#1A1A1A] font-serif text-center mb-10" data-ps="src/components/services/installment-agreements/ServiceExplore.astro:kaykv8">Explore Related Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-ps="src/components/services/installment-agreements/ServiceExplore.astro:t2ihe1">
+<section id="service-explore" class="bg-white py-16 lg:py-20">
+  <div class="max-w-[1400px] mx-auto px-4">
+    <h2 class="text-[28px] lg:text-[36px] font-bold text-[#1A1A1A] font-serif text-center mb-10">Explore Related Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {related.map((s, __psIdx) => (
-        <a href={s.href} class="bg-white border border-gray-200 rounded-[8px] p-6 hover:shadow-md hover:border-[#C1272D]/30 transition flex flex-col" data-ps={`src/components/services/installment-agreements/ServiceExplore.astro:lcibow-${__psIdx}`}>
-          <h3 class="text-[18px] font-bold text-[#1A1A1A] font-serif mb-2 leading-tight" data-ps={`src/components/services/installment-agreements/ServiceExplore.astro:ks0805-${__psIdx}`}>{s.title}</h3>
-          <p class="text-[#4B5563] text-[14px] leading-relaxed mb-3 flex-1" data-ps={`src/components/services/installment-agreements/ServiceExplore.astro:lkrjpo-${__psIdx}`}>{s.excerpt}</p>
-          <span class="text-[#C1272D] font-medium text-[14px]" data-ps={`src/components/services/installment-agreements/ServiceExplore.astro:rik1zt-${__psIdx}`}>Learn More →</span>
+        <a href={s.href} class="bg-white border border-gray-200 rounded-[8px] p-6 hover:shadow-md hover:border-[#C1272D]/30 transition flex flex-col">
+          <h3 class="text-[18px] font-bold text-[#1A1A1A] font-serif mb-2 leading-tight">{s.title}</h3>
+          <p class="text-[#4B5563] text-[14px] leading-relaxed mb-3 flex-1">{s.excerpt}</p>
+          <span class="text-[#C1272D] font-medium text-[14px]">Learn More →</span>
         </a>
       ))}
     </div>

@@ -1,364 +1,63 @@
 ---
+const serviceGroups = [
+  {
+    title: 'Individual Tax Problems',
+    description: 'Representation for audits, tax liens, levies, wage garnishments, unfiled returns, and innocent spouse matters.',
+    href: '/services/individuals-tax-help/',
+    linkLabel: 'Explore individual tax services',
+    issues: ['IRS and state audits', 'Liens, levies, and garnishments', 'Unfiled returns and penalties'],
+  },
+  {
+    title: 'Business Tax Problems',
+    description: 'Experienced counsel for business audits, payroll and sales tax disputes, bank levies, penalties, and appeals.',
+    href: '/irs-representation-for-business/',
+    linkLabel: 'Explore business tax services',
+    issues: ['Business audit defense', 'Payroll and trust fund taxes', 'State and federal tax appeals'],
+  },
+  {
+    title: 'Tax Resolution & Bankruptcy',
+    description: 'Practical options for resolving tax debt, including installment agreements, offers in compromise, appeals, and bankruptcy.',
+    href: '/services/offer-in-compromise-with-utah-tax-attorney/',
+    linkLabel: 'Explore resolution options',
+    issues: ['Offers in compromise', 'Installment agreements', 'Tax debt in bankruptcy'],
+  },
+];
 ---
 
-<section id="services" class="relative isolate bg-white py-16 lg:py-24" data-ps="src/components/home/ServicesMatrix.astro:section">
-  <div class="max-w-[1200px] mx-auto px-4 flex flex-col gap-14" data-ps="src/components/home/ServicesMatrix.astro:5cfkun">
-    <!-- Section Header -->
-    <div class="text-center max-w-[850px] mx-auto" data-ps="src/components/home/ServicesMatrix.astro:header">
-      <h2 class="text-[32px] sm:text-[36px] lg:text-[40px] font-bold text-[#1A1A1A] font-serif mb-4 leading-tight" data-ps="src/components/home/ServicesMatrix.astro:g1pfru">
-        Tax Questions? We have answers...
+<section id="services" class="relative isolate bg-white py-16 lg:py-24">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <div class="text-center max-w-[780px] mx-auto mb-12">
+      <p class="text-[#C1272D] font-bold uppercase tracking-wider text-sm mb-3">How we help</p>
+      <h2 class="text-[32px] sm:text-[36px] lg:text-[40px] font-bold text-[#1A1A1A] font-serif mb-4 leading-tight">
+        Clear paths through complex tax problems
       </h2>
-      <p class="text-[#4B5563] text-[16px] leading-[1.65] m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhic">
-        Our attorneys are highly experienced and knowledgeable of all areas of tax law. They have dealt with nearly every kind of tax situation imaginable and will be able to help you navigate the complex world of tax law.
+      <p class="text-[#4B5563] text-[16px] leading-[1.65]">
+        Whether the issue affects you, your family, or your business, our attorneys can assess the problem and help identify the strongest path forward.
       </p>
     </div>
 
-    <!-- Category 1: Individual Taxes -->
-    <div data-ps="src/components/home/ServicesMatrix.astro:cat-individual">
-      <div class="mb-6" data-ps="src/components/home/ServicesMatrix.astro:5cfkuo">
-        <span class="inline-block bg-[#C1272D] text-white font-serif font-bold text-[18px] sm:text-[20px] px-6 py-2 rounded-[6px]" data-ps="src/components/home/ServicesMatrix.astro:uknfui">
-          Individual Taxes
-        </span>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-ps="src/components/home/ServicesMatrix.astro:5cfkup">
-        <!-- 1 -->
-        <a href="/services/audit-offer-in-compromise-appeal" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchr7">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkuq">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkur">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d1x">Audit/Offer In Compromise Appeal</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhid">Utah Tax Attorney Michelle Turpin, P.C. — Learn How to Appeal an IRS Audit or Offer in Compromise Denial.</p>
-          </div>
-        </a>
-
-        <!-- 2 -->
-        <a href="/services/bank-levy-wage-garnishment" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchr8">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkvd">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkve">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d1w">Bank Levy & Wage Garnishment Defense</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhie">Emergency Tax Relief for Individuals and Businesses. If you are facing IRS Bank Levies and/or Wage Garnishments we can help.</p>
-          </div>
-        </a>
-
-        <!-- 3 -->
-        <a href="/services/tax-liens" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchr9">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkvf">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkvg">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d1v">Federal and State Tax Liens</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhj0">When you owe taxes, a tax lien may be filed against your Utah property. Call our Utah Tax Lien Attorneys today.</p>
-          </div>
-        </a>
-
-        <!-- 4 -->
-        <a href="/services/individuals-tax-help" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchra">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkvh">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkvi">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d1u">Individuals Tax Help</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhj1">We can help assist you with all of your personal taxes, both State and Federal. Call for a consultation today.</p>
-          </div>
-        </a>
-
-        <!-- 5 -->
-        <a href="/services/innocent-spouse-relief" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchrb">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkvj">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkvk">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d18">Innocent Spouse Relief</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhj2">Innocent Spouse Relief provides you relief from additional taxes you owe due to a spouse's actions. Contact us to learn more.</p>
-          </div>
-        </a>
-
-        <!-- 6 -->
-        <a href="/services/audit-help" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchrx">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkvl">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkvm">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d17">IRS and State Tax Audit Help</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhj3">Expert audit legal representation for IRS, State, and Local Tax Issues. Find out how audits work.</p>
-          </div>
-        </a>
-
-        <!-- 7 -->
-        <a href="/services/property-seizures" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchry">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkw8">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkw9">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d16">Property Seizures</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhj4">Is the IRS trying to seize your Utah property? Contact our tax lawyers today to start your defense.</p>
-          </div>
-        </a>
-
-        <!-- 8 -->
-        <a href="/services/tax-penalty" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchrz">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkwa">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkwb">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d15">Tax Penalty</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhj5">The IRS penalizes millions of taxpayers each year. Call us and learn how we can help you.</p>
-          </div>
-        </a>
-
-        <!-- 9 -->
-        <a href="/services/tax-planning" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchs0">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkwc">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkwd">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d14">Tax Planning</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhj6">Our full-service tax law firm can help you reduce taxes and audit risks. Contact us today.</p>
-          </div>
-        </a>
-
-        <!-- 10 -->
-        <a href="/services/unfiled-tax-returns" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchs1">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkwe">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkwf">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d13">Unfiled Tax Returns</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhj7">If you are facing unfiled returns for Utah or for the IRS, contact one of our tax lawyers today for specific guidance.</p>
-          </div>
-        </a>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {serviceGroups.map((group) => (
+        <article class="border border-gray-200 rounded-[10px] p-6 lg:p-7 bg-white shadow-sm hover:shadow-md hover:border-[#C1272D]/40 transition flex flex-col">
+          <div class="w-12 h-1 bg-[#C1272D] rounded-full mb-6"></div>
+          <h3 class="text-[23px] font-bold text-[#1A1A1A] font-serif mb-3">{group.title}</h3>
+          <p class="text-[#4B5563] text-[15px] leading-relaxed mb-5">{group.description}</p>
+          <ul class="space-y-2 text-[14px] text-[#374151] mb-7" aria-label={`Common ${group.title.toLowerCase()} matters`}>
+            {group.issues.map((issue) => (
+              <li class="flex gap-2"><span class="text-[#C1272D] font-bold" aria-hidden="true">✓</span>{issue}</li>
+            ))}
+          </ul>
+          <a href={group.href} class="mt-auto text-[#C1272D] font-bold hover:text-[#8F1A1F] transition">
+            {group.linkLabel} <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      ))}
     </div>
 
-    <!-- Category 2: Business Taxes -->
-    <div data-ps="src/components/home/ServicesMatrix.astro:cat-business">
-      <div class="mb-6" data-ps="src/components/home/ServicesMatrix.astro:5cfkwg">
-        <span class="inline-block bg-[#C1272D] text-white font-serif font-bold text-[18px] sm:text-[20px] px-6 py-2 rounded-[6px]" data-ps="src/components/home/ServicesMatrix.astro:uknfuh">
-          Business Taxes
-        </span>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-ps="src/components/home/ServicesMatrix.astro:5cfkwh">
-        <!-- 1 -->
-        <a href="/services/audit-help-for-businesses" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchs2">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkx3">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkx4">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d12">Audit Help for Businesses</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhj8">Michelle Turpin P.C. represents Utah businesses being audited by the IRS. Contact us today.</p>
-          </div>
-        </a>
-
-        <!-- 2 -->
-        <a href="/services/business-audit-appeals" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchs3">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkx5">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkx6">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d11">Business Audit Appeals</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhj9">You may have the right to appeal an IRS Business Audit. Contact Utah Business Tax Lawyer Michelle Turpin P.C. today.</p>
-          </div>
-        </a>
-
-        <!-- 3 -->
-        <a href="/services/business-bank-levy" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchs4">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkx7">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkx8">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d10">Business Bank Levy</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhjv">If your Utah business is facing an IRS Bank Levy we may be able to help you. Contact our Business Levy Legal Team Today.</p>
-          </div>
-        </a>
-
-        <!-- 4 -->
-        <a href="/services/business-tax-liens" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchs5">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkx9">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkxa">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d0z">Business Tax Liens</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhjw">If your Utah business owes taxes, the IRS may file a Federal Tax Lien against you. Call our Business Tax Attorneys today.</p>
-          </div>
-        </a>
-
-        <!-- 5 -->
-        <a href="/services/business-tax-penalty" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchs6">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkxb">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkxc">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d0d">Business Tax Penalty</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhjx">Our tax penalty attorneys can represent you to the IRS and work to abate your penalties.</p>
-          </div>
-        </a>
-
-        <!-- 6 -->
-        <a href="/services/irs-representation-for-business" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchss">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkxy">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkxz">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d0c">IRS & State Tax Representation for Business</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhjy">We can help your business with IRS Tax Issues. Contact Michelle Turpin, P.C. today.</p>
-          </div>
-        </a>
-
-        <!-- 7 -->
-        <a href="/services/state-tax-problem" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchst">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfky0">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfky1">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d0b">State Tax Problem</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhjz">Unpaid Employment Taxes, State Taxing Authority Problems? Our Utah Tax Lawyers can help.</p>
-          </div>
-        </a>
-
-        <!-- 8 -->
-        <a href="/services/tax-planning-for-businesses" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchsu">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfky2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfky3">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d0a">Strategic Business Tax Planning</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhk0">The IRS code is complex. We help Utah Business Owners plan to save on taxes.</p>
-          </div>
-        </a>
-
-        <!-- 9 -->
-        <a href="/services/trust-fund-recovery-penalty" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchsv">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfky4">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfky5">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d09">Trust Fund Recovery Penalty (TFRP)</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhk1">Facing an IRS Trust Fund Recovery Penalty? Michelle Turpin P.C. defends individuals against personal liability.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- Category 3: Settlement Options -->
-    <div data-ps="src/components/home/ServicesMatrix.astro:cat-settlement">
-      <div class="mb-6" data-ps="src/components/home/ServicesMatrix.astro:5cfky6">
-        <span class="inline-block bg-[#C1272D] text-white font-serif font-bold text-[18px] sm:text-[20px] px-6 py-2 rounded-[6px]" data-ps="src/components/home/ServicesMatrix.astro:uknfug">
-          Settlement Options
-        </span>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-ps="src/components/home/ServicesMatrix.astro:5cfky7">
-        <!-- 1 -->
-        <a href="/services-collection-appeals" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchsw">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkyt">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkyu">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d08">Collection Appeals</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhk2">Has the IRS rejected your Installment Agreement? We can appeal your case before the IRS.</p>
-          </div>
-        </a>
-
-        <!-- 2 -->
-        <a href="/services-corporate-restructuring" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchsx">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkyv">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkyw">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d07">Corporate Restructuring</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhk3">Restructuring your business in Utah may be an answer to incurred income or tax debt.</p>
-          </div>
-        </a>
-
-        <!-- 3 -->
-        <a href="/services/installment-agreements" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchsy">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkyx">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkyy">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d06">Installment Agreements</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:ahhk4">Our Utah Tax Lawyers can help you with IRS Installment Agreements for taxes due.</p>
-          </div>
-        </a>
-
-        <!-- 4 -->
-        <a href="/services/offer-in-compromise-with-utah-tax-attorney" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchsz">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkyz">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkz0">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d05">Offer in Compromise</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:dql4np">The IRS Offer in Compromise is an excellent way to settle taxes with the IRS for less than owed.</p>
-          </div>
-        </a>
-
-        <!-- 5 -->
-        <a href="/services/tax-appeals" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lcht0">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:5cfkz1">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:5cfkz2">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4d04">Tax Appeals</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:dql4no">You may have the right to a Tax Appeal with the IRS. Our IRS Tax Appeals Attorneys can help you.</p>
-          </div>
-        </a>
-
-        <!-- 6 -->
-        <a href="/services/payroll-taxes" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lcht1">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:kslf6i">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:kslf6j">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4czi">Trust Fund Taxes (Payroll & Sales Tax)</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:dql4nn">Is the IRS trying to collect payroll taxes from your business? Our Utah Business Tax Attorneys can help.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- Category 4: Bankruptcy -->
-    <div data-ps="src/components/home/ServicesMatrix.astro:cat-bankruptcy">
-      <div class="mb-6" data-ps="src/components/home/ServicesMatrix.astro:kslf6k">
-        <span class="inline-block bg-[#C1272D] text-white font-serif font-bold text-[18px] sm:text-[20px] px-6 py-2 rounded-[6px]" data-ps="src/components/home/ServicesMatrix.astro:uknfuf">
-          Bankruptcy
-        </span>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-ps="src/components/home/ServicesMatrix.astro:kslf6l">
-        <!-- 1 -->
-        <a href="/services/chapter-11-small-business-bankruptcy" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchtn">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:kslf6m">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:kslf6n">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4czh">Chapter 11 Small Business Bankruptcy</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:dql4nm">Chapter 11 Small Business Bankruptcy Attorneys. Salt Lake City and all of Utah. Call today.</p>
-          </div>
-        </a>
-
-        <!-- 2 -->
-        <a href="/services/chapter-13-bankruptcy" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchto">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:kslf6o">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:kslf6p">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4czg">Chapter 13 Bankruptcy</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:dql4nl">Chapter 13 Bankruptcy Attorneys. Salt Lake City and all of Utah. Call today.</p>
-          </div>
-        </a>
-
-        <!-- 3 -->
-        <a href="/services/chapter-7-bankruptcy" class="border border-gray-200 rounded-[8px] p-4 flex items-start gap-4 hover:border-[#C1272D]/40 hover:shadow-sm transition-all bg-white group no-underline text-left" data-ps="src/components/home/ServicesMatrix.astro:7lchtp">
-          <div class="w-10 h-10 rounded-full bg-[#C1272D]/10 flex items-center justify-center shrink-0 text-[#C1272D] group-hover:bg-[#C1272D] group-hover:text-white transition-colors" data-ps="src/components/home/ServicesMatrix.astro:kslf6q">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-          </div>
-          <div data-ps="src/components/home/ServicesMatrix.astro:kslf6r">
-            <h3 class="text-[16px] font-bold text-[#1A1A1A] group-hover:text-[#C1272D] transition-colors mb-1 font-serif" data-ps="src/components/home/ServicesMatrix.astro:uq4czf">Chapter 7 Bankruptcy</h3>
-            <p class="text-[14px] text-gray-600 leading-normal m-0" data-ps="src/components/home/ServicesMatrix.astro:dql4nk">Chapter 7 Bankruptcy Attorneys. Salt Lake City and all of Utah. Call today.</p>
-          </div>
-        </a>
-      </div>
+    <div class="text-center mt-10">
+      <a href="/contact-us/" class="inline-flex items-center justify-center bg-[#C1272D] text-white px-7 py-3 rounded-[6px] font-bold hover:bg-[#941E22] transition">
+        Discuss your tax situation
+      </a>
     </div>
   </div>
 </section>

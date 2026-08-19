@@ -1,0 +1,98 @@
+---
+export interface Props {
+  idPrefix?: string;
+  subject?: string;
+}
+
+const {
+  idPrefix = 'contact',
+  subject = 'New consultation request from Michelle Turpin P.C. website',
+} = Astro.props;
+
+const endpoint = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT || 'https://formspree.io/f/mdenpjwz';
+---
+
+<form
+  action={endpoint}
+  method="POST"
+  class="formspree-form space-y-4"
+  data-form-configured={endpoint ? 'true' : 'false'}
+>
+  <input type="hidden" name="_subject" value={subject} />
+  <input class="hidden" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+  <div>
+    <label for={`${idPrefix}-name`} class="block text-xs uppercase font-bold tracking-wider mb-1 text-left">Name</label>
+    <input id={`${idPrefix}-name`} name="name" type="text" autocomplete="name" required placeholder="Your Name" class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:outline-none focus:ring-2 focus:ring-white text-[14px]" />
+  </div>
+
+  <div>
+    <label for={`${idPrefix}-phone`} class="block text-xs uppercase font-bold tracking-wider mb-1 text-left">Contact Phone</label>
+    <input id={`${idPrefix}-phone`} name="phone" type="tel" autocomplete="tel" placeholder="Your Best Contact Number" class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:outline-none focus:ring-2 focus:ring-white text-[14px]" />
+  </div>
+
+  <div>
+    <label for={`${idPrefix}-email`} class="block text-xs uppercase font-bold tracking-wider mb-1 text-left">Email Address</label>
+    <input id={`${idPrefix}-email`} name="email" type="email" autocomplete="email" required placeholder="Your Email" class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:outline-none focus:ring-2 focus:ring-white text-[14px]" />
+  </div>
+
+  <div>
+    <label for={`${idPrefix}-message`} class="block text-xs uppercase font-bold tracking-wider mb-1 text-left">Your Message</label>
+    <textarea id={`${idPrefix}-message`} name="message" required rows="4" placeholder="How can we help you? Please do not include Social Security numbers or other highly sensitive information." class="w-full px-4 py-2.5 rounded-[6px] text-[#1A1A1A] bg-white border-none focus:outline-none focus:ring-2 focus:ring-white text-[14px] resize-y"></textarea>
+  </div>
+
+  <p class="text-xs leading-relaxed text-white/85">
+    By submitting this form, you authorize Michelle Turpin P.C. to use the information provided to respond to your inquiry. Submitting this form does not create an attorney-client relationship.
+  </p>
+
+  <p class="form-feedback hidden text-sm p-3 rounded font-medium" role="status" aria-live="polite"></p>
+
+  <button type="submit" class="form-submit w-full bg-white text-[#C1272D] rounded-[6px] py-3 text-[16px] font-bold hover:bg-gray-100 disabled:opacity-60 transition shadow cursor-pointer">
+    Send Us Your Message
+  </button>
+</form>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('.formspree-form').forEach((form) => {
+    if (form.dataset.enhanced === 'true') return;
+    form.dataset.enhanced = 'true';
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const feedback = form.querySelector<HTMLElement>('.form-feedback');
+      const submit = form.querySelector<HTMLButtonElement>('.form-submit');
+      if (!feedback || !submit) return;
+
+      if (form.dataset.formConfigured !== 'true' || !form.action) {
+        feedback.className = 'form-feedback block bg-yellow-900 text-white text-sm p-3 rounded font-medium';
+        feedback.textContent = 'This form is awaiting its Formspree endpoint. Please call (801) 685-0552.';
+        return;
+      }
+
+      submit.disabled = true;
+      submit.textContent = 'Sending…';
+      feedback.className = 'form-feedback hidden text-sm p-3 rounded font-medium';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+
+        if (!response.ok) throw new Error('Formspree rejected the submission');
+
+        form.reset();
+        feedback.className = 'form-feedback block bg-green-800 text-white text-sm p-3 rounded font-medium';
+        feedback.textContent = 'Thank you. Your message has been sent, and our team will contact you shortly.';
+      } catch {
+        feedback.className = 'form-feedback block bg-yellow-900 text-white text-sm p-3 rounded font-medium';
+        feedback.textContent = 'We could not send your message. Please call (801) 685-0552.';
+      } finally {
+        submit.disabled = false;
+        submit.textContent = 'Send Us Your Message';
+      }
+    });
+  });
+</script>

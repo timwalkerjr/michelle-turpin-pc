@@ -28,19 +28,7 @@ const {
   noIndex,
 } = Astro.props;
 
-// Environment variables for auto-generated OG images
-const ACCOUNT_ID = import.meta.env.ACCOUNT_ID || '';
-const SITE_ID = import.meta.env.SITE_ID || '';
-const OG_IMAGE_CDN_URL = import.meta.env.OG_IMAGE_CDN_URL || 'https://pagesmith-cdn.com';
-
-// Auto-generate OG image URL
-const pathname = Astro.url.pathname;
-const slug = pathname === '/' ? 'index' : pathname.replace(/^\/|\/$/g, '');
-
-const autoImage = (ACCOUNT_ID && SITE_ID)
-  ? `${OG_IMAGE_CDN_URL}/${ACCOUNT_ID}/${SITE_ID}/${slug}-og.png`
-  : `/${slug === 'index' ? 'home' : slug.split('/')[0]}-og.jpg`;
-const finalImage = image || autoImage;
+const finalImage = image || '/assets/media/9b4bff48c59524eb63094d56c988364a-1536.webp';
 
 // Use provided canonical URL or generate from current path
 const finalCanonicalURL = canonicalUrl || new URL(Astro.url.pathname, SITE.url).toString();
@@ -67,7 +55,6 @@ const ogImageURL = finalImage.startsWith('http') ? finalImage : new URL(finalIma
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content={SITE.twitterHandle} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImageURL} />
@@ -80,5 +67,5 @@ const ogImageURL = finalImage.startsWith('http') ? finalImage : new URL(finalIma
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 )}
 
-<link rel="icon" type="image/svg+xml" href="https://pagesmith-cdn.com/84515c4a/favicons/favicon-adc9c545.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="https://pagesmith-cdn.com/84515c4a/favicons/apple-touch-icon-adc9c545.png" />
+<link rel="icon" type="image/svg+xml" href="/assets/media/favicon-adc9c545.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/media/apple-touch-icon-adc9c545.png" />

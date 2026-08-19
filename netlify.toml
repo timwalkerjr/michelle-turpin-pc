@@ -1,0 +1,129 @@
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  PNPM_VERSION = "11.19.0"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+[[redirects]]
+  from = "/services/audit-help-for-businesses"
+  to = "/audit-help-for-businesses/"
+  status = 301
+
+[[redirects]]
+  from = "/services/business-audit-appeals"
+  to = "/business-audit-appeals/"
+  status = 301
+
+[[redirects]]
+  from = "/services/business-bank-levy"
+  to = "/business-bank-levy/"
+  status = 301
+
+[[redirects]]
+  from = "/services/business-tax-liens"
+  to = "/business-tax-liens/"
+  status = 301
+
+[[redirects]]
+  from = "/services/business-tax-penalty"
+  to = "/business-tax-penalty/"
+  status = 301
+
+[[redirects]]
+  from = "/services/irs-representation-for-business"
+  to = "/irs-representation-for-business/"
+  status = 301
+
+[[redirects]]
+  from = "/services/property-seizures"
+  to = "/property-seizures/"
+  status = 301
+
+[[redirects]]
+  from = "/services/state-tax-problem"
+  to = "/services-state-tax-problem/"
+  status = 301
+
+[[redirects]]
+  from = "/services/tax-penalty"
+  to = "/tax-penalty/"
+  status = 301
+
+[[redirects]]
+  from = "/services/tax-planning"
+  to = "/tax-planning/"
+  status = 301
+
+[[redirects]]
+  from = "/services/tax-planning-for-businesses"
+  to = "/services-tax-planning-for-businesses/"
+  status = 301
+
+[[redirects]]
+  from = "/services/trust-fund-recovery-penalty"
+  to = "/services-trust-fund-recovery-penalty/"
+  status = 301
+
+[[redirects]]
+  from = "/services/unfiled-tax-returns"
+  to = "/unfiled-tax-returns/"
+  status = 301
+
+[[redirects]]
+  from = "/services/corporate-restructuring"
+  to = "/services-corporate-restructuring/"
+  status = 301
+
+[[redirects]]
+  from = "/services/collection-appeals"
+  to = "/services-collection-appeals/"
+  status = 301
+
+[[redirects]]
+  from = "/services/settlement-options"
+  to = "/services/offer-in-compromise-with-utah-tax-attorney/"
+  status = 301
+
+[[redirects]]
+  from = "/services/settle-tax-debt-today"
+  to = "/services/offer-in-compromise-with-utah-tax-attorney/"
+  status = 301
+
+[[redirects]]
+  from = "/articles/offer-in-compromise-guide-2024"
+  to = "/services/offer-in-compromise-with-utah-tax-attorney/"
+  status = 301
+
+[[redirects]]
+  from = "/articles/irs-audit-defense-strategies"
+  to = "/services/audit-help/"
+  status = 301
+
+[[redirects]]
+  from = "/articles/can-taxes-be-discharged-in-bankruptcy"
+  to = "/services/chapter-7-bankruptcy/"
+  status = 301
+
+[[redirects]]
+  from = "/articles/defending-against-irs-wage-garnishment-utah"
+  to = "/services/bank-levy-wage-garnishment/"
+  status = 301
+
+[[redirects]]
+  from = "/articles/strategic-business-tax-planning-utah"
+  to = "/services-tax-planning-for-businesses/"
+  status = 301
+
+[[redirects]]
+  from = "/articles/innocent-spouse-relief-explained-utah"
+  to = "/services/innocent-spouse-relief/"
+  status = 301

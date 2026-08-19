@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Hero from '@/components/home/Hero.astro';
 import AttorneyMichelle from '@/components/home/AttorneyMichelle.astro';
+import AttorneySpencer from '@/components/home/AttorneySpencer.astro';
 import AttorneyRichard from '@/components/home/AttorneyRichard.astro';
 import Representation from '@/components/home/Representation.astro';
 import ControversyLaw from '@/components/home/ControversyLaw.astro';
@@ -19,7 +20,7 @@ const jsonLd = {
   "url": SITE.url,
   "telephone": "+18016850552",
   "priceRange": "$$",
-  "image": "https://pagesmith-cdn.com/84515c4a/images/66b10a5de25c2598f7d5d078_60a2dbb60d091276406b000f_michelle-turpin-utah-tax-attorneys-1024.webp",
+  "image": "/assets/media/66b10a5de25c2598f7d5d078_60a2dbb60d091276406b000f_michelle-turpin-utah-tax-attorneys-1024.webp",
   "address": [
     {
       "@type": "PostalAddress",
@@ -31,7 +32,7 @@ const jsonLd = {
     },
     {
       "@type": "PostalAddress",
-      "streetAddress": "162 N 400 E Ste a-204",
+      "streetAddress": "162 N 400 E Ste A-204",
       "addressLocality": "St. George",
       "addressRegion": "UT",
       "postalCode": "84770",
@@ -48,6 +49,7 @@ const jsonLd = {
 >
   <Hero />
   <AttorneyMichelle />
+  <AttorneySpencer />
   <AttorneyRichard />
   <Representation />
   <ControversyLaw />

@@ -1,5 +1,5 @@
 {
-  "name": "stunning-astro-template",
+  "name": "michelle-turpin-pc",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -20,7 +20,6 @@
     "glob": "^13.0.6",
     "tailwindcss": "^4.3.0",
     "@tailwindcss/typography": "^0.5.19",
-    "@astrojs/cloudflare": "^14.1.4",
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
