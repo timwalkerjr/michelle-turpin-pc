@@ -14,78 +14,8 @@
     X-Frame-Options = "SAMEORIGIN"
 
 [[redirects]]
-  from = "/services/audit-help-for-businesses"
-  to = "/audit-help-for-businesses/"
-  status = 301
-
-[[redirects]]
-  from = "/services/business-audit-appeals"
-  to = "/business-audit-appeals/"
-  status = 301
-
-[[redirects]]
-  from = "/services/business-bank-levy"
-  to = "/business-bank-levy/"
-  status = 301
-
-[[redirects]]
-  from = "/services/business-tax-liens"
-  to = "/business-tax-liens/"
-  status = 301
-
-[[redirects]]
-  from = "/services/business-tax-penalty"
-  to = "/business-tax-penalty/"
-  status = 301
-
-[[redirects]]
-  from = "/services/irs-representation-for-business"
-  to = "/irs-representation-for-business/"
-  status = 301
-
-[[redirects]]
-  from = "/services/property-seizures"
-  to = "/property-seizures/"
-  status = 301
-
-[[redirects]]
-  from = "/services/state-tax-problem"
-  to = "/services-state-tax-problem/"
-  status = 301
-
-[[redirects]]
-  from = "/services/tax-penalty"
-  to = "/tax-penalty/"
-  status = 301
-
-[[redirects]]
   from = "/services/tax-planning"
   to = "/tax-planning/"
-  status = 301
-
-[[redirects]]
-  from = "/services/tax-planning-for-businesses"
-  to = "/services-tax-planning-for-businesses/"
-  status = 301
-
-[[redirects]]
-  from = "/services/trust-fund-recovery-penalty"
-  to = "/services-trust-fund-recovery-penalty/"
-  status = 301
-
-[[redirects]]
-  from = "/services/unfiled-tax-returns"
-  to = "/unfiled-tax-returns/"
-  status = 301
-
-[[redirects]]
-  from = "/services/corporate-restructuring"
-  to = "/services-corporate-restructuring/"
-  status = 301
-
-[[redirects]]
-  from = "/services/collection-appeals"
-  to = "/services-collection-appeals/"
   status = 301
 
 [[redirects]]
@@ -120,7 +50,7 @@
 
 [[redirects]]
   from = "/articles/strategic-business-tax-planning-utah"
-  to = "/services-tax-planning-for-businesses/"
+  to = "/services/tax-planning-for-businesses/"
   status = 301
 
 [[redirects]]

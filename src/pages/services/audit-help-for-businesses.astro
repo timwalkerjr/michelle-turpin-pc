@@ -1,18 +1,18 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Hero from '@/components/unfiled-tax-returns/Hero.astro';
-import Content from '@/components/unfiled-tax-returns/Content.astro';
-import CTA from '@/components/unfiled-tax-returns/CTA.astro';
-import Contact from '@/components/unfiled-tax-returns/Contact.astro';
-import RelatedServices from '@/components/unfiled-tax-returns/RelatedServices.astro';
+import Hero from '@/components/audit-help-for-businesses/Hero.astro';
+import Content from '@/components/audit-help-for-businesses/Content.astro';
+import CTA from '@/components/audit-help-for-businesses/CTA.astro';
+import Contact from '@/components/audit-help-for-businesses/Contact.astro';
+import RelatedServices from '@/components/audit-help-for-businesses/RelatedServices.astro';
 import { SITE } from '@/config/site';
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "Unfiled Tax Returns Help - Michelle Turpin P.C.",
-  "description": "Get help filing unfiled Utah or IRS tax returns. Our tax lawyers provide specific guidance for your situation at Michelle Turpin P.C.",
-  "url": `${SITE.url}/unfiled-tax-returns/`,
+  "name": "Business IRS Audit Help - Michelle Turpin P.C.",
+  "description": "Expert IRS audit representation for Utah businesses. Michelle Turpin P.C. defends your company during audits.",
+  "url": `${SITE.url}/services/audit-help-for-businesses/`,
   "telephone": "+18016850552",
   "priceRange": "$$",
   "provider": {
@@ -43,8 +43,8 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="Unfiled Tax Returns Help | Utah Tax Attorneys"
-  description="Get help filing unfiled Utah or IRS tax returns. Our tax lawyers provide specific guidance for your situation at Michelle Turpin P.C."
+  title="Business IRS Audit Help | Utah Tax Attorneys"
+  description="Expert IRS audit representation for Utah businesses. Michelle Turpin P.C. defends your company during audits."
   jsonLd={jsonLd}
 >
   <Hero />

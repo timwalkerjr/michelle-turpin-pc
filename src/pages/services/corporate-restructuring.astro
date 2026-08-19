@@ -1,18 +1,18 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Hero from '@/components/services-tax-planning-for-businesses/Hero.astro';
-import Content from '@/components/services-tax-planning-for-businesses/Content.astro';
-import CTA from '@/components/services-tax-planning-for-businesses/CTA.astro';
-import Related from '@/components/services-tax-planning-for-businesses/Related.astro';
-import Offices from '@/components/services-tax-planning-for-businesses/Offices.astro';
+import Hero from '@/components/services-corporate-restructuring/Hero.astro';
+import Content from '@/components/services-corporate-restructuring/Content.astro';
+import CTA from '@/components/services-corporate-restructuring/CTA.astro';
+import Related from '@/components/services-corporate-restructuring/Related.astro';
+import Offices from '@/components/services-corporate-restructuring/Offices.astro';
 import { SITE } from '@/config/site';
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "Business Tax Planning - Michelle Turpin P.C.",
-  "description": "Strategic tax planning for Utah businesses. Save on taxes and stay compliant with Michelle Turpin P.C.",
-  "url": `${SITE.url}/services-tax-planning-for-businesses/`,
+  "name": "Corporate Restructuring - Michelle Turpin P.C.",
+  "description": "Corporate restructuring to resolve tax debt in Utah. Explore your options with Michelle Turpin P.C.",
+  "url": `${SITE.url}/services/corporate-restructuring/`,
   "telephone": "+18016850552",
   "priceRange": "$$",
   "provider": {
@@ -43,8 +43,8 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="Business Tax Planning | Utah Tax Attorneys"
-  description="Strategic tax planning for Utah businesses. Save on taxes and stay compliant with Michelle Turpin P.C."
+  title="Corporate Restructuring | Utah Tax Attorneys"
+  description="Corporate restructuring to resolve tax debt in Utah. Explore your options with Michelle Turpin P.C."
   jsonLd={jsonLd}
 >
   <Hero />

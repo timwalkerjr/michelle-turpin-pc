@@ -1,17 +1,17 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/business-tax-liens/Hero.astro';
-import Content from '../components/business-tax-liens/Content.astro';
-import RelatedServices from '../components/business-tax-liens/RelatedServices.astro';
-import ContactCTA from '../components/business-tax-liens/ContactCTA.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/business-audit-appeals/Hero.astro';
+import Content from '../../components/business-audit-appeals/Content.astro';
+import RelatedServices from '../../components/business-audit-appeals/RelatedServices.astro';
+import ContactCTA from '../../components/business-audit-appeals/ContactCTA.astro';
 import { SITE } from '@/config/site';
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "Business Tax Lien Help - Michelle Turpin P.C.",
-  "description": "Resolve IRS federal tax liens against your Utah business. Call our business tax attorneys at Michelle Turpin P.C. today.",
-  "url": `${SITE.url}/business-tax-liens/`,
+  "name": "Business Audit Appeals - Michelle Turpin P.C.",
+  "description": "Appeal an IRS business audit with experienced Utah business tax lawyers at Michelle Turpin P.C. Protect your company.",
+  "url": `${SITE.url}/services/business-audit-appeals/`,
   "telephone": "+18016850552",
   "priceRange": "$$",
   "provider": {
@@ -42,8 +42,8 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="Business Tax Lien Help | Utah Tax Attorneys"
-  description="Resolve IRS federal tax liens against your Utah business. Call our business tax attorneys at Michelle Turpin P.C. today."
+  title="Business Audit Appeals | Utah Tax Attorneys"
+  description="Appeal an IRS business audit with experienced Utah business tax lawyers at Michelle Turpin P.C. Protect your company."
   jsonLd={jsonLd}
 >
   <Hero />

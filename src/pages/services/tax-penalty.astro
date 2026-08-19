@@ -1,18 +1,18 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Hero from '@/components/services-collection-appeals/Hero.astro';
-import Content from '@/components/services-collection-appeals/Content.astro';
-import CTA from '@/components/services-collection-appeals/CTA.astro';
-import Related from '@/components/services-collection-appeals/Related.astro';
-import Offices from '@/components/services-collection-appeals/Offices.astro';
+import Hero from '@/components/tax-penalty/Hero.astro';
+import Content from '@/components/tax-penalty/Content.astro';
+import CTA from '@/components/tax-penalty/CTA.astro';
+import Contact from '@/components/tax-penalty/Contact.astro';
+import RelatedServices from '@/components/tax-penalty/RelatedServices.astro';
 import { SITE } from '@/config/site';
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "IRS Collection Appeals - Michelle Turpin P.C.",
-  "description": "Appeal a rejected IRS installment agreement. Our Utah tax attorneys can represent you before the IRS at Michelle Turpin P.C.",
-  "url": `${SITE.url}/services-collection-appeals/`,
+  "name": "IRS Tax Penalty Abatement - Michelle Turpin P.C.",
+  "description": "Get help with IRS tax penalties. Our Utah tax attorneys can negotiate penalty abatement and reduce what you owe.",
+  "url": `${SITE.url}/services/tax-penalty/`,
   "telephone": "+18016850552",
   "priceRange": "$$",
   "provider": {
@@ -43,13 +43,13 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="IRS Collection Appeals | Utah Tax Attorneys"
-  description="Appeal a rejected IRS installment agreement. Our Utah tax attorneys can represent you before the IRS at Michelle Turpin P.C."
+  title="IRS Tax Penalty Abatement | Utah Tax Attorney"
+  description="Get help with IRS tax penalties. Our Utah tax attorneys can negotiate penalty abatement and reduce what you owe."
   jsonLd={jsonLd}
 >
   <Hero />
   <Content />
   <CTA />
-  <Related />
-  <Offices />
+  <Contact />
+  <RelatedServices />
 </BaseLayout>

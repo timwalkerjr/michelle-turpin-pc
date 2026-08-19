@@ -1,18 +1,18 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Hero from '@/components/property-seizures/Hero.astro';
-import Content from '@/components/property-seizures/Content.astro';
-import CTA from '@/components/property-seizures/CTA.astro';
-import Contact from '@/components/property-seizures/Contact.astro';
-import RelatedServices from '@/components/property-seizures/RelatedServices.astro';
+import Hero from '@/components/unfiled-tax-returns/Hero.astro';
+import Content from '@/components/unfiled-tax-returns/Content.astro';
+import CTA from '@/components/unfiled-tax-returns/CTA.astro';
+import Contact from '@/components/unfiled-tax-returns/Contact.astro';
+import RelatedServices from '@/components/unfiled-tax-returns/RelatedServices.astro';
 import { SITE } from '@/config/site';
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "IRS Property Seizure Defense - Michelle Turpin P.C.",
-  "description": "Stop IRS property seizures in Utah. Our tax lawyers will defend your assets and negotiate with the IRS.",
-  "url": `${SITE.url}/property-seizures/`,
+  "name": "Unfiled Tax Returns Help - Michelle Turpin P.C.",
+  "description": "Get help filing unfiled Utah or IRS tax returns. Our tax lawyers provide specific guidance for your situation at Michelle Turpin P.C.",
+  "url": `${SITE.url}/services/unfiled-tax-returns/`,
   "telephone": "+18016850552",
   "priceRange": "$$",
   "provider": {
@@ -43,8 +43,8 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="IRS Property Seizure Defense | Utah Tax Lawyers"
-  description="Stop IRS property seizures in Utah. Our tax lawyers will defend your assets and negotiate with the IRS."
+  title="Unfiled Tax Returns Help | Utah Tax Attorneys"
+  description="Get help filing unfiled Utah or IRS tax returns. Our tax lawyers provide specific guidance for your situation at Michelle Turpin P.C."
   jsonLd={jsonLd}
 >
   <Hero />

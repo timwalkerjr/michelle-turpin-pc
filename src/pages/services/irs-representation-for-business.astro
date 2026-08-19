@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/irs-representation-for-business/Hero.astro';
+import Content from '../../components/irs-representation-for-business/Content.astro';
+import RelatedServices from '../../components/irs-representation-for-business/RelatedServices.astro';
+import ContactCTA from '../../components/irs-representation-for-business/ContactCTA.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "IRS Tax Representation for Business - Michelle Turpin P.C.",
+  "description": "Professional IRS and state tax representation for Utah businesses. Contact Michelle Turpin P.C. today.",
+  "url": `${SITE.url}/services/irs-representation-for-business/`,
+  "telephone": "+18016850552",
+  "priceRange": "$$",
+  "provider": {
+    "@type": "Attorney",
+    "name": "Michelle Turpin P.C.",
+    "telephone": "+18016850552",
+    "url": SITE.url
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "4764 S 900 E #3",
+      "addressLocality": "Millcreek",
+      "addressRegion": "UT",
+      "postalCode": "84117",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "162 N 400 E Ste a-204",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770",
+      "addressCountry": "US"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="IRS Tax Representation for Business | Utah"
+  description="Professional IRS and state tax representation for Utah businesses. Contact Michelle Turpin P.C. today."
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <Content />
+  <RelatedServices />
+  <ContactCTA />
+</BaseLayout>

@@ -1,18 +1,18 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Hero from '@/components/audit-help-for-businesses/Hero.astro';
-import Content from '@/components/audit-help-for-businesses/Content.astro';
-import CTA from '@/components/audit-help-for-businesses/CTA.astro';
-import Contact from '@/components/audit-help-for-businesses/Contact.astro';
-import RelatedServices from '@/components/audit-help-for-businesses/RelatedServices.astro';
+import Hero from '@/components/services-state-tax-problem/Hero.astro';
+import Content from '@/components/services-state-tax-problem/Content.astro';
+import CTA from '@/components/services-state-tax-problem/CTA.astro';
+import Related from '@/components/services-state-tax-problem/Related.astro';
+import Offices from '@/components/services-state-tax-problem/Offices.astro';
 import { SITE } from '@/config/site';
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "Business IRS Audit Help - Michelle Turpin P.C.",
-  "description": "Expert IRS audit representation for Utah businesses. Michelle Turpin P.C. defends your company during audits.",
-  "url": `${SITE.url}/audit-help-for-businesses/`,
+  "name": "Utah State Tax Problem Help - Michelle Turpin P.C.",
+  "description": "Resolve unpaid employment taxes and Utah state taxing authority problems. Our tax lawyers can help at Michelle Turpin P.C.",
+  "url": `${SITE.url}/services/state-tax-problem/`,
   "telephone": "+18016850552",
   "priceRange": "$$",
   "provider": {
@@ -43,13 +43,13 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="Business IRS Audit Help | Utah Tax Attorneys"
-  description="Expert IRS audit representation for Utah businesses. Michelle Turpin P.C. defends your company during audits."
+  title="Utah State Tax Problem Help | Tax Attorneys"
+  description="Resolve unpaid employment taxes and Utah state taxing authority problems. Our tax lawyers can help at Michelle Turpin P.C."
   jsonLd={jsonLd}
 >
   <Hero />
   <Content />
   <CTA />
-  <Contact />
-  <RelatedServices />
+  <Related />
+  <Offices />
 </BaseLayout>

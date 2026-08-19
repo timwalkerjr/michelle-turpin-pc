@@ -1,17 +1,17 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/business-audit-appeals/Hero.astro';
-import Content from '../components/business-audit-appeals/Content.astro';
-import RelatedServices from '../components/business-audit-appeals/RelatedServices.astro';
-import ContactCTA from '../components/business-audit-appeals/ContactCTA.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/business-bank-levy/Hero.astro';
+import Content from '../../components/business-bank-levy/Content.astro';
+import RelatedServices from '../../components/business-bank-levy/RelatedServices.astro';
+import ContactCTA from '../../components/business-bank-levy/ContactCTA.astro';
 import { SITE } from '@/config/site';
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "Business Audit Appeals - Michelle Turpin P.C.",
-  "description": "Appeal an IRS business audit with experienced Utah business tax lawyers at Michelle Turpin P.C. Protect your company.",
-  "url": `${SITE.url}/business-audit-appeals/`,
+  "name": "Business Bank Levy Help - Michelle Turpin P.C.",
+  "description": "Stop an IRS bank levy against your Utah business. Our legal team can help protect your accounts.",
+  "url": `${SITE.url}/services/business-bank-levy/`,
   "telephone": "+18016850552",
   "priceRange": "$$",
   "provider": {
@@ -42,8 +42,8 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="Business Audit Appeals | Utah Tax Attorneys"
-  description="Appeal an IRS business audit with experienced Utah business tax lawyers at Michelle Turpin P.C. Protect your company."
+  title="Business Bank Levy Help | Utah Tax Attorneys"
+  description="Stop an IRS bank levy against your Utah business. Our legal team can help protect your accounts."
   jsonLd={jsonLd}
 >
   <Hero />
