@@ -79,18 +79,6 @@ jobs:
           echo "- PID: ${pid}" >> "${GITHUB_STEP_SUMMARY}"
           echo "- URL: ${url}" >> "${GITHUB_STEP_SUMMARY}"
 
-      - name: Ensure Static.app staging domain
-        if: ${{ vars.STATIC_APP_PID != '' }}
-        env:
-          STATIC_APP_API_KEY: ${{ secrets.STATIC_APP_API_KEY }}
-          STATIC_APP_PID: ${{ vars.STATIC_APP_PID }}
-        run: |
-          curl --fail-with-body --silent --show-error \
-            --request POST "https://api.static.app/v1/sites/${STATIC_APP_PID}/rename-free-domain" \
-            --header "Authorization: Bearer ${STATIC_APP_API_KEY}" \
-            --header "Content-Type: application/json" \
-            --data '{"domain":"staged-michelle-turpin-pc"}'
-
       - name: Deploy to Static.app
         if: ${{ vars.STATIC_APP_PID != '' }}
         uses: designmodo/static-app-deploy-action@9a67469e5c195ac420e579693149abccb5bd67af
