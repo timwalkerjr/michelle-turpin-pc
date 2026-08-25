@@ -3,11 +3,23 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import ArticlesHero from '@/components/articles/ArticlesHero.astro';
 import ArticlesList from '@/components/articles/ArticlesList.astro';
 import ArticlesCTA from '@/components/articles/ArticlesCTA.astro';
+import { SITE } from '@/config/site';
+
+const description = 'Read expert tax law articles from Utah tax attorneys on IRS audits, tax debt settlement, bankruptcy, and strategic tax planning for individuals and businesses.';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Tax Law Articles & Insights',
+  description,
+  url: `${SITE.url}/articles/`,
+  isPartOf: { '@type': 'WebSite', name: SITE.name, url: SITE.url },
+};
 ---
 
 <BaseLayout
   title="Tax Law Articles & Insights | Michelle Turpin, P.C."
-  description="Read expert tax law articles from Utah tax attorneys on IRS audits, tax debt settlement, bankruptcy, and strategic tax planning for individuals and businesses."
+  description={description}
+  jsonLd={jsonLd}
 >
   <ArticlesHero />
   <ArticlesList />

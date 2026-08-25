@@ -28,7 +28,7 @@ const {
   noIndex,
 } = Astro.props;
 
-const finalImage = image || 'https://ik.imagekit.io/twalkerco/michelle-turpin-pc/9b4bff48c59524eb63094d56c988364a-1536.webp';
+const finalImage = image || '/assets/images/imagekit/9b4bff48c59524eb63094d56c988364a-1536.jpeg';
 
 // Use provided canonical URL or generate from current path
 const finalCanonicalURL = canonicalUrl || new URL(Astro.url.pathname, SITE.url).toString();
@@ -64,8 +64,8 @@ const ogImageURL = finalImage.startsWith('http') ? finalImage : new URL(finalIma
 
 <!-- Structured Data / JSON-LD -->
 {jsonLd && (
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 )}
 
-<link rel="icon" type="image/svg+xml" href="https://ik.imagekit.io/twalkerco/michelle-turpin-pc/favicon-adc9c545.svg" />
-<link rel="apple-touch-icon" sizes="180x180" href="https://ik.imagekit.io/twalkerco/michelle-turpin-pc/apple-touch-icon-adc9c545.png" />
+<link rel="icon" type="image/svg+xml" href="/assets/images/imagekit/favicon-adc9c545.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/imagekit/apple-touch-icon-adc9c545.png" />

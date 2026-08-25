@@ -1,0 +1,31 @@
+---
+import ServiceOverviewPage from '@/components/ServiceOverviewPage.astro';
+
+const description = 'Explore IRS and Utah tax settlement options with experienced attorneys who can help with installment agreements, offers in compromise, and appeals.';
+const links = [
+  { label: 'Installment Agreements', href: '/services/installment-agreements/' },
+  { label: 'Offer in Compromise', href: '/services/offer-in-compromise-with-utah-tax-attorney/' },
+  { label: 'Tax Appeals', href: '/services/tax-appeals/' },
+  { label: 'Collection Appeals', href: '/services/collection-appeals/' },
+  { label: 'Corporate Restructuring', href: '/services/corporate-restructuring/' },
+];
+---
+
+<ServiceOverviewPage
+  title="IRS Tax Settlement Options | Utah Tax Lawyers"
+  description={description}
+  heading="Settlement Options"
+  subheading="You have options when dealing with the IRS. We can help you navigate them."
+  eyebrow="IRS & Utah Tax Debt Resolution"
+  serviceName="Tax Settlement Options"
+  subject="Tax settlement consultation request"
+  links={links}
+>
+  <h2>Utah IRS Settlement Lawyers</h2>
+  <p>No matter what type of settlement you are trying to reach, our attorneys can help you pursue the best available result for your circumstances. Whether you are presenting a settlement offer to the IRS or negotiating another resolution, experienced guidance can make the process clearer and more manageable.</p>
+  <p>Michelle Turpin, P.C. has decades of experience helping taxpayers address collection matters and tax debt. We evaluate the facts, explain the available programs, and help clients build a strategy around what they can reasonably afford.</p>
+  <h2>Ways to Resolve Tax Debt</h2>
+  <p>Depending on your eligibility and financial circumstances, possible paths include installment agreements, offers in compromise, tax appeals, collection appeals, and business restructuring. The right option depends on the amount owed, collection status, income, assets, and the accuracy of the underlying assessment.</p>
+  <h3>Local, State, and Federal Tax Counsel</h3>
+  <p>Our full-service tax law firm has more than 30 years of experience helping individuals and businesses deal with tax and bankruptcy issues. We help clients navigate IRS and state procedures, protect their taxpayer rights, and work toward a durable resolution.</p>
+</ServiceOverviewPage>

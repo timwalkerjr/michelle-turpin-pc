@@ -1,0 +1,90 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactForm from '@/components/ContactForm.astro';
+import { SITE } from '@/config/site';
+
+interface LinkItem {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  heading: string;
+  subheading: string;
+  eyebrow: string;
+  serviceName: string;
+  subject: string;
+  links?: LinkItem[];
+}
+
+const { title, description, heading, subheading, eyebrow, serviceName, subject, links = [] } = Astro.props;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LegalService',
+  name: serviceName,
+  description,
+  url: Astro.url.href,
+  telephone: '+18016850552',
+  areaServed: { '@type': 'State', name: 'Utah' },
+  provider: { '@type': 'Attorney', name: SITE.name, url: SITE.url },
+};
+---
+
+<BaseLayout title={title} description={description} jsonLd={jsonLd}>
+  <section class="relative min-h-[460px] overflow-hidden bg-[#0A1728]">
+    <img
+      src="/assets/images/pexels/pexels-photo-34862508-1920.jpeg"
+      srcset="/assets/images/pexels/pexels-photo-34862508-640.jpeg 640w, /assets/images/pexels/pexels-photo-34862508-1200.jpeg 1200w, /assets/images/pexels/pexels-photo-34862508-1920.jpeg 1920w"
+      sizes="100vw"
+      alt="Tax attorney reviewing financial settlement options"
+      class="absolute inset-0 h-full w-full object-cover opacity-30"
+      width="1920"
+      height="1280"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-[#08111f]/95 via-[#08111f]/85 to-[#08111f]/55"></div>
+    <div class="relative z-10 mx-auto flex min-h-[460px] max-w-[1200px] items-center px-5 py-20 text-white md:px-8">
+      <div class="max-w-4xl">
+        <p class="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#F3B8BB]">{eyebrow}</p>
+        <h1 class="font-serif text-[43px] font-bold leading-[1.05] text-white md:text-[60px]">{heading}</h1>
+        <p class="mt-6 max-w-3xl text-xl font-semibold leading-relaxed text-white md:text-2xl">{subheading}</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact-us/" class="rounded-[6px] bg-[#C1272D] px-6 py-3.5 font-bold text-white no-underline transition hover:bg-[#A91F24]">Request a Consultation</a>
+          <a href={SITE.phoneHref} class="rounded-[6px] border border-white/60 px-6 py-3.5 font-bold text-white no-underline transition hover:bg-white/10">Call {SITE.phone}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16 lg:py-24">
+    <div class="mx-auto grid max-w-[1200px] gap-12 px-5 md:px-8 lg:grid-cols-[minmax(0,1fr)_380px]">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#1A1A1A] prose-p:text-[#374151] prose-p:leading-relaxed prose-li:text-[#374151]">
+        <slot />
+        {links.length > 0 && (
+          <div class="not-prose mt-10 grid gap-3 sm:grid-cols-2">
+            {links.map((item) => (
+              <a href={item.href} class="rounded-[8px] border border-gray-200 bg-[#F9F6F0] px-5 py-4 font-bold text-[#C1272D] no-underline transition hover:border-[#C1272D]">{item.label} →</a>
+            ))}
+          </div>
+        )}
+      </article>
+
+      <aside class="self-start rounded-[10px] bg-[#C1272D] p-6 text-white shadow-xl lg:sticky lg:top-24">
+        <p class="mb-2 text-sm font-bold uppercase tracking-[0.14em] text-white/80">Confidential Consultation</p>
+        <h2 class="mb-3 font-serif text-3xl font-bold text-white">Talk With a Utah Tax Attorney</h2>
+        <p class="mb-6 leading-relaxed text-white/90">Tell us how to reach you. Do not include Social Security numbers or other highly sensitive information.</p>
+        <ContactForm idPrefix={subject.replace(/[^a-z0-9]+/gi, '-').toLowerCase()} subject={subject} />
+      </aside>
+    </div>
+  </section>
+
+  <section class="bg-[#0A1728] py-16 text-center text-white lg:py-20">
+    <div class="mx-auto max-w-3xl px-5">
+      <p class="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-[#F3B8BB]">Experienced Tax Counsel</p>
+      <h2 class="font-serif text-4xl font-bold text-white">Find the Right Path Forward</h2>
+      <p class="mt-4 text-lg leading-relaxed text-white/80">Michelle Turpin, P.C. helps Utah individuals and businesses resolve federal and state tax matters with practical, experienced representation.</p>
+      <a href={SITE.phoneHref} class="mt-7 inline-flex rounded-[6px] bg-[#C1272D] px-7 py-4 text-lg font-bold text-white no-underline transition hover:bg-[#A91F24]">Call {SITE.phone}</a>
+    </div>
+  </section>
+</BaseLayout>

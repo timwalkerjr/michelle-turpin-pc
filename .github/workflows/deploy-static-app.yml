@@ -1,0 +1,88 @@
+name: Deploy Michelle Turpin mirror to Static.app
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/**
+      - public/**
+      - package.json
+      - pnpm-lock.yaml
+      - astro.config.mjs
+      - netlify.toml
+      - scripts/prepare-static-mirror.mjs
+      - .github/workflows/deploy-static-app.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: static-app-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build site
+        run: pnpm build
+        env:
+          SITE_URL: https://taxlawsolutions.com
+
+      - name: Prepare Static.app mirror
+        run: pnpm prepare:static-app
+        env:
+          STATIC_APP_NOINDEX: 'true'
+
+      - name: Package initial Static.app mirror
+        if: ${{ vars.STATIC_APP_PID == '' }}
+        run: cd static-app-dist && zip -qr ../static-app-dist.zip .
+
+      - name: Create initial Static.app mirror
+        if: ${{ vars.STATIC_APP_PID == '' }}
+        id: bootstrap
+        env:
+          STATIC_APP_API_KEY: ${{ secrets.STATIC_APP_API_KEY }}
+        run: |
+          response="$(curl --fail-with-body --silent --show-error \
+            --request POST https://api.static.app/v1/sites/zip \
+            --header "Authorization: Bearer ${STATIC_APP_API_KEY}" \
+            --form "archive=@static-app-dist.zip" \
+            --form "domain=staged-michelle-turpin-pc")"
+          pid="$(jq --raw-output '.pid // empty' <<<"${response}")"
+          url="$(jq --raw-output '.url // empty' <<<"${response}")"
+          test -n "${pid}"
+          test -n "${url}"
+          echo "pid=${pid}" >> "${GITHUB_OUTPUT}"
+          echo "url=${url}" >> "${GITHUB_OUTPUT}"
+          echo "### Static.app mirror created" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- PID: ${pid}" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- URL: ${url}" >> "${GITHUB_STEP_SUMMARY}"
+
+      - name: Deploy to Static.app
+        if: ${{ vars.STATIC_APP_PID != '' }}
+        uses: designmodo/static-app-deploy-action@9a67469e5c195ac420e579693149abccb5bd67af
+        with:
+          api-key: ${{ secrets.STATIC_APP_API_KEY }}
+          pid: ${{ vars.STATIC_APP_PID }}
+          build-dir: static-app-dist

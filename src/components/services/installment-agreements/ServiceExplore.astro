@@ -10,7 +10,7 @@ const related = [
   <div class="max-w-[1400px] mx-auto px-4">
     <h2 class="text-[28px] lg:text-[36px] font-bold text-[#1A1A1A] font-serif text-center mb-10">Explore Related Services</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {related.map((s, __psIdx) => (
+      {related.map((s) => (
         <a href={s.href} class="bg-white border border-gray-200 rounded-[8px] p-6 hover:shadow-md hover:border-[#C1272D]/30 transition flex flex-col">
           <h3 class="text-[18px] font-bold text-[#1A1A1A] font-serif mb-2 leading-tight">{s.title}</h3>
           <p class="text-[#4B5563] text-[14px] leading-relaxed mb-3 flex-1">{s.excerpt}</p>

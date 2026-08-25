@@ -3,4 +3,5 @@ dist/
 .astro/
 .env
 .netlify/
+static-app-dist/
 

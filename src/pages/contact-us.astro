@@ -2,11 +2,28 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ContactHero from '@/components/contact-us/ContactHero.astro';
 import ContactContent from '@/components/contact-us/ContactContent.astro';
+import { SITE } from '@/config/site';
+
+const description = 'Contact Michelle Turpin, P.C. for IRS and Utah state tax help. Call (801) 685-0552 or message our Salt Lake City or St. George tax law offices.';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Michelle Turpin, P.C.',
+  description,
+  url: `${SITE.url}/contact-us/`,
+  mainEntity: {
+    '@type': 'LegalService',
+    name: SITE.name,
+    url: SITE.url,
+    telephone: '+18016850552',
+  },
+};
 ---
 
 <BaseLayout
   title="Contact Us | Utah Tax Attorneys | Michelle Turpin, P.C."
-  description="Contact Michelle Turpin, P.C. for IRS and Utah state tax help. Call (801) 685-0552 or send a message. Offices in Salt Lake City and St. George, Utah."
+  description={description}
+  jsonLd={jsonLd}
 >
   <ContactHero />
   <ContactContent />

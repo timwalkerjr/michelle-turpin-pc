@@ -3,11 +3,23 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import ReviewsHero from '@/components/reviews/ReviewsHero.astro';
 import ReviewsList from '@/components/reviews/ReviewsList.astro';
 import ReviewsCTA from '@/components/reviews/ReviewsCTA.astro';
+import { SITE } from '@/config/site';
+
+const description = 'Read client reviews for Michelle Turpin, P.C., Utah tax attorneys known for responsive IRS representation, tax debt relief, and practical tax planning.';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Client Reviews for Michelle Turpin, P.C.',
+  description,
+  url: `${SITE.url}/reviews/`,
+  about: { '@type': 'LegalService', name: SITE.name, url: SITE.url },
+};
 ---
 
 <BaseLayout
   title="Client Reviews | Utah Tax Attorneys | Michelle Turpin, P.C."
-  description="Read verified client reviews for Michelle Turpin, P.C. — Utah tax attorneys rated 4.9 stars for IRS representation, tax debt relief, and tax planning."
+  description={description}
+  jsonLd={jsonLd}
 >
   <ReviewsHero />
   <ReviewsList />

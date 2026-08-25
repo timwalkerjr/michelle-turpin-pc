@@ -1,0 +1,36 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import TaxPlanningHero from '@/components/tax-planning/TaxPlanningHero.astro';
+import TaxPlanningIntro from '@/components/tax-planning/TaxPlanningIntro.astro';
+import TaxPlanningAttorney from '@/components/tax-planning/TaxPlanningAttorney.astro';
+import TaxPlanningDualBanner from '@/components/tax-planning/TaxPlanningDualBanner.astro';
+import TaxPlanningRepresentation from '@/components/tax-planning/TaxPlanningRepresentation.astro';
+import TaxPlanningServices from '@/components/tax-planning/TaxPlanningServices.astro';
+import TaxPlanningMapLocations from '@/components/tax-planning/TaxPlanningMapLocations.astro';
+import { SITE } from '@/config/site';
+
+const description = 'Utah tax planning attorneys help individuals and businesses reduce tax liability, claim available benefits, and lower audit risk.';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LegalService',
+  name: 'Utah Tax Planning Attorneys',
+  description,
+  url: `${SITE.url}/services/tax-planning/`,
+  telephone: '+18016850552',
+  provider: { '@type': 'Attorney', name: SITE.name, url: SITE.url },
+};
+---
+
+<BaseLayout
+  title="Utah Tax Planning Attorneys | Reduce Taxes & Audit Risks"
+  description={description}
+  jsonLd={jsonLd}
+>
+  <TaxPlanningHero />
+  <TaxPlanningIntro />
+  <TaxPlanningAttorney />
+  <TaxPlanningDualBanner />
+  <TaxPlanningRepresentation />
+  <TaxPlanningServices />
+  <TaxPlanningMapLocations />
+</BaseLayout>
