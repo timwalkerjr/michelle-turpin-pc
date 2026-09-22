@@ -1,51 +1,17 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import ServiceHero from '@/components/services/audit-offer-in-compromise-appeal/ServiceHero.astro';
-import ServiceContent from '@/components/services/audit-offer-in-compromise-appeal/ServiceContent.astro';
-import ServiceExplore from '@/components/services/audit-offer-in-compromise-appeal/ServiceExplore.astro';
-import { SITE } from '@/config/site';
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Audit & Offer In Compromise Appeals - Michelle Turpin P.C.",
-  "description": "Appeal an IRS audit or Offer in Compromise denial with experienced Utah tax attorneys at Michelle Turpin, P.C.",
-  "url": `${SITE.url}/services/audit-offer-in-compromise-appeal/`,
-  "telephone": "+18016850552",
-  "priceRange": "$$",
-  "provider": {
-    "@type": "Attorney",
-    "name": "Michelle Turpin P.C.",
-    "telephone": "+18016850552",
-    "url": SITE.url
-  },
-  "address": [
-    {
-      "@type": "PostalAddress",
-      "streetAddress": "4764 S 900 E #3",
-      "addressLocality": "Millcreek",
-      "addressRegion": "UT",
-      "postalCode": "84117",
-      "addressCountry": "US"
-    },
-    {
-      "@type": "PostalAddress",
-      "streetAddress": "162 N 400 E Ste a-204",
-      "addressLocality": "St. George",
-      "addressRegion": "UT",
-      "postalCode": "84770",
-      "addressCountry": "US"
-    }
-  ]
-};
+import AppealPage from '@/components/AppealPage.astro';
 ---
-
-<BaseLayout
-  title="Audit & Offer In Compromise Appeals | Utah Tax Attorney"
-  description="Appeal an IRS audit result or denied Offer in Compromise with experienced Utah tax attorneys who protect your rights and present a strong administrative case."
-  jsonLd={jsonLd}
->
-  <ServiceHero />
-  <ServiceContent />
-  <ServiceExplore />
-</BaseLayout>
+<AppealPage title="IRS Audit Appeals" description="Disagree with IRS examination findings? Our tax attorneys help individuals and businesses evaluate proposed adjustments and pursue administrative or court review." path="/services/audit-offer-in-compromise-appeal/">
+  <h2>Appealing IRS Examination Findings</h2>
+  <p>An audit appeal concerns the IRS's proposed changes to your tax return. The notice you receive identifies the available response procedure. Our team reviews the examination report, supporting records, and disputed adjustments to help you prepare your case.</p>
+  <h3>Administrative Review</h3>
+  <p>A 30-day letter generally offers an opportunity to request a conference with the IRS Independent Office of Appeals. Follow the instructions and deadline in your letter. A written protest may be required, depending on the case.</p>
+  <p>Our attorneys can organize evidence, explain your position, and represent you in discussions about the disputed tax issues.</p>
+  <h3>Notice of Deficiency and Tax Court</h3>
+  <p>A notice of deficiency provides a separate opportunity to petition the U.S. Tax Court. The filing period is generally 90 days, or 150 days when the notice is addressed to a person outside the United States. Review the exact notice and applicable rules promptly; discussions with the IRS do not automatically extend this deadline.</p>
+  <p>If you do not file a timely petition, the IRS can generally assess the proposed deficiency. Other remedies may depend on the circumstances.</p>
+  <h3>Prepare for Your Consultation</h3>
+  <ul><li>The IRS notice, envelope, and examination report</li><li>The tax returns and years involved</li><li>Documents supporting disputed income, deductions, or credits</li><li>Prior correspondence with the IRS</li></ul>
+  <p>An Offer in Compromise rejection follows a different procedure. See our dedicated <a href="/services/offer-in-compromise-appeal/">Offer in Compromise appeals page</a>.</p>
+  <p class="text-sm">Further information: <a href="https://www.irs.gov/appeals">IRS Independent Office of Appeals</a> and <a href="https://www.ustaxcourt.gov/definitions/">U.S. Tax Court definitions</a>.</p>
+</AppealPage>

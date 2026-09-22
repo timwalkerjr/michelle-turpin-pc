@@ -1,59 +1,11 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import TaxPlanningHero from '@/components/tax-planning/TaxPlanningHero.astro';
-import TaxPlanningIntro from '@/components/tax-planning/TaxPlanningIntro.astro';
-import TaxPlanningAttorney from '@/components/tax-planning/TaxPlanningAttorney.astro';
-import TaxPlanningDualBanner from '@/components/tax-planning/TaxPlanningDualBanner.astro';
-import TaxPlanningRepresentation from '@/components/tax-planning/TaxPlanningRepresentation.astro';
-import TaxPlanningServices from '@/components/tax-planning/TaxPlanningServices.astro';
-import TaxPlanningMapLocations from '@/components/tax-planning/TaxPlanningMapLocations.astro';
-import { SITE } from '@/config/site';
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Tax Planning Attorneys - Michelle Turpin, P.C.",
-  "description": "Proactive tax planning from Michelle Turpin, P.C. helps Utah individuals and businesses reduce tax liability and audit risk. Schedule a consultation today.",
-  "url": `${SITE.url}/tax-planning/`,
-  "telephone": "+18016850552",
-  "priceRange": "$$",
-  "provider": {
-    "@type": "Attorney",
-    "name": "Michelle Turpin P.C.",
-    "telephone": "+18016850552",
-    "url": SITE.url
-  },
-  "address": [
-    {
-      "@type": "PostalAddress",
-      "streetAddress": "4764 S 900 E #3",
-      "addressLocality": "Millcreek",
-      "addressRegion": "UT",
-      "postalCode": "84117",
-      "addressCountry": "US"
-    },
-    {
-      "@type": "PostalAddress",
-      "streetAddress": "162 N 400 E Ste a-204",
-      "addressLocality": "St. George",
-      "addressRegion": "UT",
-      "postalCode": "84770",
-      "addressCountry": "US"
-    }
-  ]
-};
+import ArticleBody from '@/components/ArticleBody.astro';
+import SpencerCredentials from '@/components/SpencerCredentials.astro';
+import articles from '@/data/articles.json';
+const article = articles.find(a=>a.slug==='tax-planning-for-businesses-strategies-to-maximize-savings-and-compliance')!;
 ---
-
-<BaseLayout
-  title="Tax Planning Attorneys | Utah | Michelle Turpin, P.C."
-  description="Proactive tax planning from Michelle Turpin, P.C. helps Utah individuals and businesses reduce tax liability and audit risk. Schedule a consultation today."
-  jsonLd={jsonLd}
->
-  <TaxPlanningHero />
-  <TaxPlanningIntro />
-  <TaxPlanningAttorney />
-  <TaxPlanningDualBanner />
-  <TaxPlanningRepresentation />
-  <TaxPlanningServices />
-  <TaxPlanningMapLocations />
+<BaseLayout title="Tax Planning for Businesses | Michelle Turpin P.C." description={article.description}>
+  <section class="bg-[#101b2c] py-16 lg:py-24 text-white"><div class="max-w-[1200px] mx-auto px-4"><p class="uppercase tracking-wider text-sm mb-4">Business Tax Planning</p><h1 class="font-serif text-4xl lg:text-5xl leading-tight font-bold max-w-4xl">Tax Planning for Businesses: Strategies to Maximize Savings and Compliance</h1><p class="text-xl text-gray-200 mt-6 max-w-3xl">{article.description}</p><a href="/contact-us/" class="inline-block mt-7 bg-[#C1272D] rounded-md px-6 py-3 font-bold">Schedule a Tax Planning Consultation</a></div></section>
+  <section class="max-w-[1200px] mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12"><div class="min-w-0"><ArticleBody body={article.body}/><div class="mt-10 p-6 bg-[#FBF9F6] rounded-lg"><h2 class="font-serif text-2xl font-bold mb-3">Planning for Your Individual Taxes?</h2><p class="mb-3">Our team also advises individuals on federal and state tax matters.</p><a href="/services/individuals-tax-help/" class="text-[#C1272D] font-bold hover:underline">Explore individual tax planning →</a></div></div><SpencerCredentials/></section>
 </BaseLayout>

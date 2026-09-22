@@ -1,5 +1,6 @@
 ---
 // Offer in Compromise content with 2-column sidebar layout
+import reviews from '@/data/reviews.json';
 import ServiceSidebar from '@/components/services/ServiceSidebar.astro';
 ---
 
@@ -75,6 +76,7 @@ import ServiceSidebar from '@/components/services/ServiceSidebar.astro';
           </div>
         </div>
 
+        <section aria-label="Offer in Compromise client experience" class="rounded-lg bg-[#FBF9F6] border-l-4 border-[#C1272D] p-6 mt-8"><h3 class="font-serif text-2xl font-bold mb-4">An Offer in Compromise Client's Experience</h3>{reviews.filter(r => r.category === 'Offer in Compromise').map(r => <figure><div class="text-yellow-600" aria-label="5 stars">★★★★★</div><blockquote class="italic leading-relaxed my-3">{r.quote}</blockquote><figcaption class="font-bold">— {r.name}</figcaption></figure>)}</section>
         <p class="text-[#6B7280] text-[13px] italic border-t border-gray-200 pt-6 mt-10">
           Results vary by case. This content does not constitute tax advice. Consultation needed for specific guidance.
         </p>

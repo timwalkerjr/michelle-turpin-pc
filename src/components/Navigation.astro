@@ -6,7 +6,7 @@ import { SITE } from '@/config/site';
   <!-- Top Utility Bar -->
   <div class="bg-[#1A1A1A] text-white py-2 border-b border-white/10">
     <div class="max-w-[1400px] mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-[14px]">
-      <p class="font-normal text-gray-300 text-center sm:text-left m-0">Utah Tax & Bankruptcy Attorneys</p>
+      <p class="font-normal text-gray-300 text-center sm:text-left m-0">Federal & State Tax Attorneys</p>
       <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
         <a
           href={SITE.phoneHref}
@@ -51,7 +51,7 @@ import { SITE } from '@/config/site';
       </a>
 
       <!-- Desktop Links with Mega Menus -->
-      <div class="hidden lg:flex items-center gap-3 xl:gap-5">
+      <div class="hidden xl:flex items-center gap-3 2xl:gap-5">
         <a href="/" class="text-[15px] font-medium text-[#C1272D] no-underline hover:text-[#C1272D] transition-colors py-2">Home</a>
 
         <!-- 1. Individual Taxes Mega Menu -->
@@ -63,14 +63,14 @@ import { SITE } from '@/config/site';
             </svg>
           </a>
           <!-- Mega Menu Dropdown -->
-          <div class="absolute top-full left-1/2 -translate-x-1/3 hidden group-hover:block bg-white shadow-2xl border border-gray-200 rounded-[10px] p-6 w-screen max-w-[680px] z-50 transition-all">
+          <div class="absolute top-full left-1/2 -translate-x-1/3 hidden group-hover:block group-focus-within:block bg-white shadow-2xl border border-gray-200 rounded-[10px] p-6 w-screen max-w-[680px] z-50 transition-all">
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-gray-100">
               <div>
                 <h4 class="text-[16px] font-bold text-[#1A1A1A] font-serif m-0">Individual Tax Services</h4>
                 <p class="text-xs text-gray-500 m-0">Comprehensive relief, audit defense, and resolution for individuals.</p>
               </div>
-              <a href="/#services" class="text-xs font-semibold text-[#C1272D] hover:underline flex items-center gap-1 shrink-0">
-                View all individual services &rarr;
+              <a href="/contact-us/" class="text-xs font-semibold text-[#C1272D] hover:underline flex items-center gap-1 shrink-0">
+                Schedule an Individual Tax Consultation &rarr;
               </a>
             </div>
             <div class="grid grid-cols-2 gap-x-6 gap-y-3">
@@ -79,8 +79,8 @@ import { SITE } from '@/config/site';
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors">Audit & OIC Appeals</div>
-                  <div class="text-[12px] text-gray-500 leading-snug">Appeal IRS audit or OIC rejection</div>
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors">IRS Audit Appeals</div>
+                  <div class="text-[12px] text-gray-500 leading-snug">Challenge IRS examination findings</div>
                 </div>
               </a>
 
@@ -146,7 +146,7 @@ import { SITE } from '@/config/site';
             </svg>
           </a>
           <!-- Mega Menu Dropdown -->
-          <div class="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block bg-white shadow-2xl border border-gray-200 rounded-[10px] p-6 w-screen max-w-[860px] z-50 transition-all">
+          <div class="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block group-focus-within:block bg-white shadow-2xl border border-gray-200 rounded-[10px] p-6 w-screen max-w-[860px] z-50 transition-all">
             <div class="flex items-center justify-between pb-3 mb-4 border-b border-gray-100">
               <div>
                 <h4 class="text-[16px] font-bold text-[#1A1A1A] font-serif m-0">Business Tax Solutions</h4>
@@ -162,7 +162,7 @@ import { SITE } from '@/config/site';
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                 </div>
                 <div>
-                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors whitespace-nowrap">Business Audit Help</div>
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] transition-colors whitespace-nowrap">Business Audit Defense</div>
                   <div class="text-[12px] text-gray-500 leading-snug">IRS corporate audits</div>
                 </div>
               </a>
@@ -259,9 +259,18 @@ import { SITE } from '@/config/site';
             </svg>
           </a>
           <!-- Dropdown -->
-          <div class="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block bg-white shadow-2xl border border-gray-200 rounded-[10px] p-5 w-[480px] z-50 transition-all">
-            <div class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3 px-2">IRS & State Resolution Programs</div>
+          <div class="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block group-focus-within:block bg-white shadow-2xl border border-gray-200 rounded-[10px] p-5 w-[480px] z-50 transition-all">
+            <div class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3 px-2">IRS & State Resolution Programs</div><a href="/contact-us/" class="block px-3 py-3 text-sm font-bold text-[#C1272D] hover:underline">Discuss Your Settlement Options →</a><a href="/services/offer-in-compromise-appeal/" class="block p-3 text-sm font-semibold hover:text-[#C1272D]">Offer in Compromise Appeals →</a>
             <div class="flex flex-col gap-1.5">
+              <a href="/services/offer-in-compromise-with-utah-tax-attorney" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline">
+                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <div>
+                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] whitespace-nowrap">Offer in Compromise (OIC)</div>
+                  <div class="text-[12px] text-gray-500">Settle your debt for less than you owe</div>
+                </div>
+              </a>
               <a href="/services/installment-agreements" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline">
                 <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
@@ -272,15 +281,7 @@ import { SITE } from '@/config/site';
                 </div>
               </a>
 
-              <a href="/services/offer-in-compromise-with-utah-tax-attorney" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline">
-                <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                </div>
-                <div>
-                  <div class="text-[14px] font-semibold text-[#1A1A1A] group-hover/item:text-[#C1272D] whitespace-nowrap">Offer in Compromise (OIC)</div>
-                  <div class="text-[12px] text-gray-500">Settle your debt for less than you owe</div>
-                </div>
-              </a>
+
 
               <a href="/services/tax-appeals" class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F9F6F0] transition-colors group/item no-underline">
                 <div class="w-8 h-8 rounded-full bg-[#C1272D]/10 text-[#C1272D] flex items-center justify-center shrink-0 group-hover/item:bg-[#C1272D] group-hover/item:text-white transition-colors">
@@ -316,7 +317,7 @@ import { SITE } from '@/config/site';
         </div>
 
         <!-- 4. Criminal Tax Law -->
-        <a href="/criminal-tax" class="text-[15px] font-medium text-[#1A1A1A] no-underline hover:text-[#C1272D] transition-colors py-2 whitespace-nowrap">Criminal Tax Law</a>
+        <div class="relative group"><a href="/criminal-tax" class="text-[15px] font-medium py-2 inline-flex items-center gap-1.5 hover:text-[#C1272D]">Criminal Tax Law <span aria-hidden="true">⌄</span></a><div class="absolute top-full right-0 hidden group-hover:block group-focus-within:block bg-white shadow-xl border border-gray-200 rounded-lg p-3 w-72 z-50"><a href="/criminal-tax/" class="block p-3 text-sm font-semibold hover:text-[#C1272D]">Criminal Tax Defense</a><a href="/contact-us/" class="block px-3 py-3 text-sm font-bold text-[#C1272D] hover:underline">Schedule a Criminal Tax Consultation →</a></div></div>
 
         <!-- 5. More Dropdown -->
         <div class="relative group">
@@ -326,7 +327,7 @@ import { SITE } from '@/config/site';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </a>
-          <div class="absolute top-full right-0 hidden group-hover:block bg-white shadow-xl border border-gray-100 rounded-[8px] p-2 w-64 z-50">
+          <div class="absolute top-full right-0 hidden group-hover:block group-focus-within:block bg-white shadow-xl border border-gray-100 rounded-[8px] p-2 w-64 z-50">
             <a href="/reviews" class="flex items-center gap-2.5 px-3 py-2 rounded-md text-sm text-[#1A1A1A] hover:bg-[#F9F6F0] hover:text-[#C1272D] no-underline">
               <svg class="w-4 h-4 text-[#C1272D]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
               Reviews & Results
@@ -339,12 +340,7 @@ import { SITE } from '@/config/site';
               <svg class="w-4 h-4 text-[#C1272D]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
               Articles & Guides
             </a>
-            <div class="border-t border-gray-200 mt-2 pt-2">
-              <div class="px-3 pb-1 text-[11px] font-bold uppercase tracking-wider text-gray-400">Bankruptcy</div>
-              <a href="/services/chapter-7-bankruptcy" class="block px-3 py-2 rounded-md text-sm text-[#1A1A1A] hover:bg-[#F9F6F0] hover:text-[#C1272D] no-underline">Chapter 7 Bankruptcy</a>
-              <a href="/services/chapter-11-small-business-bankruptcy" class="block px-3 py-2 rounded-md text-sm text-[#1A1A1A] hover:bg-[#F9F6F0] hover:text-[#C1272D] no-underline">Chapter 11 Bankruptcy</a>
-              <a href="/services/chapter-13-bankruptcy" class="block px-3 py-2 rounded-md text-sm text-[#1A1A1A] hover:bg-[#F9F6F0] hover:text-[#C1272D] no-underline">Chapter 13 Bankruptcy</a>
-            </div>
+<a href="/contact-us/" class="block px-3 py-3 text-sm font-bold text-[#C1272D] hover:underline">Schedule a Tax Consultation →</a>
           </div>
         </div>
 
@@ -356,7 +352,7 @@ import { SITE } from '@/config/site';
       <button
         id="mobile-menu-button"
         type="button"
-        class="lg:hidden p-2 text-[#1A1A1A] hover:text-[#C1272D] transition-colors focus:outline-none"
+        class="xl:hidden p-2 text-[#1A1A1A] hover:text-[#C1272D] transition-colors focus:outline-none"
         aria-label="Toggle menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
@@ -375,7 +371,7 @@ import { SITE } from '@/config/site';
   <!-- Mobile Menu Dropdown with Collapsible Mega Categories -->
   <div
     id="mobile-menu"
-    class="hidden lg:hidden bg-white border-t border-gray-200 max-h-[85vh] overflow-y-auto px-5 py-4 shadow-xl"
+    class="hidden xl:hidden bg-white border-t border-gray-200 max-h-[85vh] overflow-y-auto px-5 py-4 shadow-xl"
     role="navigation"
     aria-label="Mobile navigation"
 
@@ -392,14 +388,14 @@ import { SITE } from '@/config/site';
           </svg>
         </summary>
         <div class="pl-3 py-2 space-y-2 text-sm bg-gray-50 rounded-lg my-1">
-          <a href="/services/audit-offer-in-compromise-appeal" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Audit/OIC Appeals</a>
+          <a href="/services/audit-offer-in-compromise-appeal" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">IRS Audit Appeals</a>
           <a href="/services/bank-levy-wage-garnishment" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Bank Levy & Wage Garnishment</a>
           <a href="/services/tax-liens" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Federal and State Tax Liens</a>
           <a href="/services/individuals-tax-help" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Individuals Tax Help</a>
           <a href="/services/innocent-spouse-relief" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Innocent Spouse Relief</a>
           <a href="/services/audit-help" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">IRS and State Audit Help</a>
         </div>
-      </details>
+      <a href="/contact-us/" class="block px-3 py-3 text-sm font-bold text-[#C1272D] hover:underline">Schedule an Individual Tax Consultation →</a></details>
 
       <!-- Business Taxes Accordion -->
       <details class="group py-1 border-b border-gray-100">
@@ -410,7 +406,7 @@ import { SITE } from '@/config/site';
           </svg>
         </summary>
         <div class="pl-3 py-2 space-y-2 text-sm bg-gray-50 rounded-lg my-1">
-          <a href="/services/audit-help-for-businesses" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Audit Help for Businesses</a>
+          <a href="/services/audit-help-for-businesses" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Business Audit Defense</a>
           <a href="/services/business-audit-appeals" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Business Audit Appeals</a>
           <a href="/services/business-bank-levy" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Business Bank Levy</a>
           <a href="/services/business-tax-liens" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Business Tax Liens</a>
@@ -420,7 +416,7 @@ import { SITE } from '@/config/site';
           <a href="/services/tax-planning-for-businesses" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Business Tax Planning</a>
           <a href="/services/trust-fund-recovery-penalty" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Trust Fund Penalty (TFRP)</a>
         </div>
-      </details>
+      <a href="/contact-us/" class="block px-3 py-3 text-sm font-bold text-[#C1272D] hover:underline">Schedule Business Review →</a></details>
 
       <!-- Settlement Options Accordion -->
       <details class="group py-1 border-b border-gray-100">
@@ -429,7 +425,7 @@ import { SITE } from '@/config/site';
           <svg class="w-4 h-4 text-gray-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
-        </summary>
+        </summary><a href="/services/offer-in-compromise-appeal/" class="block py-2 pl-3 text-sm">Offer in Compromise Appeals</a>
         <div class="pl-3 py-2 space-y-2 text-sm bg-gray-50 rounded-lg my-1">
           <a href="/services/installment-agreements" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Installment Agreements</a>
           <a href="/services/offer-in-compromise-with-utah-tax-attorney" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Offer in Compromise</a>
@@ -437,9 +433,9 @@ import { SITE } from '@/config/site';
           <a href="/services/payroll-taxes" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Trust Fund / Payroll Taxes</a>
           <a href="/services/collection-appeals" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Collection Appeals</a>
         </div>
-      </details>
+      <a href="/contact-us/" class="block px-3 py-3 text-sm font-bold text-[#C1272D] hover:underline">Discuss Your Settlement Options →</a></details>
 
-      <a href="/criminal-tax" class="text-[16px] font-medium text-[#1A1A1A] py-2 border-b border-gray-100 no-underline hover:text-[#C1272D]">Criminal Tax Law</a>
+      <details class="group py-1 border-b border-gray-100"><summary class="py-2 text-[16px] font-semibold cursor-pointer">Criminal Tax Law</summary><a href="/criminal-tax/" class="block px-3 py-2 text-sm">Criminal Tax Defense</a><a href="/contact-us/" class="block px-3 py-3 text-sm font-bold text-[#C1272D] hover:underline">Schedule a Criminal Tax Consultation →</a></details>
 
       <!-- More Accordion -->
       <details class="group py-1 border-b border-gray-100">
@@ -453,12 +449,9 @@ import { SITE } from '@/config/site';
           <a href="/reviews" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Reviews & Results</a>
           <a href="/tax-planning" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Tax Planning</a>
           <a href="/articles" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Articles & Guides</a>
-          <div class="pt-2 mt-2 border-t border-gray-200 text-[11px] font-bold uppercase tracking-wider text-gray-400">Bankruptcy</div>
-          <a href="/services/chapter-7-bankruptcy" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Chapter 7 Bankruptcy</a>
-          <a href="/services/chapter-11-small-business-bankruptcy" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Chapter 11 Bankruptcy</a>
-          <a href="/services/chapter-13-bankruptcy" class="block py-1 text-gray-700 hover:text-[#C1272D] no-underline">Chapter 13 Bankruptcy</a>
+
         </div>
-      </details>
+      <a href="/contact-us/" class="block px-3 py-3 text-sm font-bold text-[#C1272D] hover:underline">Schedule a Tax Consultation →</a></details>
 
       <a href="/about" class="text-[16px] font-medium text-[#1A1A1A] py-2 border-b border-gray-100 no-underline hover:text-[#C1272D]">About Us</a>
       <a href="/contact-us" class="text-[16px] font-medium text-[#1A1A1A] py-2 no-underline hover:text-[#C1272D]">Contact Us</a>
