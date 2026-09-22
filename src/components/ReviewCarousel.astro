@@ -27,7 +27,8 @@ const excerpt = (quote:string) => quote.length > 240 ? quote.slice(0, quote.last
   <a href="/reviews/" class="inline-block text-sm text-white underline mt-4">Read full client reviews</a>
 </section>
 <style>
-  .review-track { display:flex; gap:1.5rem; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:thin; padding-bottom:.5rem; }
+  .review-track { display:flex; gap:1.5rem; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; }
+  .review-track::-webkit-scrollbar { display:none; }
   .review-card { flex:0 0 100%; scroll-snap-align:start; margin:0; }
   @media(min-width:768px) { .review-track:not(.compact) .review-card { flex-basis:calc((100% - 3rem)/3); } }
   button:focus-visible, .review-track:focus-visible { outline:3px solid #fbbf24; outline-offset:4px; }
