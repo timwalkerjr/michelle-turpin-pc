@@ -10,18 +10,16 @@ export interface Props {
 const { currentPath = '', topicTitle = 'Your Tax Case' } = Astro.props;
 
 const servicesList = [
-  { name: 'Audit / OIC Appeal', href: '/services/audit-offer-in-compromise-appeal' },
-  { name: 'Tax Appeals', href: '/services/tax-appeals' },
   { name: 'Offer in Compromise', href: '/services/offer-in-compromise-with-utah-tax-attorney' },
+  { name: 'Offer in Compromise Appeals', href: '/services/offer-in-compromise-appeal' },
+  { name: 'IRS Audit Appeals', href: '/services/audit-offer-in-compromise-appeal' },
+  { name: 'Tax Appeals', href: '/services/tax-appeals' },
   { name: 'Installment Agreements', href: '/services/installment-agreements' },
   { name: 'Bank Levy & Wage Garnishment', href: '/services/bank-levy-wage-garnishment' },
   { name: 'Federal & State Tax Liens', href: '/services/tax-liens' },
   { name: 'IRS & State Audit Defense', href: '/services/audit-help' },
   { name: 'Innocent Spouse Relief', href: '/services/innocent-spouse-relief' },
   { name: 'Payroll & Business Taxes', href: '/services/payroll-taxes' },
-  { name: 'Chapter 7 Bankruptcy', href: '/services/chapter-7-bankruptcy' },
-  { name: 'Chapter 13 Bankruptcy', href: '/services/chapter-13-bankruptcy' },
-  { name: 'Chapter 11 Business Bankruptcy', href: '/services/chapter-11-small-business-bankruptcy' },
 ];
 ---
 
@@ -40,7 +38,7 @@ const servicesList = [
       Need Help With {topicTitle}?
     </h3>
     <p class="text-white/90 text-[14px] leading-relaxed mb-5">
-      Speak directly with Utah's premier tax controversy attorneys. We protect your rights before IRS deadlines expire.
+      Speak directly with our experienced tax controversy attorneys. We protect your rights before IRS deadlines expire.
     </p>
 
     <div class="space-y-2.5">
@@ -57,7 +55,7 @@ const servicesList = [
         href="/contact-us"
         class="block w-full border border-white/40 text-white rounded-[6px] py-2.5 px-4 text-[14px] font-medium hover:bg-white/10 transition text-center"
       >
-        Request Free Consultation
+        Request a Consultation
       </a>
     </div>
 
@@ -135,8 +133,8 @@ const servicesList = [
 
     <div class="space-y-3 text-[13px] text-[#4B5563]">
       <div class="border-b border-gray-100 pb-2.5">
-        <p class="font-bold text-[#1A1A1A] mb-0.5">Salt Lake City (Millcreek)</p>
-        <p class="leading-relaxed">4764 S 900 E #3, Millcreek, UT 84117</p>
+        <p class="font-bold text-[#1A1A1A] mb-0.5">Salt Lake City</p>
+        <p class="leading-relaxed">4764 S 900 E #3, Salt Lake City, UT 84117</p>
       </div>
       <div>
         <p class="font-bold text-[#1A1A1A] mb-0.5">St. George Office</p>
@@ -149,22 +147,6 @@ const servicesList = [
         Direct Line: (801) 685-0552
       </a>
     </div>
-  </div>
-
-  <!-- 5. Client Portal & Secure Payment Link -->
-  <div class="bg-gray-50 border border-gray-200 rounded-[8px] p-4 text-center">
-    <p class="text-[12px] uppercase tracking-wider text-gray-500 font-bold mb-1">Existing Clients</p>
-    <a
-      href="https://secure.billpro.com/michelleturpin"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center justify-center gap-1.5 text-[13px] font-medium text-[#1A1A1A] hover:text-[#C1272D] transition"
-    >
-      <svg class="w-4 h-4 text-[#C1272D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-      </svg>
-      Secure Clio Client Payment Portal →
-    </a>
   </div>
 
 </aside>

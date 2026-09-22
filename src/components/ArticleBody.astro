@@ -1,0 +1,10 @@
+---
+interface Props { body: string }
+const { body } = Astro.props;
+---
+<div class="article-body prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-[#1A1A1A] prose-a:text-[#C1272D]" set:html={body} />
+<style>
+  .article-body { overflow-wrap:anywhere; }
+  .article-body :global(table) { display:block; overflow-x:auto; max-width:100%; }
+  .article-body :global(img) { max-width:100%; height:auto; border-radius:8px; }
+</style>

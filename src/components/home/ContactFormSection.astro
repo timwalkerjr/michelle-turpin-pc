@@ -1,4 +1,5 @@
 ---
+import ReviewCarousel from '@/components/ReviewCarousel.astro';
 import ContactForm from '@/components/ContactForm.astro';
 ---
 
@@ -25,16 +26,7 @@ import ContactForm from '@/components/ContactForm.astro';
         Our attorneys are highly experienced and knowledgeable of all areas of tax law. They have dealt with nearly every kind of tax situation imaginable, and they will be able to help you navigate the complex world of tax law.
       </p>
 
-      <!-- Testimonial Box -->
-      <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-[8px] p-6 text-white shadow-lg">
-        <div class="text-[#f59e0b] text-[16px] tracking-wider mb-2 select-none" aria-label="5 stars">★★★★★</div>
-        <p class="italic text-[15px] sm:text-[16px] text-gray-100 leading-relaxed mb-3 m-0">
-          "Outstanding tax attorneys! Talk about tax savings! Thanks for all your help."
-        </p>
-        <p class="text-sm font-medium text-gray-300 m-0">
-          — Joshua Echols
-        </p>
-      </div>
+      <ReviewCarousel id="contact-reviews" label="More client reviews" compact />
     </div>
 
     <!-- Right Column: Red Contact Card -->
